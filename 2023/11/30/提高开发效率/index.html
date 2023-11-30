@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>博客分享</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="1234567891011121314151617提高开发效率本次暴露除的一些问题：1.前端等待后端接口时间较长，接口出来发现接口不通  解决方案：后端要多多调试接口，后端要保证接口与业务保持一致2.接口出来的慢，接口出来了，前端才能做一些功能测试，导致开发周期bug时间变长，功能测试太考靠后  解决方案：多用mock.js，做功能测试，减少与后端的联调性，分清问题出在哪一方3.重复的接口多次调用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客分享">
+<meta property="og:url" content="http://example.com/2023/11/30/%E6%8F%90%E9%AB%98%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87/index.html">
+<meta property="og:site_name" content="博客分享">
+<meta property="og:description" content="1234567891011121314151617提高开发效率本次暴露除的一些问题：1.前端等待后端接口时间较长，接口出来发现接口不通  解决方案：后端要多多调试接口，后端要保证接口与业务保持一致2.接口出来的慢，接口出来了，前端才能做一些功能测试，导致开发周期bug时间变长，功能测试太考靠后  解决方案：多用mock.js，做功能测试，减少与后端的联调性，分清问题出在哪一方3.重复的接口多次调用">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-30T06:06:42.664Z">
+<meta property="article:modified_time" content="2023-11-14T01:16:08.787Z">
+<meta property="article:author" content="李海文">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="博客分享" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">博客分享</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-提高开发效率" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/30/%E6%8F%90%E9%AB%98%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87/" class="article-date">
+  <time class="dt-published" datetime="2023-11-30T06:06:42.664Z" itemprop="datePublished">2023-11-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">提高开发效率</span><br><span class="line">本次暴露除的一些问题：</span><br><span class="line">1.前端等待后端接口时间较长，接口出来发现接口不通</span><br><span class="line">  解决方案：后端要多多调试接口，后端要保证接口与业务保持一致</span><br><span class="line">2.接口出来的慢，接口出来了，前端才能做一些功能测试，导致开发周期bug时间变长，功能测试太考靠后</span><br><span class="line">  解决方案：多用mock.js，做功能测试，减少与后端的联调性，分清问题出在哪一方</span><br><span class="line">3.重复的接口多次调用。重复代码，代码复用</span><br><span class="line">  解决方案：模块化和组件化，使代码更易于管理和维护，避免重复开发新得功能组件，以后组件可以放入新的平台。</span><br><span class="line">4.关于测试文档，出现bug的修改，发现许多问题，可能有的模块出现很多问题，但是量大？</span><br><span class="line">  解决方案：把所有的bug分配给量少的人，一起完成修改，较低周期</span><br><span class="line">5.前后端文档更新没有及时通知，原型修改没有及时通知?沟通问题</span><br><span class="line">  解决方案：无论原型接口有任何改动，群里都要及时发公告，前端收到要进行反馈。避免开发做无用功（后端，原型设计）</span><br><span class="line">6.联调完成之后，发布之前代码出现问题!</span><br><span class="line">  解决方案: 联调完成后前后台针对自己的模块进行基本测试，保证能够顺利运行不会出现错误</span><br><span class="line"> 意见建议：</span><br><span class="line">  原型设计完，需要根据我们以后产品的组件进行设计，尽量复用代码</span><br><span class="line">  加强对postapi的熟练使用</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/30/%E6%8F%90%E9%AB%98%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87/" data-id="clpksmhmu0005bsn1hsuch0sc" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/30/%E4%B8%80%E4%BB%BD%20ElementUI%20%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/30/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/30/%E4%B8%80%E4%BB%BD%20ElementUI%20%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/30/%E6%8F%90%E9%AB%98%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/30/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 李海文<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
