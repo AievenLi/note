@@ -68,10 +68,10 @@ theme:
 
 # Page tree
 nav:
-  - index.md
-  - 前言介绍:
-    - 背景: test.md
-    - 啰嗦: test/test2.md
+  # - index.md
+  # - 前言介绍:
+  #   - 背景: test.md
+  #   - 啰嗦: test/test2.md
 
 
 # Hooks
