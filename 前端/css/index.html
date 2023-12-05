@@ -1,0 +1,3708 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="一辈人一代神">
+      
+      
+        <meta name="author" content="haiwen">
+      
+      
+        <link rel="canonical" href="https://apple.hai.com/%E5%89%8D%E7%AB%AF/css/">
+      
+      
+        <link rel="prev" href="../bun/">
+      
+      
+        <link rel="next" href="../dom%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Css - 海文知识积累</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link rel="stylesheet" href="../../assets/stylesheets/custom.css">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#element-ui" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="海文知识积累" class="md-header__button md-logo" aria-label="海文知识积累" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            海文知识积累
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Css
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换黑夜"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换黑夜" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换白日"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换白日" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mydocs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Material for MkDocs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../test/" class="md-tabs__link">
+        
+  
+    
+  
+  Test
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../test/test2/" class="md-tabs__link">
+          
+  
+    
+  
+  Test
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../bun/" class="md-tabs__link">
+          
+  
+    
+  
+  前端
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="海文知识积累" class="md-nav__button md-logo" aria-label="海文知识积累" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    海文知识积累
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mydocs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material for MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Test
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Test
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/test2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    前端
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            前端
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bun/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bun
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Css
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Css
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#element-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      element-ui
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css" class="md-nav__link">
+    <span class="md-ellipsis">
+      css
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#element-scrollbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      element scrollbar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      破裂的图片
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beforeafter" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、伪元素:before和:after用法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beforeafter_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、:before和:after特点
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beforeafter_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、:before和:after常见使用场景
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      接嵌套
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-scroll-snap" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS Scroll Snap 属性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CSS Scroll Snap 属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#css-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      css display
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cssdisplay" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何理解CSS的display属性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="如何理解CSS的display属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      表内容
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      我们了解到的已经相当不错了
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="我们了解到的已经相当不错了">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: none;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-inline" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: inline;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: block;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-list-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: list-item;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-inline-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: inline-block;
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      一个响应式的数字计数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      是否记住基于表格的布局?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      块的新属性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="块的新属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display-flex" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: flex;
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="display: flex;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flex" class="md-nav__link">
+    <span class="md-ellipsis">
+      flex容器属性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flex_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      flex项的相关属性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: grid;
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="display: grid;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#css_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS网格的关键术语
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      相对模糊并处于实验性的
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="相对模糊并处于实验性的">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display-run-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: run-in;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-ruby" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: ruby;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: contents;
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="总结">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      动画
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="动画">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#css_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用css类
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dom%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dom常用操作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../element-ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Element ui
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Es
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flex%E5%B8%83%E5%B1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flex 布局教程：实例篇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Html
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Js
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../json-server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Json server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js%E5%8A%9F%E8%83%BD%E4%BB%A3%E7%A0%81%E5%9D%97/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Js功能代码块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../koa2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Koa2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mysqid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一：简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../node/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Node
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nvm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nvm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vue3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vue%E5%8A%9F%E8%83%BD%E7%BB%84%E4%BB%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue功能组件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wepy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wepy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一些问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%B8%80%E4%BB%BD%20ElementUI%20%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一份 ElementUI 问题清单
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%8F%90%E9%AB%98%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    提高开发效率
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%BA%90%E7%A0%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    源码
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    移动端适配
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_25" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_25" id="__nav_4_25_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    20220310
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_25_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_25">
+            <span class="md-nav__icon md-icon"></span>
+            20220310
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20220310/%E7%AC%AC%E4%B8%80%E8%8A%82/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_26" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_26" id="__nav_4_26_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    AngularJS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_26_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_26">
+            <span class="md-nav__icon md-icon"></span>
+            AngularJS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AngularJS/Angular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Angular
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_27" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_27" id="__nav_4_27_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    TYPESCRIPT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_27_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_27">
+            <span class="md-nav__icon md-icon"></span>
+            TYPESCRIPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TYPESCRIPT/TS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_28" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_28" id="__nav_4_28_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Es11
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_28_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_28">
+            <span class="md-nav__icon md-icon"></span>
+            Es11
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../es11/js11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Js11
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_29" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_29" id="__nav_4_29_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Js高级
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_29_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_29">
+            <span class="md-nav__icon md-icon"></span>
+            Js高级
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js%E9%AB%98%E7%BA%A7/js%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Js基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js%E9%AB%98%E7%BA%A7/js%E9%AB%98%E7%BA%A7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js%E9%AB%98%E7%BA%A7/%E5%89%8D%E7%AB%AF%E8%BF%9B%E9%98%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    前端进阶
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_30" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_30" id="__nav_4_30_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    学习线路
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_30_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_30">
+            <span class="md-nav__icon md-icon"></span>
+            学习线路
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AD%A6%E4%B9%A0%E7%BA%BF%E8%B7%AF/%E5%AD%A6%E4%B9%A0%E7%BA%BF%E8%B7%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    学习线路
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_31" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_31" id="__nav_4_31_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    框架
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_31_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_31">
+            <span class="md-nav__icon md-icon"></span>
+            框架
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%A1%86%E6%9E%B6/vite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_32" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_32" id="__nav_4_32_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    源码
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_32_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_32">
+            <span class="md-nav__icon md-icon"></span>
+            源码
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%BA%90%E7%A0%81/element%E6%BA%90%E7%A0%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Element UI 源码中学到的技巧
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%BA%90%E7%A0%81/%E4%B8%80%E6%A0%8Fexcel%E5%92%8Cword/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一栏excel和word
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_33" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_33" id="__nav_4_33_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    移动端
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_33_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_33">
+            <span class="md-nav__icon md-icon"></span>
+            移动端
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E9%97%AE%E9%A2%98%E6%94%B6%E9%9B%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    问题收集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_34" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_34" id="__nav_4_34_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    脚手架
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_34_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_34">
+            <span class="md-nav__icon md-icon"></span>
+            脚手架
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%84%9A%E6%89%8B%E6%9E%B6/lerna/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lerna
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%84%9A%E6%89%8B%E6%9E%B6/%E8%84%9A%E6%89%8B%E6%9E%B6%E6%9C%AC%E5%9C%B0link%E6%A0%87%E5%87%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    脚手架本地link标准
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#element-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      element-ui
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css" class="md-nav__link">
+    <span class="md-ellipsis">
+      css
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#element-scrollbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      element scrollbar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      破裂的图片
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beforeafter" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、伪元素:before和:after用法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beforeafter_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、:before和:after特点
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beforeafter_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、:before和:after常见使用场景
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      接嵌套
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-scroll-snap" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS Scroll Snap 属性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CSS Scroll Snap 属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#css-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      css display
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cssdisplay" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何理解CSS的display属性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="如何理解CSS的display属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      表内容
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      我们了解到的已经相当不错了
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="我们了解到的已经相当不错了">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: none;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-inline" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: inline;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: block;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-list-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: list-item;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-inline-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: inline-block;
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      一个响应式的数字计数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      是否记住基于表格的布局?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      块的新属性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="块的新属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display-flex" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: flex;
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="display: flex;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flex" class="md-nav__link">
+    <span class="md-ellipsis">
+      flex容器属性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flex_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      flex项的相关属性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: grid;
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="display: grid;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#css_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS网格的关键术语
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      相对模糊并处于实验性的
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="相对模糊并处于实验性的">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display-run-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: run-in;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-ruby" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: ruby;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: contents;
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="总结">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      动画
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="动画">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#css_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用css类
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<p>scss</p>
+<p>npm install sass-loader node-sass --save-dev</p>
+<p>npm : 无法加载文件 C:\Users\h12w8\AppData\Roaming\npm\cnpm.ps1，因为在此系统上禁止运行脚本。</p>
+<h6 id="element-ui">element-ui</h6>
+<p>自定义表单查询审批流程，有啥作用
+18600589271
+gutter 间距
+offset 偏移
+type="flex" 对齐方式
+align = “top middle bottom
+justify="center" end space-between space-around
+xs &lt;768px
+sm &gt;768px
+md &gt;992px
+lg&gt;1200px
+xl&gt;1920px
+基于断电的隐藏类：
+hidden-xs-only - 当视口在 xs 尺寸时隐藏
+hidden-sm-only - 当视口在 sm 尺寸时隐藏
+hidden-sm-and-down - 当视口在 sm 及以下尺寸时隐藏
+hidden-sm-and-up - 当视口在 sm 及以上尺寸时隐藏
+hidden-md-only - 当视口在 md 尺寸时隐藏
+hidden-md-and-down - 当视口在 md 及以下尺寸时隐藏
+hidden-md-and-up - 当视口在 md 及以上尺寸时隐藏
+hidden-lg-only - 当视口在 lg 尺寸时隐藏
+hidden-lg-and-down - 当视口在 lg 及以下尺寸时隐藏
+hidden-lg-and-up - 当视口在 lg 及以上尺寸时隐藏
+hidden-xl-only - 当视口在 xl 尺寸时隐藏
+el-collapse-transition 展开折叠
+ <transition name="el-zoom-in-top"> bottom center 缩放</p>
+<p><transition name="el-fade-in-linear">淡入淡出</p>
+<p><el-container> 布局容器
+<el-header> 顶栏容器
+<el-aside> 侧边栏容器
+<el-main> 主要区容器
+<el-footer> 底栏容器</p>
+<h6 id="css">css</h6>
+<pre><code>:root{
+    --button-height:32px;
+    --font-size:12px;
+    --button-bg:white;
+    --button-active-bg:#eee;
+    --border-radius:4px;
+    --color:#333;
+    --border-color:#999;
+    --border-color-hover:#666;
+}
+.g_button {
+    font-size:var(--font-size);
+    height:var(--button-height);
+}
+</code></pre>
+<pre><code class="language-css">css 一行文本超出...
+overflow:hidden;
+text-overflow:ellipsis;
+white-space:nowrap;
+
+//多行文本超出显示
+display:-webkit-box;
+-webkit-box-orient:vertical;
+-webkit-line-clamp:3;
+overflow:hidden;
+
+//IOS手机兼容滚动条滑动不流畅
+overflow:auto;
+-webkit-overflow-scrolling:touch;
+
+//修改滚动条样式
+隐藏div元素的滚动条
+div::-webkit-scrollbar{
+    display:none;
+}
+
+div::-webkit-scrollbar 滚动条整体部分
+div::-webkit-scrollbar-thumb 滚动条里面的小方块，能向上向下移动，（或往左往右移动，取决与垂直滚动条还是水平滚动条
+div::-webkit-scrollbar-track 滚动条的轨道（里面装有Thumb）
+div::-webkit-scrollbar-button滚动条的轨道两端按钮，允许通过点击微调小方块的位置
+div::-webkit-scrollbar-track-piece 内层轨道，滚动条中间部分（除去）
+div::-webkit-scrollbar-scrollbar-corner 边角，即两个滚动条的交汇处
+div::-webkit-resizer 两个滚动条的交汇处上用于通过拖动调整元素大小的小控件注意此方案有兼容性问题，一般需要影藏滚动条时我都是用一个色块通过定位盖上去，或者将子级元素调大，父级元素使用overflow:hidden 截掉滚动条部分。暴力且直接
+
+使用css写出一个三角形坐标
+div {
+    width: 0;
+    height: 0;
+    border: 5px solid #transparent;
+    border-top-color: red;
+}
+
+6.解决 ios audio 无法自动播放、循环播放的问题
+
+ios 手机在使用 audio 或者 video 播放的时候，个别机型无法实现自动播放，可使用下面的代码 hack。
+// 解决ios audio无法自动播放、循环播放的问题
+var music = document.getElementById('video');
+var state = 0;
+
+document.addEventListener('touchstart', function(){
+    if(state==0){
+        music.play();
+        state=1;
+    }
+}, false);
+
+document.addEventListener(&quot;WeixinJSBridgeReady&quot;, function () {
+    music.play();
+}, false);
+
+//循环播放
+music.onended = function () {
+    music.load();
+    music.play();
+}
+
+7.水平垂直居中
+
+我一般只使用两种方式 定位 或者 flex，我觉得够用了。
+div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+父级控制子集居中
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+8.隐藏页面元素
+
+display-none: 元素不存在，从 dom 中删除
+opacity-0: 元素透明度将为 0，但元素仍然存在，绑定的事件仍旧有效仍可触发执行。
+visibility-hidden：元素隐藏，但元素仍旧存在，页面中无法触发该元素的事件。
+9.前端工程化
+
+一提到前端工程化很多人想到的都是 webpack，这是不对的，webpack 仅仅是前端工程化中的一环。在整个工程化过程中他帮我们解决了绝大多数的问题，但并没有解决所有问题。
+前端工程化是通过工具提升效率，降低成本的一种手段。
+近些年被广泛的关注和探讨，究其原因主要是因为现代化前端应用功能要求不断提高，业务逻辑日益复杂，作为当下互联网时代唯一不可或缺的技术，前端可以说是占据了整个开发行业的半壁江山。从传统的网站，到现在的 H5,移动 App,桌面应用，以及小程序。前端技术几乎是无所不能的全面覆盖。
+在这些表象的背后呢，实际上是行业对开发人员的要求发生了天翻地覆的变化，以往前端写 demo，套模板，调页面这种刀耕火种的方式已经完全不符合当下对开发效率的要求，前端工程化就是在这样一个背景下被提上台面，成为前端工程师必备的手段之一。
+一般来说前端工程包含，项目初始化，项目开发，集成，构建，打包，测试，部署等流程。工程化就是以工程的角度来解决这些问题。比如项目初始化我们一般使用npm init, 创建页面模板使用 plop，我们喜欢使用 ES6+开发，但是需要通过 babel 编码成 ES5，持续集成的时候我们使用 git，但是为了保持开发规范我们引入了 ESLint，部署一般使用 ci/cd 或者 jenkins 等等。
+前端工程化是一个比较大的话题，后面我们会单开话题来讲。
+10.contenteditable
+
+html 中大部分标签都是不可以编辑的，但是添加了 contenteditable 属性之后，标签会变成可编辑状态。
+&lt;div contenteditable=&quot;true&quot;&gt;&lt;/div&gt;
+
+不过通过这个属性把标签变为可编辑状态后只有 input 事件，没有 change 事件。也不能像表单一样通过 maxlength 控制最大长度。我也忘记我在什么情况下用到过了，后面想起来再补吧。
+11.calc
+
+这是一个 css 属性，我一般称之为 css 表达式。可以计算 css 的值。最有趣的是他可以计算不同单位的差值。很好用的一个功能，缺点是不容易阅读。接盘侠没办法一眼看出 20px 是啥。
+div {
+    width: calc(25% - 20px);
+}
+
+12.Proxy 和 Object.defineProperty 区别
+
+Proxy 的意思是代理，我一般教他拦截器，可以拦截对象上的一个操作。用法如下，通过 new 的方式创建对象，第一个参数是被拦截的对象，第二个参数是对象操作的描述。实例化后返回一个新的对象，当我们对这个新的对象进行操作时就会调用我们描述中对应的方法。
+new Proxy(target, {
+    get(target, property) {
+
+    },
+    set(target, property) {
+
+    },
+    deleteProperty(target, property) {
+
+    }
+})
+
+Proxy 区别于 Object.definedProperty。
+Object.defineProperty 只能监听到属性的读写，而 Proxy 除读写外还可以监听属性的删除，方法的调用等。
+通常情况下我们想要监视数组的变化，基本要依靠重写数组方法的方式实现，这也是 Vue 的实现方式，而 Proxy 可以直接监视数组的变化。
+const list = [1, 2, 3];
+const listproxy = new Proxy(list, {
+    set(target, property, value) {
+        target[property] = value;
+        return true; // 标识设置成功
+    }
+});
+
+list.push(4);
+
+Proxy 是以非入侵的方式监管了对象的读写，而 defineProperty 需要按特定的方式定义对象的属性。
+13.Reflect
+
+他是 ES2015 新增的对象，纯静态对象也就是不能被实例画，只能通过静态方法的方式调用，和 Math 对象类似，只能类似 Math.random 的方式调用。
+Reflect 内部封装了一系列对对象的底层操作，一共 14 个，其中 1 个被废弃，还剩下 13 个。
+Reflect 的静态方法和 Proxy 描述中的方法完全一致。也就是说 Reflect 成员方法就是 Proxy 处理对象的默认实现。
+Proxy 对象默认的方法就是调用了 Reflect 内部的处理逻辑，也就是如果我们调用 get 方法，那么在内部，proxy 就是将 get 原封不动的交给了 Reflect，如下。
+const proxy = new Proxy(obj, {
+    get(target, property) {
+        return Reflect.get(target, property);
+    }
+})
+
+Reflect 和 Proxy 没有绝对的关系，我们一般将他们两个放在一起讲是为了方便对二者的理解。
+那为什么会有 Reflect 对象呢，其实他最大的用处就是提供了一套统一操作 Object 的 API。判断对象是否存在某一个属性，可以使用 in 操作符，但是不够优雅，还可以使用Reflect.has(obj, name); 删除一个属性可以使用 delete，也可以使用 Reflect.deleteProperty(obj, name); 获取所有属性名可以使用 Object.keys, 也可以使用 Reflect.ownKeys(obj); 我们更推荐使用 Reflect 的 API 来操作对象，因为他才是未来。
+14.解析 get 参数
+
+通过 replace 方法获取 url 中的参数键值对，可以快速解析 get 参数。
+const q = {};
+location.search.replace(/([^?&amp;=]+)=([^&amp;]+)/g,(_,k,v)=&gt;q[k]=v);
+console.log(q);
+15.解析连接 url
+
+可以通过创建 a 标签，给 a 标签赋值 href 属性的方式，获取到协议，pathname，origin 等 location 对象上的属性。
+// 创建a标签
+const aEle = document.createElement('a');
+// 给a标签赋值href路径
+aEle.href = '/test.html';
+// 访问aEle中的属性
+aEle.protocol; // 获取协议
+aEle.pathname; // 获取path
+aEle.origin;
+aEle.host;
+aEle.search;
+</code></pre>
+<h6 id="element-scrollbar">element scrollbar</h6>
+<p>/deep/ .el-scrollbar__wrap{</p>
+<p>overflow-x: hidden;</p>
+<p>}</p>
+<h6 id="_1">破裂的图片</h6>
+<pre><code>
+</code></pre>
+<p>css的<code>伪元素</code>，之所以被称为伪元素，是因为他们不是真正的页面元素，html没有对应的元素，但是其所有用法和表现行为与真正的页面元素一样，可以对其使用诸如页面元素一样的css样式，表面上看上去貌似是页面的某些元素来展现，实际上是css样式展现的行为，因此被称为伪元素。如下图，是伪元素在html代码机构中的展现，可以看出无法伪元素的结构无法审查。</p>
+<p><img alt="img" src="http://segmentfault.com/img/bVb9y2" /></p>
+<p>css有一系列的伪元素，如:before，:after，:first-line，:first-letter等，本文就详述一下:before和:after元素的使用</p>
+<h4 id="beforeafter">一、伪元素:before和:after用法</h4>
+<p>这个两个伪元素在真正页面<em>元素内部</em><code>之前</code>和<code>之后</code>添加新内容（当然了，可以对伪元素应用定位可以置于任何位置）。可以用以下例子来说明：</p>
+<pre><code class="language-html">    &lt;p&gt;wonyun!&lt;/p&gt;
+    &lt;style&gt;
+        p:before{content: &quot;hello &quot;}
+        p:after{content: &quot;you are handsome!&quot;}
+    &lt;/style&gt;
+</code></pre>
+<p>上面例子从技术角度看，等价于下面的html结构：</p>
+<pre><code class="language-html">    &lt;p&gt;
+        &lt;span&gt;hello &lt;/span&gt;
+        wonyun!
+        &lt;span&gt; you are handsome!&lt;/span&gt;
+    &lt;/p&gt;
+</code></pre>
+<p>由此可知：<strong>伪元素:before和:after添加的内容默认是<code>inline</code>元素</strong>；这个两个伪元素的<code>content</code>属性，表示伪元素的内容,设置:before和:after时必须设置其<code>content</code>属性，否则伪元素就不起作用。那么问题来了，<code>content</code>属性的值可以有哪些内容呢，具体有以下几种情况：</p>
+<ul>
+<li><code>字符串</code>，字符串作为伪元素的内容添加到主元素中</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong>：字符串中若有html字符串，添加到主元素后不会进行html转义，也不会转化为真正的html内容显示，而是会原样输出</p>
+</blockquote>
+<ul>
+<li><code>attr(attr_name)</code>, 伪元素的内容跟主元素的某个属性值进行关联，及其内容为主元素的某指定属性的值</li>
+</ul>
+<blockquote>
+<p><strong>好处</strong>：可以通过js动态改变主元素的指定属性值，这时伪元素的内容也会跟着改变，可以实现某些特殊效果，如图片加载失败用一段文字替换。</p>
+</blockquote>
+<ul>
+<li>
+<p><code>url()/uri()</code>, 引用外部资源，例如图片；</p>
+</li>
+<li>
+<p><code>counter()</code>, 调用计数器，可以不使用列表元素实现序号问题。</p>
+</li>
+</ul>
+<hr />
+<h4 id="beforeafter_1">二、:before和:after特点</h4>
+<p>上面说了，伪元素是通过样式来达到元素效果的，也就是说伪元素不占用dom元素节点，引用<a href="http://www.alloyteam.com/2015/04/beforeafter伪元素妙用/">:before,:after伪元素妙用</a>里面总结的，:before和:after伪元素的主要特点如下：</p>
+<ul>
+<li><strong>伪元素不属于文档</strong>，所以js无法操作它</li>
+<li>伪元素属于主元素的一部分，因此<strong>点击伪元素触发的是主元素的click事件</strong></li>
+<li>原文说块级元素才能有:before, :after，其实是不妥的，大部分行级元素也可以设置伪元素，但是像img可替换元素，因为其外观和尺寸有外部资源决定，那么如果外部资源正确加载，就会替换掉其内部内容，这时伪元素也会被替换掉，但是当外部资源加载失败时，设置的伪元素是可以起作用的。</li>
+</ul>
+<p>基于伪元素的特点可以知道其优缺点，也引用别人文章的话：</p>
+<ul>
+<li>优点</li>
+<li>减少dom节点数</li>
+<li>让css帮助解决部分js问题，让问题变得简单</li>
+<li>缺点</li>
+<li>不利于SEO</li>
+<li>无法审查元素，不利于调试</li>
+</ul>
+<hr />
+<h4 id="beforeafter_2">三、:before和:after常见使用场景</h4>
+<ol>
+<li>清除浮动</li>
+</ol>
+<pre><code>清除浮动是前端最常见的问题，有一种做法是使用一个空的页面元素如div来清除浮动，但是这种做法增加毫无语义的页面元素，而且占用dom节点。更可取的做法是利用伪元素来清除浮动：
+            &lt;div class=&quot;l-form-row&quot;&gt;
+                &lt;div class=&quot;l-form-label&quot;&gt;&lt;/div&gt;
+                ....
+            &lt;/div&gt;
+            &lt;style&gt;
+                .l-form-row:after {
+                    clear: both;
+                    content: &quot;\0020&quot;;
+                    display: block;
+                    height: 0;
+                    overflow: hidden
+                }
+            &lt;/style&gt;
+</code></pre>
+<p>这样，class=l-form-row的元素内部任何浮动都能清除掉，不用额外添加无意义的元素。</p>
+<ol>
+<li>利用<code>attr()</code>来实现某些动态功能</li>
+</ol>
+<p>在页面中常见这种问题，页面上加载的图片在无法加载时会显示一个破损图片，直接影响页面的美观；
+<img alt="img" src="http://cdn2.w3cplus.com/cdn/farfuture/A2Bz5jXo1C3l2A3tc7h4QIkXhZ-eKXh8QjxO-f79fKQ/mtime:1468406046/sites/default/files/blogs/2016/1607/dirty-tricks3.png" /></p>
+<p>那么可以通过伪元素配合样式能够让未加载的图片看起来真的像破裂的效果，如下图所示：
+<img alt="img" src="https://images2015.cnblogs.com/blog/408483/201608/408483-20160825213155866-395524514.png" /></p>
+<p><img>是一个替换元素，其外观和尺寸是由外部资源来决定的，当外部图片资源加载失败时其会显示破裂图片和alt文字，尺寸仅由其自身内容决定。这时<img>元素可以使用伪元素:before和:after，因为其元素内容没有被替换；利用attr()来获取图片alt属性值作为伪元素:after的content内容来替换img的内容，并运用适当的样式从而完成：图片加载成功时显示正常的图片，加载失败时显示图片破裂效果的样式，具体代码参考：</p>
+<pre><code class="language-css">        img{
+            min-height: 50px;
+           position: relative;
+        }
+        img:before: {
+             content: &quot; &quot;;
+             display: block;
+            position: absolute;
+            top: -10px;
+            left: 0;
+            height: calc(100% + 10px);
+            width: 100%;
+            backgound-color: rgb(230, 230,230);
+            border: 2px dotted rgb(200,200,200);
+            border-radius: 5px;
+        }
+        img: {
+            content: '\f127&quot; &quot; Broken Image of &quot; attr(alt);
+            display: block;
+            font-size: 16px;
+            font-style: normal;
+            font-family: FontAwesome;
+            color: rgb(100,100,100)
+            position: absolute;
+            top: 5px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+</code></pre>
+<ol>
+<li>与counter()结合实现序号问题，而不用使用列表元素。具体还要结合css的 counter-increment 和 counter-reset 属性的用法 。</li>
+</ol>
+<p>代码如下：</p>
+<pre><code class="language-html">        &lt;h2&gt;&lt;/h2&gt;
+        &lt;h2&gt;&lt;/h2&gt;
+        &lt;style&gt;
+            body {counter-reset:section;}
+            h2:before { 
+                counter-increment: section; 
+                content: &quot;Chapter&quot;  counter(section) &quot;.&quot;;
+            }
+        &lt;/style&gt;
+</code></pre>
+<p>结果如下：
+<img alt="img" src="https://images2015.cnblogs.com/blog/408483/201608/408483-20160825220412882-1283938733.png" /></p>
+<ol>
+<li>特效使用</li>
+</ol>
+<p>利用这两个伪元素，可以实现各种效果，如放大镜、叉叉、箭头、三角符等，也可轻易实现如下效果
+<img alt="img" src="http://img1.dimpurr.com/dimblog/2013/10/6cc221614774e78add77d4e7a1171f591.gif" />
+代码实现如下：</p>
+<pre><code class="language-css">        a {
+        position: relative;
+        display: inline-block;
+        outline: none;
+        text-decoration: none;
+        color: #000;
+        font-size: 32px;
+        padding: 5px 10px;
+        }
+
+        a:hover::before, a:hover::after { position: absolute; }
+        a:hover::before { content: &quot;\5B&quot;; left: -20px; }
+        a:hover::after { content: &quot;\5D&quot;; right:  -20px; }
+</code></pre>
+<p><img alt="img" src="http://cdn2.w3cplus.com/cdn/farfuture/1To616umvPEkmTcTiE_2FeVW3MraP89IwuzpzV1Z4E0/mtime:1468406052/sites/default/files/blogs/2016/1607/dirty-tricks7.gif" /></p>
+<p>代码实现如下：</p>
+<pre><code class="language-css">        table{overflow: hidden;}
+        td, th{
+            padding: 10px;
+            position: relative;
+            outline: 0;
+        }
+        td:hover::after,
+        th:hover::after { 
+              content: '';  
+              background-color: lightblue;
+              position: absolute;  
+              left: 0;
+              height: 10000px;
+              top: -5000px;
+              width: 100%;
+              z-index: -1;
+        }
+
+        td:hover::before {
+              background-color: lightblue;
+              content: '';  
+              height: 100%;
+              top: 0;
+              left: -5000px;
+              position: absolute;  
+              width: 10000px;
+              z-index: -1;
+        }
+
+</code></pre>
+<p><img alt="img" src="http://7tszky.com1.z0.glb.clouddn.com/FvD_sYY4Fmp_yKS0E07H-5jhuKTB" />
+具体代码：</p>
+<pre><code class="language-css">        .empty__bg {
+                display: inline-block;
+                width: 95px;
+                height: 92px;
+                background: url(http://7tszky.com1.z0.glb.clouddn.com/FvD_sYY4Fmp_yKS0E07H-5jhuKTB) no-repeat;
+                background-size: 95px 92px;
+                position: relative;
+                margin-bottom: 16px;/*注意这里需要留好位置放置after元素（它是absolute进去的）*/
+            }
+            .empty__bg:after {
+                content: &quot;暂无学习计划&quot;;
+                display: block;
+                font-size: 14px;
+                line-height: 24px;
+                text-align: center;
+                width: 100%;
+                color: #909090;
+                position: absolute;
+                top: 100%;
+                left: 0;
+            }
+        }
+</code></pre>
+<p><img alt="img" src="http://7tszky.com1.z0.glb.clouddn.com/Fv_HjtNCbR13N7bdbkeZY5RaSOTb" />
+上述可以实现<code>扩大可点击区域</code>，这对应手机用户来说更加友好一些，否则用户点击不会触发相应的事件；具体代码实现如下：</p>
+<pre><code class="language-css">        .play-cover {position: relative}
+        .play-cover:before{
+            content: &quot;&quot;;
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 8px solid white;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            margin-left: 9px;
+            margin-bottom: 7px;
+            z-index: 5;
+        }
+        .play-cover:after{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid white;
+            background: rgba(0, 0, 0, .6);
+            border-radius: 12px;
+            background-clip: padding-box;
+        }
+</code></pre>
+<p>CSS美化radio和checkbox的样式<a href="http://forsigner.com/magic-check/">magic-check</a>，就是利用伪元素:before和:after来实现的；
+具体是为每个真正的表单元素radio和checkbox搭配一个label，然后隐藏真正的radio和checkbox，label元素单击的时候隐藏的radio或者checkbox实际上是处于checked状态，这跟label的具体用法有关；利用label的伪元素:before和:after来实现美化radio和checkbox。</p>
+<p>下面是checkbox的美化的css代码：</p>
+<pre><code class="language-css">        .magic-checkbox {
+              position: absolute;
+              display: none;  //先隐藏真正的checkboxbox
+         }
+         .magic-checkbox + label {//为与checkbox搭配的label使用样式
+              position: relative; //相对定位，方便其内容的伪元素进行定位
+              display: block; //块元素
+              padding-left: 30px;
+              cursor: pointer;
+              vertical-align: middle; 
+         }
+        .magic-checkbox + label:before { //label添加:before伪元素，用于生成一个带边界的正方形，模拟复选框的轮廓
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                content: '';
+                border: 1px solid #c0c0c0; 
+                border-radius: 3px; 
+            }
+            //为checkbox添加:after伪元素，作用是生成一个√图形，模拟checkbox选中状态，未选中状态下会被隐藏
+            .magic-checkbox + label:after {
+                  top: 2px;
+                  left: 7px;
+                  box-sizing: border-box;
+                  width: 6px;  //实现√图形很简单：设置一个长方形，去掉其上边界和左边界，剩下的2个边界旋转45度就得到√形状
+                  height: 12px;
+                  transform: rotate(45deg);
+                  border-width: 2px;
+                  border-style: solid;
+                  border-color: #fff;
+                  border-top: 0;
+                  border-left: 0;
+                  position: absolute;
+                  display: none; //√形状先隐藏
+                  content: '';
+              }
+            //单击label，隐藏的checkbox为checked状态，这时设置checked状态下搭配label的:before伪元素背景和边界颜色
+             .magic-checkbox:checked + label:before {
+                    animation-name: none; 
+                    border: #3e97eb;
+                    background: #3e97eb; 
+                }
+            //checked状态的checkbox搭配的label伪元素:after此时设置显示，那么√就显示出来了
+             .magic-checkbox:checked + label:after {
+                  display: block; 
+             }
+</code></pre>
+<p>利用:before和:after能轻易实现美化的radio和checkbox</p>
+<p>css<a>链接嵌套</a></p>
+<pre><code>
+</code></pre>
+<h2 id="_2">接嵌套</h2>
+<p>众所周之，在前端开发当中，超链接<code>&lt;a&gt;</code>标签嵌套<code>&lt;a&gt;</code>标签会出问题：浏览器解析的时候，将它们解析成不嵌套的。来看代码：</p>
+<pre><code>&lt;a href=&quot;#url1&quot;&gt;When the crisis was over,  &lt;a href=&quot;#url2&quot;&gt;Mr. Jones&lt;/a&gt; left the region immediately.&lt;/a&gt;
+</code></pre>
+<p>浏览器解析上面的HTML代码将会变成这样：</p>
+<pre><code>&lt;a href=&quot;#url1&quot;&gt;When the crisis was over,&lt;/a&gt;  
+&lt;a href=&quot;#url2&quot;&gt;Mr. Jones&lt;/a&gt; 
+left the region immediately.
+</code></pre>
+<p>如下图所示：</p>
+<p><img alt="链接嵌套" src="https://www.w3cplus.com/sites/default/files/blogs/2016/1607/dirty-tricks1.png" /></p>
+<p>而我们事实上需要的达到的效果是：</p>
+<pre><code>&lt;a href=&quot;#url1&quot;&gt;When the crisis was over,&lt;/a&gt;  
+&lt;a href=&quot;#url2&quot;&gt;Mr. Jones&lt;/a&gt; 
+&lt;a href=&quot;#url1&quot;&gt;left the region immediately.&lt;/a&gt;
+</code></pre>
+<p>曾经为了达到这样的效果，我只能这样老实的写HTML代码，那么事实上呢？我们是存在一定的黑魔法的。<strong>那就是给<code>&lt;a&gt;</code>标签内部的<code>&lt;a&gt;</code>标签外添加一个<code>&lt;object&gt;</code>标签。</strong>如下所示：</p>
+<pre><code>&lt;a href=&quot;#url1&quot;&gt;When the crisis was over,  &lt;object&gt;&lt;a href=&quot;#url2&quot;&gt;Mr. Jones&lt;/a&gt;&lt;/object&gt; left the region immediately.&lt;/a&gt;
+</code></pre>
+<p>最终浏览器达到的效果其实和下面的HTML代码效果一样：</p>
+<pre><code>&lt;a href=&quot;#url1&quot;&gt;When the crisis was over,&lt;/a&gt; 
+&lt;a href=&quot;#url2&quot;&gt;Mr. Jones&lt;/a&gt; 
+&lt;a href=&quot;#url1&quot;&gt;left the region immediately.&lt;/a&gt;
+</code></pre>
+<p>当然，其结构未做任何改变，但效果是类似上面的代码效果。</p>
+<p><img alt="链接嵌套" src="https://www.w3cplus.com/sites/default/files/blogs/2016/1607/dirty-tricks2.png" /></p>
+<p>在线效果：</p>
+<p>著作权归作者所有。
+商业转载请联系作者获得授权,非商业转载请注明出处。
+原文: https://www.w3cplus.com/css/dirty-tricks-dark-corners-front-end-pt1.html?from=timeline&amp;isappinstalled=0 © <a href="https://www.w3cplus.com/">w3cplus.com</a></p>
+<h2 id="css-scroll-snap">CSS Scroll Snap 属性</h2>
+<pre><code>
+</code></pre>
+<h6 id="css-display">css display</h6>
+<h1 id="cssdisplay">如何理解CSS的display属性</h1>
+<p>作者：静子 日期：2016-06-23 点击：9387</p>
+<p><a href="https://www.w3cplus.com/blog/tags/68.html">CSS</a></p>
+<blockquote>
+<p><strong>特别声明：</strong>如果您喜欢小站的内容，可以点击<a href="https://www.zhi12.cn/paywall/membership/widget?uid=5491&amp;siteid=s_64be3b00&amp;cms=drupal&amp;content_id=2610&amp;callback=https%3A//www.w3cplus.com&amp;source=https%3A//www.w3cplus.com%3Fq%3Dnode/2610&amp;sign=ecbcc7859e33dea192cf9efdb6d2e61c">申请会员</a>进行全站阅读。如果您对付费阅读有任何建议或想法，欢迎发送邮件至: <strong>airenliao@gmail.com</strong>!或添加QQ：874472854(^_^)</p>
+</blockquote>
+<p>在布局中，<code>display</code>属性是最重要的CSS属性之一。其最常见的属性值有<code>block</code>,<code>inline</code>,<code>none</code>,<code>table</code>以及<code>inline-block</code>。最近的新宠为<code>flex</code>,因为它是专门为布局创建的<code>display</code>属性。新出现的<code>grid</code>(最近仍比较活跃)是另外一个指定的布局属性，其很快就会广泛被使用。</p>
+<p>这篇文章比我预期的要长很多，你可以选择性进行阅读，但是我更希望你可以静下心来阅读整篇文章。</p>
+<h2 id="_3">表内容</h2>
+<p>通过创建各种响应式设计，对于<code>display</code>以及<code>position</code>属性我学习到了很多，关于他们的工作原理以及如何和媒体查询相结合实现所需的布局。我会简短的介绍每一个值，并且会提及之前创建的与之有很强依赖性的一些响应式组件。</p>
+<p>如果不涉及<a href="https://drafts.csswg.org/css-display/#box-tree">盒子树(box tree)</a>我们是没有办法谈及这些属性的。浏览器基本上是通过生成盒子树解析CSS并进行相关渲染呈现，这里盒子树是指呈现文档的格式结构。<code>display</code>属性定义了盒子的显示类型。</p>
+<p>关于浏览器如何进行渲染在屏幕上显示这个话题，真的令人十分陶醉。这里我建议你阅读<a href="http://taligarsiel.com/">Talia Garsiel</a>书写的<a href="http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/">浏览器工作原理: 现代web浏览器的幕后</a>。另外一篇必读的文章是<a href="http://fantasai.inkedblade.net/">Fantasai</a>书写的<a href="http://fantasai.inkedblade.net/weblog/2012/css-layout-evolution/">CSS布局演变: 始于1990年终于未来</a>，该作者目前在W3C CSS规范组工作。她曾有一个优秀的演讲：<a href="http://2016.phillyemergingtech.com/2012/">用于企业会议的新兴技术</a>，如果你对视频不感兴趣，还有一篇相关文章讲解。</p>
+<h2 id="_4">我们了解到的已经相当不错了</h2>
+<p>有趣的事实: 我们所使用的<code>display</code>属性值实际上有很大的限制。如:<code>block</code>在块流中有很大限制。请参考<a href="https://drafts.csswg.org/css-display/#propdef-display">规范</a>获取完整的列表。</p>
+<p>所有的元素都有一个默认的<code>display</code>值,但是均可以被显式设置所重写。</p>
+<h3 id="display-none">display: none;</h3>
+<p>将元素与其子元素从普通文档流中移除。这时文档的渲染就像元素从来没有存在过一样，也就是说它所占据的空间被折叠了。元素的内容也会被屏幕阅读所忽略。</p>
+<h3 id="display-inline">display: inline;</h3>
+<p><img alt="Inline Elements" src="https://www.w3cplus.com/sites/default/files/blogs/2016/1606/inline-640.jpg" /></p>
+<p>该元素生成一个或多个行内框。就如名字般，行内级元素所占具的空间就是他的标签所定义的大小。可以被视为对块级元素的补充。</p>
+<h3 id="display-block">display: block;</h3>
+<p><img alt="Block Elements" src="https://www.w3cplus.com/sites/default/files/blogs/2016/1606/block-480.jpg" /></p>
+<p>该元素生成块级框。除特殊声明外，所有的块级元素开始于新的一行，延展到其容器的宽度。</p>
+<h3 id="display-list-item">display: list-item;</h3>
+<p>元素被渲染为列表项呈现的方式，确切说就像是一个块级元素，但是会生成一个可以被<code>list-style</code>属性进行样式修饰的标记框。只有<code>&lt;li&gt;</code>元素可以具有<code>list-style</code>的默认值。通常将<code>&lt;li&gt;</code>元素重置为默认行为。</p>
+<h3 id="display-inline-block">display: inline-block;</h3>
+<iframe id="cp_embed_PNMxXL" src="https://codepen.io/huijing/embed/PNMxXL?height=460&amp;theme-id=9162&amp;slug-hash=PNMxXL&amp;default-tab=result&amp;user=huijing&amp;embed-version=2" scrolling="no" frameborder="0" height="460" allowtransparency="true" allowfullscreen="true" name="CodePen Embed" title="CodePen Embed" class="cp_embed_iframe " style="box-sizing: inherit; width: 2903.17px; overflow: hidden;"></iframe>
+
+<p>该元素生成一个块级别框，但是整个框的行为就像是一个内联元素。尝试在<a href="http://codepen.io/huijing/pen/PNMxXL/">Codepen</a>书写此示例，改变窗口的大小，这样会更有意义。</p>
+<h2 id="_5">一个响应式的数字计数</h2>
+<p>我创建的组件之一是针对不同旅客使用的数字叠加器。我得到了一个用于移动布局与一个用于桌面布局的静态的photoshop文件。但是他们都具有一个中间宽度以防“打破”布局。</p>
+<p>这主要是由于括号内的文字没有很好的折叠在一起。所以我需要使用媒体查询进行宽度调整。使相关元素以不同的宽度显示。在<a href="http://codepen.io/huijing/full/LZPNYo/">Codepen</a>中查阅全尺寸效果并观察该组件在不同宽度窗口的显示。</p>
+<iframe id="cp_embed_LZPNYo" src="https://codepen.io/huijing/embed/LZPNYo?height=320&amp;theme-id=9162&amp;slug-hash=LZPNYo&amp;default-tab=result&amp;user=huijing&amp;embed-version=2" scrolling="no" frameborder="0" height="320" allowtransparency="true" allowfullscreen="true" name="CodePen Embed" title="CodePen Embed" class="cp_embed_iframe " style="box-sizing: inherit; width: 2903.17px; overflow: hidden;"></iframe>
+
+<h2 id="_6">是否记住基于表格的布局?</h2>
+<p>这有一组<code>display</code>值允许你的元素表现类似于HTML表格。新加坡的开发人员<a href="https://twitter.com/p0larBoy">Colin Toh</a>写了一篇优秀的<a href="http://colintoh.com/blog/display-table-anti-hero">有关于<code>display</code>为表格属性的文章</a>，你应该认真看一下。</p>
+<p>虽然我们大多数的人都不在使用基于表格的布局，<code>display: table</code>在一定的情况下还是十分有用的。如: 如果你想要在更广泛的布局上使用表格，但是在在较小宽度上保持典型的块布局。这可以同时结合媒体查询与<code>display</code>(为了采取更好的措施，使用伪元素)进行实现，仅需要调整窗口的大小观看实现的效果。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>table</strong></th>
+<th style="text-align: center;">对应于HTML元素中的<code>&lt;table&gt;</code>。定义了一个块级框。</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong><code>table-header-group</code></strong></td>
+<td style="text-align: center;">对应于HTML元素中的<code>&lt;thead&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>table-row</code></strong></td>
+<td style="text-align: center;">对应于HTML元素中的<code>&lt;tr&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>table-cell</code></strong></td>
+<td style="text-align: center;">对应于HTML元素中的<code>&lt;td&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>table-row-group</code></strong></td>
+<td style="text-align: center;">对应于HTML元素中的<code>&lt;tbody&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>table-footer-group</code></strong></td>
+<td style="text-align: center;">对应于HTML元素中的<code>&lt;tfoot&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>table-column-group</code></strong></td>
+<td style="text-align: center;">对应于HTML元素中的<code>&lt;colgroup&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>table-column</code></strong></td>
+<td style="text-align: center;">对应于HTML元素中的<code>&lt;col&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>table-caption</code></strong></td>
+<td style="text-align: center;">对应于HTML元素中的<code>&lt;caption&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>inline-table</code></strong></td>
+<td style="text-align: center;">这是唯一没有直接映射到HTML元素的值。这个元素的表现形式将为表格HTML元素，但是是一个内联块而不是块级元素。</td>
+</tr>
+</tbody>
+</table>
+<pre><code>@media screen and (min-width: 720px) {
+  .table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+  }
+}
+
+.tr {
+  margin-bottom: 1.6rem;
+}
+
+@media screen and (min-width: 720px) {
+  .tr {
+    display: table-row;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .td {
+    display: table-cell;
+    border: #f0f0f0 1px solid;
+    padding: 0.4rem;
+  }
+  .td:first-child {
+    width: 11em;
+  }
+}
+
+.th {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  font-family: &quot;Palo Alto&quot;;
+}
+
+@media screen and (min-width: 720px) {
+  .th {
+    font-size: 1.294rem;
+    line-height: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .th {
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+    font-family: &quot;Roboto Slab&quot;, Rockwell, serif;
+    font-weight: 700;
+  }
+}
+
+@media screen and (min-width: 720px) and (min-width: 720px) {
+  .th {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+}
+
+.th::before {
+  content: 'display: ';
+}
+
+@media screen and (min-width: 720px) {
+  .th::before {
+    content: '';
+  }
+}
+
+.th::after {
+  content: ';';
+}
+
+@media screen and (min-width: 720px) {
+  .th::after {
+    content: '';
+  }
+}
+</code></pre>
+<h2 id="_7">块的新属性</h2>
+<p><a href="https://www.chenhuijing.com/blog/how-well-do-you-know-display/">Tab Atkins Jr.</a>是Flexbox以及网格规范的主要作者，关于新布局规范的显示模式提出了最突出的一点。</p>
+<blockquote>
+<p>Flexbox是一维布局 -- 用于任何需要在一条直线上显示的布局(或者是中断线，如果他们迂回在一起则会表现为单一的直线)。 网格是二维布局，它可以用于低功能的flexbox的替代品(我们已经测试过单一的行/列的形式十分近似于flexbox)，但是不可以用于完全替代。 - Tab Atkins Jr. <a href="https://lists.w3.org/Archives/Public/www-style/2013May/0114.html">to www-style</a></p>
+</blockquote>
+<p>需要时刻牢记于心，在工作中使用这些新CSS布局，并在使用过程中对其充满了困惑。</p>
+<h3 id="display-flex">display: flex;</h3>
+<p>引入flexbox布局模块或CSS弹性框，标志着我们第一次有了专门为浏览器内容进行布局的规范。自从HTML被引入之后，网页内容布局已经演变了很多。当设计者想要创建一些富有创意的设计时，使用的第一种方法就是嵌套的HTML表格，或者我们所说的基于表格的布局。</p>
+<p>当CSS开始升温的时候，我们转向了基于浮动的布局，通过将内容嵌套在不同的<code>div</code>中进行浮动实现想要的效果。基于浮动的布局仍然十分常见，但是随着时间的推移，所有当代浏览器均支持flexbox布局。我相信不久的将来基于flexbox与网格的布局将会成为布局的普遍方式。</p>
+<p>这里我要引用Scott Vandehey的文章 - <a href="http://spaceninja.com/2015/08/24/what-is-flexbox/">什么是Flexbox？</a>。这是其向Tab Atkins Jr.探索Flexbox历史时所书写的一篇文章。最早的草案规范日期为<a href="https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">2009年7月23日</a>，但是讨论始于几年之前。</p>
+<p>然而并没有什么正式的结构，各浏览器供应商也已经实现了flexbox，但是并没有真正的遵循规范。这也是为什么felxbox语法变得一团糟的原因(向后兼容一些老的浏览器时也是如此)。</p>
+<p>flexbox模型是十分强大的，它可以实现很多功能，如果想要彻底搞明白flexbox的工作原理以及如何使用它，你需要多花点心思。flexbox以及网格布局需要长篇的文章进行深度覆盖，这里我列举了一些有关于flexbox的相关文章:</p>
+<ul>
+<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox 指南</a> -- Chris Coyier</li>
+<li><a href="https://philipwalton.github.io/solved-by-flexbox/">Flexbox所处理的</a> -- <a href="http://philipwalton.com/">Philip Walton</a></li>
+<li><a href="http://flexboxfroggy.com/">Flexbox Froggy</a> -- <a href="http://thomaspark.co/">Thomas Spark</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">使用CSS弹性框</a> -- Mozilla Developer Network</li>
+<li><a href="https://drafts.csswg.org/css-flexbox/">CSS Flexbox 规范 (草案)</a></li>
+</ul>
+<p><img alt="Felxbox 关系图" src="https://www.w3cplus.com/sites/default/files/blogs/2016/1606/flex-diagram.svg" /></p>
+<blockquote>
+<p>有关于Flexbox更多的教程，可以<a href="http://www.w3cplus.com/blog/tags/157.html">猛击这里阅读</a>。</p>
+</blockquote>
+<p>在一个元素上声明<code>dispaly: flex</code>，它就会变为flex容器，同时它的子元素就会变为flex项。这不会被继承即其子元素的下一代不会具有felx属性。flex容器和flex项都有各自的flex属性。</p>
+<p>再次强调，我希望你认真查阅上述有关于flexbox的资源列表，这将会有助于你更好地理解并使用flexbox。</p>
+<h4 id="flex">flex容器属性</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong><code>flex-direction</code></strong></th>
+<th style="text-align: center;">定义了主轴以及flex项的方向。<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction"><code>flex-direction</code>值的完整列表</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong><code>flex-wrap</code></strong></td>
+<td style="text-align: center;">指定flex项的调整，单行显示亦或允许多行显示。<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap"><code>flex-wrap</code>值的完整列表</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>flex-flow</code></strong></td>
+<td style="text-align: center;"><code>flex-direction</code>以及<code>flex-wrap</code>属性的补充。<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow"><code>flex-flow</code>值的完整列表</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>justify-content</code></strong></td>
+<td style="text-align: center;">定义flex项沿主轴分布时的间隙大小。<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content"><code>justify-content</code>值的完整列表</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>align-items</code></strong></td>
+<td style="text-align: center;">定义flex项在垂直主轴分布时的间隙大小。<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-content"><code>align-items</code>值的完整列表</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>align-content</code></strong></td>
+<td style="text-align: center;">指定行flex项在flex容器内如何分布，如果flex项为单独一行则不适用。<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-content"><code>align-content</code>值的完整列表</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="flex_1">flex项的相关属性</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong><code>order</code></strong></th>
+<th style="text-align: center;">指定flex项的布局顺序，按顺序值进行升序，若值相同根据源顺序进行布局。<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/order"><code>order</code>值的完整列表</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong><code>flex-grow</code></strong></td>
+<td style="text-align: center;">若有足够空间，定义元素是否可扩展，根据此值确定该元素扩展的空间比例(这有些小复杂)。<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow"><code>flex-grow</code>值的完整列表</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>flex-shink</code></strong></td>
+<td style="text-align: center;">若没有足够空间，定义元素是否可缩小，该值决定了元素可缩小的比例。<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink"><code>flex-shink</code>值的完整列表</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>flex-basis</code></strong></td>
+<td style="text-align: center;">制定了flex项在主轴方向上的输出大小。<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis"><code>flex-basis</code>值的完整列表</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>flex</code></strong></td>
+<td style="text-align: center;"><code>flex-grow</code>,<code>flex-shrink</code>,<code>flex-basis</code>属性的补充。<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex"><code>felx</code>值的完整列表</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>align-self</code></strong></td>
+<td style="text-align: center;">指定单个flex项的被重写的对齐方式。<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-self"><code>align-self</code>值的完整列表</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="display-grid">display: grid;</h3>
+<p>任何有关网格布局的，我都会去参考<a href="https://rachelandrew.co.uk/">Rachel Andrew</a> - 我认为她是CSS网格大师。她一直在带头努力提高人们对这个新的<code>display</code>属性的认识，通过一些演讲，文章以及教程。</p>
+<p>CSS网格使我们可以创建网格系统并且可以纯粹使用CSS控制网格项的定位，实现了与HTML的分离。当结合使用媒体查询时，CSS网格变成了一个有用的工具用于设计并创建一些灵活的布局。</p>
+<p>当前的<a href="https://drafts.csswg.org/css-grid/">CSS网格布局模块1</a>草案始于<a href="http://www.w3.org/TR/2011/WD-css3-grid-layout-20110407/">2011年</a>。像flexbox，本规范的成熟需要一个用于布局的适当的方法，奠定网页内容而不损害HTML语义。</p>
+<p>注意，虽然Microsoft Edge以及Internet Explorer可以使用<code>-ms-</code>实现旧版本浏览器的支持，CSS网格还没有在所有的浏览器中实现。这并不足以为奇，因为最原始的网格规范的编辑大部分来自于Microsoft。</p>
+<p>在flexbox规范凌乱的实施之后，正在发展的CSS网格采取了不同的做法。浏览器供应商使用不同的供应商前缀将正在实验的功能添加到浏览器中以便于开发人员的测试。这十分有助于规范的制定，并且在正式规范形成之前找到所有的缺陷。</p>
+<p>为了这样子实施，CSS网格发展了一个标记。它必须由开发人员手动启动。在Chrome和Opera中，分别导航到<code>chrome://flags</code>和<code>opera://flags</code>，并启动“网页实验平台功能”。对于 Firefox，导航到<code>about:config</code>并将<code>layout.css.grid.enabled</code>以及<code>layout.css.grid-template-subgrid-value.enabled</code>设置为true。</p>
+<h4 id="css_1">CSS网格的关键术语</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Grid Container</strong></th>
+<th style="text-align: center;">相似于flex容器的概念，元素声明为<code>display: grid;</code>。其直接后代(子元素)为网格项</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Grid Item</strong></td>
+<td style="text-align: center;">如果父元素为<code>display: grid;</code>, 那么这个元素就被视为网格项。网格项的子元素不被视为网格项。</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Grid Track</strong></td>
+<td style="text-align: center;">可以为网格的行或列。</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Grid Line</strong></td>
+<td style="text-align: center;">定义网格结构的线，被视为网格轨道之间的界限。</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Grid Cell</strong></td>
+<td style="text-align: center;">单个的网格单元，由相邻的水平和垂直的网格线所包围的空间。</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Grid Area</strong></td>
+<td style="text-align: center;">最酷的一部分。由多个网格单元格组成的区域。</td>
+</tr>
+</tbody>
+</table>
+<p>试图用简短的语言概述网格真的是一件十分具有挑战的事情。请参考一下资源，并尝试使用CSS网格进行实现。事实上，你可以现在进行<a href="http://gridbyexample.com/">网格相关实验</a>并且查看Codepen有关于网格不同用例的相关链接的演示。</p>
+<ul>
+<li><a href="http://blogs.igalia.com/mrego/2016/02/01/deep-dive-into-grid-layout-placement/">深入探索网格布局的位置</a> -- <a href="http://blogs.igalia.com/mrego/">Manuel Rego Casasnovas</a></li>
+<li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">Grid指南</a> -- <a href="http://chris.house/">Chris House</a></li>
+<li><a href="http://gridbyexample.com/">网格示例</a> -- <a href="https://rachelandrew.co.uk/">Rachel Andrew</a></li>
+</ul>
+<blockquote>
+<p>有关于Grid更多的教程，可以<a href="http://www.w3cplus.com/blog/tags/355.html">猛击这里阅读</a>。</p>
+</blockquote>
+<h2 id="_8">相对模糊并处于实验性的</h2>
+<h3 id="display-run-in">display: run-in;</h3>
+<p>这是十分有趣的一个，我之前都不知道它的存在知道我阅读了<a href="http://www.w3.org/TR/css-display-3/">CSS display 规范</a>。并且我也阅读了2010文章，<a href="http://chriscoyier.net/">Chris Coyier</a>书写的<a href="https://css-tricks.com/run-in/">CSS Run-in Display值</a>。不幸的是，浏览器厂商不喜欢这种规范已被移除，这样你就可以认为这是一个备用的现实规范。</p>
+<p>事实上，你将一个元素的<code>display</code>属性设置为<code>run-in</code>,就会渲染一个<code>run-in</code>框。用例就是使用本地方法创建一个run-in标题，这在平面设计中的说法是和正文位于同一行的标题。</p>
+<p>Sameen Shaw.Also known asIndigo Five Alpha,Dr. Sameen Shawor simplyShaw, is a physician and aformer operative for the U.S. ArmyIntelligence SupportActivity. Prior to joining the team Shaw was part of anoperation known as Catalyst Indigo, responsible for actingon relevant list intelligence delivered bythe Machine, whichshe knew only as "Research".</p>
+<p>你可以使用浮动实现相似效果，但是被视为一个hack方法。将标题的基线定位到正文基线上是具有挑战性的，你需要调整标题字体大小以及正文的行高使之相匹配。并有可能出现标题多余一行的情况。</p>
+<p>如果你将标题的设置为<code>display: inline</code>,除非你将标题嵌套在段落元素内(<code>p</code>为块元素)，否则它不会工作的。但是这又会出现语义上的错误。就我个人而言我希望看到其可以实现，但是我想那时浏览器厂商会有更多的担忧。</p>
+<h3 id="display-ruby">display: ruby;</h3>
+<p>介绍这一特定属性之前需要首先介绍一下<code>&lt;ruby&gt;</code>元素。简单地说，有一种元素用于在文本基线旁的注释，通常是帮助发音。这对于东南亚语言是十分常见的，如汉语或者日语。我所研究的大多数文章是2010年左右，所以我使用<code>&lt;ruby&gt;</code>书写了<a href="https://www.chenhuijing.com/blog/html-ruby/">2016的状态</a>。</p>
+<p><code>display:ruby;</code>和<code>display:table;</code>有很大的相似之处，但是规范不鼓励将ruby值应用到非ruby元素上，如使用<code>span</code>显示ruby文本。相反，我们应该使用HTML ruby元素，所以屏幕阅读器和非CSS渲染器可以解析ruby结构的内容。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>ruby</strong></th>
+<th style="text-align: center;">对应于HTML元素中的<code>&lt;ruby&gt;</code>，它将生成一个ruby容器框，产生一个ruby格式上下文用于标记为内部ruby框的子元素。</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>ruby-base</strong></td>
+<td style="text-align: center;">对应于HTML元素中的<code>&lt;rb&gt;</code>,ruby格式上下文中的一个内部ruby框。</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>ruby-text</strong></td>
+<td style="text-align: center;">对应于HTML元素的<code>&lt;rt&gt;</code>,ruby格式上下文中的内部ruby框。</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>ruby-base-container</strong></td>
+<td style="text-align: center;">对应于HTML元素的<code>&lt;rbc&gt;</code>,ruby格式上下文中的一个内部ruby框。</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>ruby-text-container</strong></td>
+<td style="text-align: center;">对应于HTML元素中的<code>&lt;rtc&gt;</code>,ruby格式上下文中的一个内部ruby框。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="display-contents">display: contents;</h3>
+<blockquote>
+<p>元素本身不会产生任何框，但是其子元素和伪元素可以正常生成框。为了框的生成和布局，需要将元素处理为好像和子元素或者伪元素一样处于文档树中。 - CSS Display Module Level 3</p>
+</blockquote>
+<p>规范想表达的是，当你将一个元素设置为<code>display:contents</code>,它就会从DOM中消失，但是其子元素会保留并且占据空间。不幸的是，本规范现在仅仅得到了火狐的支持。在火狐浏览器下，调整全尺寸的<a href="http://codepen.io/huijing/full/wWWzmd/">Codepen</a>来感受其效果。</p>
+<iframe id="cp_embed_wWWzmd" src="https://codepen.io/huijing/embed/wWWzmd?height=319&amp;theme-id=9162&amp;slug-hash=wWWzmd&amp;default-tab=result&amp;user=huijing&amp;embed-version=2" scrolling="no" frameborder="0" height="319" allowtransparency="true" allowfullscreen="true" name="CodePen Embed" title="CodePen Embed" class="cp_embed_iframe " style="box-sizing: inherit; width: 2903.17px; overflow: hidden;"></iframe>
+
+<p>我已经尝试概述迄今为止谈及该属性的两篇文章，<a href="https://samrueby.com/">Sam Rueby</a>书写的<a href="https://samrueby.com/2015/02/09/firefox-is-releasing-support-for-css-display-contents/">火狐所支持的CSS属性 - dispaly:contents</a>以及<a href="https://rachelandrew.co.uk/">Rachel Andrew</a>书写的<a href="https://rachelandrew.co.uk/archives/2016/01/29/vanishing-boxes-with-display-contents/">display:contents与消失的的框</a>。Rachel Andrew还介绍了使用<code>flex-items</code>书写的有关于这个属性的一个神奇的用例。</p>
+<h2 id="_9">总结</h2>
+<p>这篇文章的长度超出了我的预期，如果你阅读到此，我要表示真挚的感谢。我很高兴不久的将来我们就可以在不使用hack的情况下使用这些布局。同时，希望这篇文章可以帮助你了解到更多有关于CSS布局相关的知识</p>
+<p>著作权归作者所有。
+商业转载请联系作者获得授权,非商业转载请注明出处。
+原文: https://www.w3cplus.com/css/how-well-do-you-know-display.html © <a href="https://www.w3cplus.com/">w3cplus.com</a></p>
+<h3 id="_10">动画</h3>
+<pre><code>animation-name: 时间曲线
+animation-duration 动画的时长
+animation-timing-function 动画的时间曲线
+animation-delay 动画开始前的延迟
+animation-iteration-count 动画的播放次数
+animation-direction 动画方向
+
+@keyframes mykf {
+ 0%{top:0,transition:top ease}
+ 50%{top:30px;transition:top ease-in}
+ 75%{top:1px; transittion:top ese-out}
+ 100%{}
+}
+
+transition-property 要变换的属性
+transition-duration 变换的时长
+transition-timing-funciton 时间曲线
+transittion-delay 延迟
+</code></pre>
+<p>修改内部样式</p>
+<p>.changeNav &gt;&gt;&gt; <strong>.vp-radio-button–small .vp-radio-button__inner</strong> {
+width: 100%;
+}</p>
+<h6 id="css_2">常用css类</h6>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../bun/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Bun">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Bun
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../dom%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/" class="md-footer__link md-footer__link--next" aria-label="Next: Dom常用操作">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Dom常用操作
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2023 Martin Donath
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+  
+      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  <script src="../../assets/javascripts/custom.js"></script>
+
+  </body>
+</html>

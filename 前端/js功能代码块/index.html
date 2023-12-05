@@ -1,0 +1,2758 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="一辈人一代神">
+      
+      
+        <meta name="author" content="haiwen">
+      
+      
+        <link rel="canonical" href="https://apple.hai.com/%E5%89%8D%E7%AB%AF/js%E5%8A%9F%E8%83%BD%E4%BB%A3%E7%A0%81%E5%9D%97/">
+      
+      
+        <link rel="prev" href="../json-server/">
+      
+      
+        <link rel="next" href="../koa2/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Js功能代码块 - 海文知识积累</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link rel="stylesheet" href="../../assets/stylesheets/custom.css">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#0" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="海文知识积累" class="md-header__button md-logo" aria-label="海文知识积累" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            海文知识积累
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Js功能代码块
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换黑夜"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换黑夜" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换白日"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换白日" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mydocs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Material for MkDocs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../test/" class="md-tabs__link">
+        
+  
+    
+  
+  Test
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../test/test2/" class="md-tabs__link">
+          
+  
+    
+  
+  Test
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../bun/" class="md-tabs__link">
+          
+  
+    
+  
+  前端
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="海文知识积累" class="md-nav__button md-logo" aria-label="海文知识积累" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    海文知识积累
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mydocs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material for MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Test
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Test
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/test2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    前端
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            前端
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bun/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bun
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Css
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dom%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dom常用操作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../element-ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Element ui
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Es
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flex%E5%B8%83%E5%B1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flex 布局教程：实例篇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Html
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Js
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../json-server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Json server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Js功能代码块
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Js功能代码块
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    <span class="md-ellipsis">
+      时间补0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      金额补零
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      移动端适配
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iphonex" class="md-nav__link">
+    <span class="md-ellipsis">
+      判断是否是iphonex
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#md5" class="md-nav__link">
+    <span class="md-ellipsis">
+      md5加密
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      选择单选
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      如果首字母是数子取全部，或者中文第一个字符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      下载文件流
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      导出pdf
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      改变游览器动态窗口
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数防抖
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数节流
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      下载excel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      判断数字
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../koa2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Koa2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mysqid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一：简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../node/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Node
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nvm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nvm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vue3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vue%E5%8A%9F%E8%83%BD%E7%BB%84%E4%BB%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue功能组件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wepy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wepy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一些问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%B8%80%E4%BB%BD%20ElementUI%20%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一份 ElementUI 问题清单
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%8F%90%E9%AB%98%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    提高开发效率
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%BA%90%E7%A0%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    源码
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    移动端适配
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_25" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_25" id="__nav_4_25_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    20220310
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_25_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_25">
+            <span class="md-nav__icon md-icon"></span>
+            20220310
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20220310/%E7%AC%AC%E4%B8%80%E8%8A%82/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_26" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_26" id="__nav_4_26_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    AngularJS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_26_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_26">
+            <span class="md-nav__icon md-icon"></span>
+            AngularJS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AngularJS/Angular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Angular
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_27" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_27" id="__nav_4_27_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    TYPESCRIPT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_27_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_27">
+            <span class="md-nav__icon md-icon"></span>
+            TYPESCRIPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TYPESCRIPT/TS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_28" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_28" id="__nav_4_28_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Es11
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_28_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_28">
+            <span class="md-nav__icon md-icon"></span>
+            Es11
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../es11/js11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Js11
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_29" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_29" id="__nav_4_29_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Js高级
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_29_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_29">
+            <span class="md-nav__icon md-icon"></span>
+            Js高级
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js%E9%AB%98%E7%BA%A7/js%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Js基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js%E9%AB%98%E7%BA%A7/js%E9%AB%98%E7%BA%A7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js%E9%AB%98%E7%BA%A7/%E5%89%8D%E7%AB%AF%E8%BF%9B%E9%98%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    前端进阶
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_30" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_30" id="__nav_4_30_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    学习线路
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_30_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_30">
+            <span class="md-nav__icon md-icon"></span>
+            学习线路
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AD%A6%E4%B9%A0%E7%BA%BF%E8%B7%AF/%E5%AD%A6%E4%B9%A0%E7%BA%BF%E8%B7%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    学习线路
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_31" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_31" id="__nav_4_31_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    框架
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_31_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_31">
+            <span class="md-nav__icon md-icon"></span>
+            框架
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%A1%86%E6%9E%B6/vite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_32" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_32" id="__nav_4_32_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    源码
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_32_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_32">
+            <span class="md-nav__icon md-icon"></span>
+            源码
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%BA%90%E7%A0%81/element%E6%BA%90%E7%A0%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Element UI 源码中学到的技巧
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%BA%90%E7%A0%81/%E4%B8%80%E6%A0%8Fexcel%E5%92%8Cword/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一栏excel和word
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_33" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_33" id="__nav_4_33_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    移动端
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_33_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_33">
+            <span class="md-nav__icon md-icon"></span>
+            移动端
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E9%97%AE%E9%A2%98%E6%94%B6%E9%9B%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    问题收集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_34" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_34" id="__nav_4_34_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    脚手架
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_34_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_34">
+            <span class="md-nav__icon md-icon"></span>
+            脚手架
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%84%9A%E6%89%8B%E6%9E%B6/lerna/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lerna
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%84%9A%E6%89%8B%E6%9E%B6/%E8%84%9A%E6%89%8B%E6%9E%B6%E6%9C%AC%E5%9C%B0link%E6%A0%87%E5%87%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    脚手架本地link标准
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    <span class="md-ellipsis">
+      时间补0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      金额补零
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      移动端适配
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iphonex" class="md-nav__link">
+    <span class="md-ellipsis">
+      判断是否是iphonex
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#md5" class="md-nav__link">
+    <span class="md-ellipsis">
+      md5加密
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      选择单选
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      如果首字母是数子取全部，或者中文第一个字符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      下载文件流
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      导出pdf
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      改变游览器动态窗口
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数防抖
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数节流
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      下载excel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      判断数字
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Js功能代码块</h1>
+
+<h6 id="0">时间补0</h6>
+<pre><code class="language-js">function time(value){
+     if (!value) return ''
+  if (value.indexOf(':') === -1) return value
+  let result = ''
+  const arr = value.split(':')
+  // hour
+  if (parseInt(arr[0]) &lt; 10) {
+    result = '0' + arr[0]
+  } else {
+    result = arr[0]
+  }
+  if (parseInt(arr[1]) &lt; 10) {
+    result = result + ':0' + arr[1]
+  } else {
+    result = result + ':' + arr[1]
+  }
+  if (parseInt(arr[2]) &lt; 10) {
+    result = result + ':0' + arr[2]
+  } else {
+    result = result + ':' + arr[2]
+  }
+  return result
+}
+
+</code></pre>
+<h6 id="_1">金额补零</h6>
+<pre><code class="language-js">/**
+ * 金额数据处理
+ */
+function test (value) {
+  if (!value) return '0.00'
+
+  const result = parseFloat(value)
+
+  if (Number.isInteger(result)) {
+    return result
+  }
+
+  return result.toFixed(2)
+}
+</code></pre>
+<h6 id="_2">移动端适配</h6>
+<pre><code class="language-js">// 定义最大的fontSize
+const MAX_FONT_SIZE = 42
+// 监听html文档被解析完成的事件
+document.addEventListener('DOMContentLoaded', () =&gt; {
+  // 获取HTML标签
+  const html = document.querySelector('html')
+  // 获取根元素 fontssize 标准，屏幕宽度/10
+  let fontSize = window.innerWidth / 10
+  // 获取到的fontsize 不允许超过我们定义的最大值
+  fontSize = fontSize &gt; MAX_FONT_SIZE ? MAX_FONT_SIZE : fontSize
+  // 定义根源html fontsize 的大小（rem）
+  html.style.fontSize = fontSize + 'px'
+})
+</code></pre>
+<h6 id="iphonex">判断是否是iphonex</h6>
+<pre><code class="language-js">/**
+ *判断当前设备是否是iphonex
+ *@return boolean true 表示当前设备为iphonex。false就表示不为ipnonex
+ */
+const isIphonex = () =&gt; {
+  if (typeof window !== 'undefined' &amp;&amp; window) {
+    return /iphone/gi.test(window.navigator.userAgent) &amp;&amp; window.screen.height &gt;= 812
+  }
+  return false
+}
+window.isIphoneX = isIphonex()
+</code></pre>
+<h6 id="md5">md5加密</h6>
+<pre><code class="language-js">/* eslint-disable */
+!(function(a) {
+    'use strict';
+    function b(a, b) {
+      var c = (65535 &amp; a) + (65535 &amp; b),
+        d = (a &gt;&gt; 16) + (b &gt;&gt; 16) + (c &gt;&gt; 16);
+      return (d &lt;&lt; 16) | (65535 &amp; c);
+    }
+    function c(a, b) {
+      return (a &lt;&lt; b) | (a &gt;&gt;&gt; (32 - b));
+    }
+    function d(a, d, e, f, g, h) {
+      return b(c(b(b(d, a), b(f, h)), g), e);
+    }
+    function e(a, b, c, e, f, g, h) {
+      return d((b &amp; c) | (~b &amp; e), a, b, f, g, h);
+    }
+    function f(a, b, c, e, f, g, h) {
+      return d((b &amp; e) | (c &amp; ~e), a, b, f, g, h);
+    }
+    function g(a, b, c, e, f, g, h) {
+      return d(b ^ c ^ e, a, b, f, g, h);
+    }
+    function h(a, b, c, e, f, g, h) {
+      return d(c ^ (b | ~e), a, b, f, g, h);
+    }
+    function i(a, c) {
+      (a[c &gt;&gt; 5] |= 128 &lt;&lt; c % 32), (a[(((c + 64) &gt;&gt;&gt; 9) &lt;&lt; 4) + 14] = c);
+      var d,
+        i,
+        j,
+        k,
+        l,
+        m = 1732584193,
+        n = -271733879,
+        o = -1732584194,
+        p = 271733878;
+      for (d = 0; d &lt; a.length; d += 16)
+        (i = m),
+          (j = n),
+          (k = o),
+          (l = p),
+          (m = e(m, n, o, p, a[d], 7, -680876936)),
+          (p = e(p, m, n, o, a[d + 1], 12, -389564586)),
+          (o = e(o, p, m, n, a[d + 2], 17, 606105819)),
+          (n = e(n, o, p, m, a[d + 3], 22, -1044525330)),
+          (m = e(m, n, o, p, a[d + 4], 7, -176418897)),
+          (p = e(p, m, n, o, a[d + 5], 12, 1200080426)),
+          (o = e(o, p, m, n, a[d + 6], 17, -1473231341)),
+          (n = e(n, o, p, m, a[d + 7], 22, -45705983)),
+          (m = e(m, n, o, p, a[d + 8], 7, 1770035416)),
+          (p = e(p, m, n, o, a[d + 9], 12, -1958414417)),
+          (o = e(o, p, m, n, a[d + 10], 17, -42063)),
+          (n = e(n, o, p, m, a[d + 11], 22, -1990404162)),
+          (m = e(m, n, o, p, a[d + 12], 7, 1804603682)),
+          (p = e(p, m, n, o, a[d + 13], 12, -40341101)),
+          (o = e(o, p, m, n, a[d + 14], 17, -1502002290)),
+          (n = e(n, o, p, m, a[d + 15], 22, 1236535329)),
+          (m = f(m, n, o, p, a[d + 1], 5, -165796510)),
+          (p = f(p, m, n, o, a[d + 6], 9, -1069501632)),
+          (o = f(o, p, m, n, a[d + 11], 14, 643717713)),
+          (n = f(n, o, p, m, a[d], 20, -373897302)),
+          (m = f(m, n, o, p, a[d + 5], 5, -701558691)),
+          (p = f(p, m, n, o, a[d + 10], 9, 38016083)),
+          (o = f(o, p, m, n, a[d + 15], 14, -660478335)),
+          (n = f(n, o, p, m, a[d + 4], 20, -405537848)),
+          (m = f(m, n, o, p, a[d + 9], 5, 568446438)),
+          (p = f(p, m, n, o, a[d + 14], 9, -1019803690)),
+          (o = f(o, p, m, n, a[d + 3], 14, -187363961)),
+          (n = f(n, o, p, m, a[d + 8], 20, 1163531501)),
+          (m = f(m, n, o, p, a[d + 13], 5, -1444681467)),
+          (p = f(p, m, n, o, a[d + 2], 9, -51403784)),
+          (o = f(o, p, m, n, a[d + 7], 14, 1735328473)),
+          (n = f(n, o, p, m, a[d + 12], 20, -1926607734)),
+          (m = g(m, n, o, p, a[d + 5], 4, -378558)),
+          (p = g(p, m, n, o, a[d + 8], 11, -2022574463)),
+          (o = g(o, p, m, n, a[d + 11], 16, 1839030562)),
+          (n = g(n, o, p, m, a[d + 14], 23, -35309556)),
+          (m = g(m, n, o, p, a[d + 1], 4, -1530992060)),
+          (p = g(p, m, n, o, a[d + 4], 11, 1272893353)),
+          (o = g(o, p, m, n, a[d + 7], 16, -155497632)),
+          (n = g(n, o, p, m, a[d + 10], 23, -1094730640)),
+          (m = g(m, n, o, p, a[d + 13], 4, 681279174)),
+          (p = g(p, m, n, o, a[d], 11, -358537222)),
+          (o = g(o, p, m, n, a[d + 3], 16, -722521979)),
+          (n = g(n, o, p, m, a[d + 6], 23, 76029189)),
+          (m = g(m, n, o, p, a[d + 9], 4, -640364487)),
+          (p = g(p, m, n, o, a[d + 12], 11, -421815835)),
+          (o = g(o, p, m, n, a[d + 15], 16, 530742520)),
+          (n = g(n, o, p, m, a[d + 2], 23, -995338651)),
+          (m = h(m, n, o, p, a[d], 6, -198630844)),
+          (p = h(p, m, n, o, a[d + 7], 10, 1126891415)),
+          (o = h(o, p, m, n, a[d + 14], 15, -1416354905)),
+          (n = h(n, o, p, m, a[d + 5], 21, -57434055)),
+          (m = h(m, n, o, p, a[d + 12], 6, 1700485571)),
+          (p = h(p, m, n, o, a[d + 3], 10, -1894986606)),
+          (o = h(o, p, m, n, a[d + 10], 15, -1051523)),
+          (n = h(n, o, p, m, a[d + 1], 21, -2054922799)),
+          (m = h(m, n, o, p, a[d + 8], 6, 1873313359)),
+          (p = h(p, m, n, o, a[d + 15], 10, -30611744)),
+          (o = h(o, p, m, n, a[d + 6], 15, -1560198380)),
+          (n = h(n, o, p, m, a[d + 13], 21, 1309151649)),
+          (m = h(m, n, o, p, a[d + 4], 6, -145523070)),
+          (p = h(p, m, n, o, a[d + 11], 10, -1120210379)),
+          (o = h(o, p, m, n, a[d + 2], 15, 718787259)),
+          (n = h(n, o, p, m, a[d + 9], 21, -343485551)),
+          (m = b(m, i)),
+          (n = b(n, j)),
+          (o = b(o, k)),
+          (p = b(p, l));
+      return [m, n, o, p];
+    }
+    function j(a) {
+      var b,
+        c = '';
+      for (b = 0; b &lt; 32 * a.length; b += 8) c += String.fromCharCode((a[b &gt;&gt; 5] &gt;&gt;&gt; b % 32) &amp; 255);
+      return c;
+    }
+    function k(a) {
+      var b,
+        c = [];
+      for (c[(a.length &gt;&gt; 2) - 1] = void 0, b = 0; b &lt; c.length; b += 1) c[b] = 0;
+      for (b = 0; b &lt; 8 * a.length; b += 8) c[b &gt;&gt; 5] |= (255 &amp; a.charCodeAt(b / 8)) &lt;&lt; b % 32;
+      return c;
+    }
+    function l(a) {
+      return j(i(k(a), 8 * a.length));
+    }
+    function m(a, b) {
+      var c,
+        d,
+        e = k(a),
+        f = [],
+        g = [];
+      for (f[15] = g[15] = void 0, e.length &gt; 16 &amp;&amp; (e = i(e, 8 * a.length)), c = 0; 16 &gt; c; c += 1) (f[c] = 909522486 ^ e[c]), (g[c] = 1549556828 ^ e[c]);
+      return (d = i(f.concat(k(b)), 512 + 8 * b.length)), j(i(g.concat(d), 640));
+    }
+    function n(a) {
+      var b,
+        c,
+        d = '0123456789abcdef',
+        e = '';
+      for (c = 0; c &lt; a.length; c += 1) (b = a.charCodeAt(c)), (e += d.charAt((b &gt;&gt;&gt; 4) &amp; 15) + d.charAt(15 &amp; b));
+      return e;
+    }
+    function o(a) {
+      return unescape(encodeURIComponent(a));
+    }
+    function p(a) {
+      return l(o(a));
+    }
+    function q(a) {
+      return n(p(a));
+    }
+    function r(a, b) {
+      return m(o(a), o(b));
+    }
+    function s(a, b) {
+      return n(r(a, b));
+    }
+    function t(a, b, c) {
+      return b ? (c ? r(b, a) : s(b, a)) : c ? p(a) : q(a);
+    }
+    'function' == typeof define &amp;&amp; define.amd
+      ? define(function() {
+          return t;
+        })
+      : (a.md5 = t);
+  })(this);
+</code></pre>
+<pre><code class="language-js">  selectRow(selection, row) {
+      if(selection.length &gt; 1){
+        let del_row = selection.shift()
+        this.$refs.table.toggleRowSelection(del_row, false)
+        this.$message.info('只能选择一项')
+      } else if(selection.length === 1) {
+        this.multipleSelection = selection
+      } else if(selection.length === 0) {
+        this.$message.info('请选择一项')
+      }
+    },
+</code></pre>
+<h6 id="_3">选择单选</h6>
+<h6 id="_4">如果首字母是数子取全部，或者中文第一个字符</h6>
+<pre><code class="language-js"> first: (val) =&gt;
+      (val = String(parseInt(val)) === 'NaN' ? val.substring(0, 1) : parseInt(val))
+  },
+</code></pre>
+<h6 id="_5">下载文件流</h6>
+<pre><code class="language-js">  exportPDF(this.form.id).then(res =&gt; {
+          if (res.status === 200) {
+            let headersName = ''
+            if (res.headers['content-disposition']) {
+              headersName = res.headers['content-disposition'].split('=')[1]
+            } else {
+              headersName = '工程变更申请'
+            }
+            let fileName = decodeURI(headersName)
+            let blob = new Blob([res.data], { type: 'application/pdf' })
+            if (window.navigator &amp;&amp; window.navigator.msSaveOrOpenBlob) {
+              window.navigator.msSaveBlob(blob, fileName)
+            } else {
+              let objectUrl = URL.createObjectURL(blob)
+              const link = document.createElement('a')
+              link.href = objectUrl
+              link.download = fileName
+              link.click()
+              URL.revokeObjectURL(objectUrl)
+            }
+          }
+        })
+</code></pre>
+<h6 id="pdf">导出pdf</h6>
+<pre><code class="language-js">
+    /**
+         * 导出PDF
+         */
+        $scope.exportPDF = function() {
+            var url = &quot;equipment/exportPDF.do&quot;;
+            var graphType = 1; //非浮式
+            if($scope.type=='浮式'){
+                graphType = 2; //浮式
+            }   
+            var data = {platformId:$scope.platformid,graphType:graphType};
+            var type = 'application/octet-stream';
+            commonService.post(url,data,{responseType:&quot;arraybuffer&quot;}).success(function (data, status, headers, config) {
+               var fileName = &quot;井控装置单(&quot;+$scope.platformname+&quot;).pdf&quot;; 
+               saveAs(new Blob([data], { type: type }), fileName);  // 中文乱码
+           });
+        };
+</code></pre>
+<pre><code class="language-js">风险管控台账
+ // const reader = res.body.getReader()
+  // console.log(reader)
+  const contentDisposition = res.headers.get(&quot;content-disposition&quot;)
+  const contentType = res.headers.get(&quot;content-type&quot;)
+  const filename = contentDisposition.match(/filename=&quot;(.+)&quot;/)[1]
+  const file = new Blob([res.body], { type: contentType }) // this is not working
+  const objectUrl = URL.createObjectURL(file)
+  .then((response) =&gt; response.blob())
+.then((blob) =&gt; URL.createObjectURL(blob))
+.then((href) =&gt; {
+  const a = document.createElement(&quot;a&quot;)
+  document.body.appendChild(a)
+  a.style = &quot;display: none&quot;
+  a.href = href
+  a.download = fileName
+  a.click()
+})
+</code></pre>
+<pre><code>window.open(&quot;http://www.w3school.com.cn&quot;,&quot;_blank&quot;,&quot;toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=400, height=400&quot;)
+
+</code></pre>
+<h6 id="_6">改变游览器动态窗口</h6>
+<pre><code>  let  addHeight = () =&gt;{
+      this.height = window.innerHeight
+    }
+     window.addEventListener('resize',debuce(addHeight,1000))
+      function debuce(fn,time){
+        let timer = null
+        return function (){
+          if(timer!==null){
+            clearTimeout(timer)
+          }
+           timer = setTimeout(fn,time)
+        }
+</code></pre>
+<h6 id="_7">函数防抖</h6>
+<pre><code> function debuce(fn,time){
+        let timer = null
+        return function (){
+          if(timer!==null){
+            clearTimeout(timer)
+          }
+           timer = setTimeout(fn,time)
+        }
+</code></pre>
+<h6 id="_8">函数节流</h6>
+<pre><code>function throttle(cd,time=300){
+    var t = null;
+    return function(){
+        if(t) return;
+        t = setTimeout(() =&gt; {
+            cd.call(this);
+            t = null;
+        }, time);
+    }
+}
+</code></pre>
+<p>vue2.0过滤器</p>
+<pre><code>import filters from '@/utils/filter.js'
+Object.keys(filters).forEach(key=&gt;Vue.filter(key,filters[key]))
+</code></pre>
+<h6 id="excel">下载excel</h6>
+<pre><code class="language-js">export const csvDownload = &lt;T = any&gt;(
+  param: any
+) =&gt; new Promise&lt;{ param: ReponseDataStruct&lt;T&gt; }&gt;(() =&gt; {
+  const myDate = wijmo.Globalize.formatDate(new Date(), 'yyyyMMddHHmm');
+  const fileName = `AAR0020_${myDate}.csv`;
+
+  const workbook = new ExcelJS.Workbook();
+  workbook.addWorksheet(&quot;sheet1&quot;);
+  const worksheet = workbook.getWorksheet(&quot;sheet1&quot;);
+  worksheet.columns = [
+    { header: &quot;法人コード&quot;, key: &quot;hjnCd&quot; },
+    { header: &quot;店舗&quot;, key: &quot;tenCd&quot; },
+    { header: &quot;棚卸予定日付&quot;, key: &quot;tnoYotYmd&quot; },
+    { header: &quot;部門コード&quot;, key: &quot;bmnCd&quot; },
+    { header: &quot;棚卸区分&quot;, key: &quot;tnoKb&quot; },
+    { header: &quot;棚卸年月度&quot;, key: &quot;tnoMdo&quot; },
+    { header: &quot;棚卸基準日付&quot;, key: &quot;tnoKjuYmd&quot; },
+    { header: &quot;随時棚卸確定区分&quot;, key: &quot;ztnKteKb&quot; },
+    { header: &quot;一斉棚卸仮確定区分&quot;, key: &quot;itnKarKteKb&quot; },
+    { header: &quot;一斉棚卸本確定区分&quot;, key: &quot;itnHonKteKb&quot; },
+    { header: &quot;部門名&quot;, key: &quot;bmn10ktKj&quot; },
+  ];
+
+  worksheet.addRows(param);
+
+  const uint8Array = workbook.csv.writeBuffer(); // csvの場合
+  const blob = new Blob([uint8Array], { type: 'application/octet-binary;charset=utf-8' });
+  if ('download' in document.createElement('a')) {
+    // 非IE
+    const elink = document.createElement('a');
+    elink.download = fileName;
+    elink.style.display = 'none';
+    // オンにする
+    elink.href = URL.createObjectURL(blob);
+    document.body.appendChild(elink);
+    elink.click();
+    URL.revokeObjectURL(elink.href);
+    document.body.removeChild(elink);
+  } else {
+    (navigator as any).msSaveBlob(blob, fileName);
+  }
+});
+</code></pre>
+<h6 id="_9">判断数字</h6>
+<pre><code class="language-js">// typeof + isFinite  但是NaN和infinty 也是数字类型
+function isNumber(num){
+    return typeof num === 'number' &amp;&amp; isFinite(num)
+}
+
+// typeof + isFinite //  isFinite(null) / true 会帅选NaN和infinity
+function isNumber(num){
+    return typeof num === 'number' &amp;&amp; isFinite(num)
+}
+
+//最推荐正则
+function isNumber(num){
+    return /^[0-9]+.?[0-9]*$/.test(num)
+}
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../json-server/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Json server">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Json server
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../koa2/" class="md-footer__link md-footer__link--next" aria-label="Next: Koa2">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Koa2
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2023 Martin Donath
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+  
+      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  <script src="../../assets/javascripts/custom.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,4808 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="一辈人一代神">
+      
+      
+        <meta name="author" content="haiwen">
+      
+      
+        <link rel="canonical" href="https://apple.hai.com/%E5%89%8D%E7%AB%AF/es11/js11/">
+      
+      
+        <link rel="prev" href="../../TYPESCRIPT/TS/">
+      
+      
+        <link rel="next" href="../../js%E9%AB%98%E7%BA%A7/js%E5%9F%BA%E7%A1%80/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Js11 - 海文知识积累</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link rel="stylesheet" href="../../../assets/stylesheets/custom.css">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="海文知识积累" class="md-header__button md-logo" aria-label="海文知识积累" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            海文知识积累
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Js11
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换黑夜"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换黑夜" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换白日"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换白日" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mydocs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Material for MkDocs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../test/" class="md-tabs__link">
+        
+  
+    
+  
+  Test
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../test/test2/" class="md-tabs__link">
+          
+  
+    
+  
+  Test
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../bun/" class="md-tabs__link">
+          
+  
+    
+  
+  前端
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="海文知识积累" class="md-nav__button md-logo" aria-label="海文知识积累" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    海文知识积累
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mydocs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material for MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Test
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Test
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test/test2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    前端
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            前端
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bun/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bun
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Css
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dom%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dom常用操作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../element-ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Element ui
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Es
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flex%E5%B8%83%E5%B1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flex 布局教程：实例篇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../html/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Html
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../js/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Js
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../json-server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Json server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../js%E5%8A%9F%E8%83%BD%E4%BB%A3%E7%A0%81%E5%9D%97/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Js功能代码块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../koa2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Koa2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mysqid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一：简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../node/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Node
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nvm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nvm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../react/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vue3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vue%E5%8A%9F%E8%83%BD%E7%BB%84%E4%BB%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue功能组件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wepy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wepy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一些问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%80%E4%BB%BD%20ElementUI%20%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一份 ElementUI 问题清单
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8F%90%E9%AB%98%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    提高开发效率
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%BA%90%E7%A0%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    源码
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    移动端适配
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_25" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_25" id="__nav_4_25_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    20220310
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_25_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_25">
+            <span class="md-nav__icon md-icon"></span>
+            20220310
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../20220310/%E7%AC%AC%E4%B8%80%E8%8A%82/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_26" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_26" id="__nav_4_26_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    AngularJS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_26_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_26">
+            <span class="md-nav__icon md-icon"></span>
+            AngularJS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AngularJS/Angular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Angular
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_27" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_27" id="__nav_4_27_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    TYPESCRIPT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_27_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_27">
+            <span class="md-nav__icon md-icon"></span>
+            TYPESCRIPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TYPESCRIPT/TS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_28" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_28" id="__nav_4_28_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Es11
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_28_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_28">
+            <span class="md-nav__icon md-icon"></span>
+            Es11
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Js11
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Js11
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      代理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      对象
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      对象结构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      继承
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      箭头函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      解构赋值
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      模版字符编码
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#startswith" class="md-nav__link">
+    <span class="md-ellipsis">
+      startsWith判断开头
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      深拷贝
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      数组
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      数组方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      数组方法扩展
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      异步
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      正则相关
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符串新增方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promise
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reflect
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      模块化
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rest" class="md-nav__link">
+    <span class="md-ellipsis">
+      rest扩展运算符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set.map
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#symbol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symbol
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ajax
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-iterator" class="md-nav__link">
+    <span class="md-ellipsis">
+      next()函数 Iterator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#async-await" class="md-nav__link">
+    <span class="md-ellipsis">
+      Async await
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_29" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_29" id="__nav_4_29_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Js高级
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_29_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_29">
+            <span class="md-nav__icon md-icon"></span>
+            Js高级
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../js%E9%AB%98%E7%BA%A7/js%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Js基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../js%E9%AB%98%E7%BA%A7/js%E9%AB%98%E7%BA%A7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../js%E9%AB%98%E7%BA%A7/%E5%89%8D%E7%AB%AF%E8%BF%9B%E9%98%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    前端进阶
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_30" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_30" id="__nav_4_30_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    学习线路
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_30_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_30">
+            <span class="md-nav__icon md-icon"></span>
+            学习线路
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B9%A0%E7%BA%BF%E8%B7%AF/%E5%AD%A6%E4%B9%A0%E7%BA%BF%E8%B7%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    学习线路
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_31" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_31" id="__nav_4_31_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    框架
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_31_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_31">
+            <span class="md-nav__icon md-icon"></span>
+            框架
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%A1%86%E6%9E%B6/vite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_32" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_32" id="__nav_4_32_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    源码
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_32_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_32">
+            <span class="md-nav__icon md-icon"></span>
+            源码
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%BA%90%E7%A0%81/element%E6%BA%90%E7%A0%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Element UI 源码中学到的技巧
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%BA%90%E7%A0%81/%E4%B8%80%E6%A0%8Fexcel%E5%92%8Cword/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一栏excel和word
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_33" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_33" id="__nav_4_33_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    移动端
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_33_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_33">
+            <span class="md-nav__icon md-icon"></span>
+            移动端
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E9%97%AE%E9%A2%98%E6%94%B6%E9%9B%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    问题收集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_34" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_34" id="__nav_4_34_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    脚手架
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_34_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_34">
+            <span class="md-nav__icon md-icon"></span>
+            脚手架
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%84%9A%E6%89%8B%E6%9E%B6/lerna/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lerna
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%84%9A%E6%89%8B%E6%9E%B6/%E8%84%9A%E6%89%8B%E6%9E%B6%E6%9C%AC%E5%9C%B0link%E6%A0%87%E5%87%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    脚手架本地link标准
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      代理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      对象
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      对象结构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      继承
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      箭头函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      解构赋值
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      模版字符编码
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#startswith" class="md-nav__link">
+    <span class="md-ellipsis">
+      startsWith判断开头
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      深拷贝
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      数组
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      数组方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      数组方法扩展
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      异步
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      正则相关
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符串新增方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promise
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reflect
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      模块化
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rest" class="md-nav__link">
+    <span class="md-ellipsis">
+      rest扩展运算符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set.map
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#symbol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symbol
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ajax
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-iterator" class="md-nav__link">
+    <span class="md-ellipsis">
+      next()函数 Iterator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#async-await" class="md-nav__link">
+    <span class="md-ellipsis">
+      Async await
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Js11</h1>
+
+<h6 id="_1">代理</h6>
+<pre><code class="language-js">//  ES5
+// let obj = {}
+// let newVal = ''
+// Object.defineProperty(obj, 'name', {
+//     get(){
+//         return newVal
+//     },
+//     set(val){
+//         console.log('set')
+//         // this.name = val
+//         newVal = val
+//     }
+// })
+// obj.name = 'es'
+// console.log(obj.name)
+
+// proxy
+// let obj = {}
+// let p = new Proxy(obj, {})
+// obj.name = 'imooc'
+// console.log(obj.name)
+// for(let key in obj){
+//     console.log(key)
+// }
+
+// get
+// let arr = [7, 8, 9]
+// arr = new Proxy(arr, {
+//     get(target, prop) {
+//         // console.log(target, prop)
+//         return prop in target ? target[prop] : 'error'
+//     }
+// })
+// console.log(arr[1])
+// console.log(arr[10])
+
+// let dict = {
+//     'hello': '你好',
+//     'world': '世界'
+// }
+// dict = new Proxy(dict, {
+//     get(target, prop) {
+//         return prop in target ? target[prop] : prop
+//     }
+// })
+// console.log(dict['world'])
+// console.log(dict['imooc'])
+
+// set
+// let arr = []
+// arr = new Proxy(arr, {
+//     set(target, prop, val) {
+//         if (typeof val === 'number') {
+//             target[prop] = val
+//             return true
+//         } else {
+//             return false
+//         }
+//     }
+// })
+// arr.push(5)
+// arr.push(6)
+// console.log(arr[0], arr[1], arr.length)
+
+// has
+// let range = {
+//     start: 1,
+//     end: 5
+// }
+
+// range = new Proxy(range, {
+//     has(target, prop){
+//         return prop &gt;= target.start &amp;&amp; prop &lt;= target.end
+//     }
+// })
+// console.log(2 in range)
+// console.log(9 in range)
+
+// ownKeys
+// let obj = {
+//     name: 'imooc',
+//     [Symbol('es')]: 'es6'
+// }
+// console.log(Object.getOwnPropertyNames(obj))
+// console.log(Object.getOwnPropertySymbols(obj))
+// console.log(Object.keys(obj))
+// for(let key in obj){
+//     console.log(key)
+// }
+
+// let userinfo = {
+//     username: 'xiecheng',
+//     age: 34,
+//     _password: '***'
+// }
+// userinfo = new Proxy(userinfo, {
+//     ownKeys(target) {
+//         return Object.keys(target).filter(key =&gt; !key.startsWith('_'))
+//     }
+// })
+
+// // for (let key in userinfo) {
+// //     console.log(key)
+// // }
+// console.log(Object.keys(userinfo))
+
+// let user = {
+//     name: 'xiecheng',
+//     age: 34,
+//     _password: '***'
+// }
+// user = new Proxy(user, {
+//     get(target, prop) {
+//         if (prop.startsWith('_')) {
+//             throw new Error('不可访问')
+//         } else {
+//             return target[prop]
+//         }
+//     },
+//     set(target, prop, val) {
+//         if (prop.startsWith('_')) {
+//             throw new Error('不可访问')
+//         } else {
+//             target[prop] = val
+//             return true
+//         }
+//     },
+//     deleteProperty(target, prop) { // 拦截删除
+//         if (prop.startsWith('_')) {
+//             throw new Error('不可删除')
+//         } else {
+//             delete target[prop]
+//             return true
+//         }
+//     },
+//     ownKeys(target) {
+//         return Object.keys(target).filter(key =&gt; !key.startsWith('_'))
+//     }
+// })
+// console.log(user.age)
+// console.log(user._password)
+// user.age = 18
+// // console.log(user.age)
+// // try {
+// //     user._password = 'xxx'
+// // } catch(e){
+// //     console.log(e.message)
+// // }
+
+// // try {
+// //     // delete user.age
+// //     delete user._password
+// // } catch (e) {
+// //     console.log(e.message)
+// // }
+// // console.log(user.age)
+
+// for(let key in user){
+//     console.log(key)
+// }
+
+// apply
+// let sum = (...args) =&gt; {
+//     let num = 0
+//     args.forEach(item =&gt; {
+//         num += item
+//     })
+//     return num
+// }
+
+// sum = new Proxy(sum, {
+//     apply(target, ctx, args) {
+//         return target(...args) * 2
+//     }
+// })
+// console.log(sum(1, 2))
+// console.log(sum.call(null, 1, 2, 3))
+// console.log(sum.apply(null, [1, 2, 3]))
+
+// construct  new
+let User = class {
+    constructor(name) {
+        this.name = name
+    }
+}
+User = new Proxy(User, {
+    construct(target, args, newTarget) {
+        console.log('construct')
+        return new target(...args)
+    }
+})
+console.log(new User('imooc'))
+</code></pre>
+<h6 id="_2">对象</h6>
+<pre><code class="language-js">// let name = 'xiecheng'
+// let age = 34
+// let s = 'school'
+// let obj = {
+//     name,
+//     age,
+//     [s]: 'imooc',
+//     study(){
+//         console.log(this.name + '正在学习')
+//     }
+// }
+// // console.log(obj)
+// obj.study()
+
+// console.log(Object.is(2, '2'))
+// console.log(Object.is(NaN, NaN))
+// console.log(Object.is(+0, -0))
+// let obj1 = {  // new Object()
+//     name: 'xiecheng',
+//     age: 34
+// }
+
+// let obj2 = { // new Object()
+//     name: 'xiecheng',
+//     age: 34
+// }
+// console.log(obj1 == obj2) // false
+
+// console.log(Object.is(obj1, obj2)) // false
+// let obj2 = obj1
+// console.log(Object.is(obj1, obj2)) // true
+
+// let x = {
+//     a: 3,
+//     b: 4
+// }
+// // let y = {...x}
+// let y = {
+//     c: 5,
+//     a: 6
+// }
+// // Object.assign(y, x)
+// // console.log(y)
+// console.log('aa' in x)
+
+// let arr = [1, 2, 3]
+// console.log(2 in arr)
+let obj = {
+    name: 'xiecheng',
+    age: 34,
+    school: 'imooc'
+}
+// for(let key in obj){
+//     console.log(key, obj[key])
+// }
+
+// Object.keys(obj).forEach(key =&gt; {
+//     console.log(key, obj[key])
+// })
+
+// Object.getOwnPropertyNames(obj).forEach(key =&gt; {
+//     console.log(key, obj[key])
+// })
+
+Reflect.ownKeys(obj).forEach(key =&gt; {
+    console.log(key, obj[key])
+})
+</code></pre>
+<h6 id="_3">对象结构</h6>
+<pre><code class="language-js">// function foo(x, y){
+//     y = y || 'world'
+//     console.log(x, y)
+// }
+// // foo('hello', 'imooc')
+// foo('hello', 0)
+
+// function foo(x, y = 'world'){
+//     console.log(x, y)
+// }
+// foo('hello', 0)
+
+// function foo(x = 5) {
+//     // let x = 1
+//     const x = 1
+// }
+// foo()
+
+// function foo(x, x, y = 5) {
+//     // let x = 1
+//     // const x = 1
+// }
+// foo()
+
+// function foo(x, z, y = 5) {
+//     console.log(x, y, z)
+// }
+// foo(1, 2)
+
+// function foo({x, y = 5}){
+//     console.log(x, y)
+// }
+
+// foo({})
+// foo({
+//     x: 1,
+//     y: 2
+// })
+// foo()
+
+// function ajax(url, {
+//     body = '',
+//     method = 'GET',
+//     headers = {}
+// } = {}){
+//     console.log(method)
+// }
+
+// ajax('http://www.imooc.com', {
+//    method: 'POST'
+// })
+
+// function foo(x = 1, y = 2, z = 3){
+//     console.log(x, y)
+// }
+// console.log(foo.length)
+
+// let x = 1
+// function foo(x, y = x){
+//     console.log(y) // 2
+// }
+// foo(2)
+
+// let x = 1
+
+// function foo(y = x) {
+//     let x = 2
+//     console.log(y) // 1
+// }
+// foo()
+
+// function foo(y = x){
+//     let x = 2
+//     console.log(y)
+// }
+// foo()
+
+// function foo(){}
+// console.log(foo.name)
+
+// console.log((new Function).name) //anonymous
+
+function foo(x, y){
+    console.log(this, x, y)
+}
+
+// foo.bind({name: 'xiecheng'})(1, 2)
+// console.log(foo.bind({}).name)
+
+console.log((function(){}).bind({}).name)
+</code></pre>
+<h6 id="_4">继承</h6>
+<pre><code class="language-js">// 类
+function People(name, age) {
+    // console.log(this)
+    // 实例属性
+    this.name = name
+    this.age = age
+    People.count++
+}
+// 静态属性
+People.count = 0
+// 静态方法
+People.getCount = function(){
+    console.log(this.age) // undefined
+    console.log('当前共有' + P eople.count + '个人')
+}
+
+// 实例方法
+People.prototype.showName = function () {
+    console.log('我的名字是' + this.name)
+}
+let p1 = new People('xiecheng', 34)
+console.log(p1)
+p1.showName()
+
+let p2 = new People('zhangsan', 20)
+console.log(p2)
+p2.showName()
+
+console.log(People.count)
+People.getCount()
+
+// let str = new String('imooc')
+// console.log(str)
+
+// let arr = new Array(1, 2, 3)
+// console.log(arr)
+
+// let obj = new Object()
+// obj.name = 'xiecheng'
+// console.log(obj)
+
+// 静态方法
+// console.log(Math.max(4, 5))
+// console.log(Math.random())
+
+// 父类
+function Animal(name) {
+    this.name = name
+}
+Animal.prototype.showName = function () {
+    console.log('名字是:' + this.name)
+}
+
+// 子类
+function Dog(name, color) {
+    Animal.call(this, name) // 继承属性
+    this.color = color
+}
+Dog.prototype = new Animal()
+Dog.prototype.constuctor = Dog
+
+let d1 = new Dog('wangcai', 'white')
+console.log(d1)
+d1.showName()
+
+
+class People {
+    constructor(name, age) {
+        this.name = name
+        this.age = age
+        this._sex = -1
+    }
+    // static count = 0
+    get sex() { // 属性
+        if (this._sex === 1) {
+            return 'male'
+        } else if (this._sex === 0) {
+            return 'female'
+        } else {
+            return 'error'
+        }
+    }
+    set sex(val) { // 1:male 0:female
+        if (val === 0 || val === 1) {
+            this._sex = val
+        }
+    }
+    showName() {
+        console.log(this.name)
+    }
+    // 静态方法
+    static getCount() {
+        return 5
+    }
+}
+// 静态属性
+People.count = 9
+console.log(typeof People) // function
+console.log(People.count)
+
+let p1 = new People('xiecheng', 34)
+console.log(p1)
+p1.sex = 5
+console.log(p1.sex)
+console.log(People.getCount())
+
+class Coder extends People {
+    constructor(name, age, company) {
+        super(name, age)
+        this.company = company
+    }
+    showCompany() {
+        console.log(this.company)
+    }
+}
+
+let c1 = new Coder('zhangsan', 25, 'imooc')
+console.log(c1)
+c1.showName()
+c1.showCompany()
+c1.sex = 1
+console.log(c1.sex)
+console.log(Coder.getCount())
+
+</code></pre>
+<h6 id="_5">箭头函数</h6>
+<pre><code class="language-js">// console.log(sum(4, 5))
+
+// function sum(x, y) {
+//     return x + y
+// }
+
+// console.log(sum)
+// let sum = function(x, y){
+//     return x + y
+// }
+
+// let sum = (x, y) =&gt; {
+//     return x + y
+// }
+// let sum = (x, y) =&gt; x + y
+// console.log(sum(3, 4))
+
+// let x = x =&gt; x
+
+// let x = function(x){
+//     return x
+// }
+
+// let oBtn = document.querySelector('#btn')
+// oBtn.addEventListener('click', function () {
+//     // console.log(this)
+//     // setTimeout(function () {
+//     //     // call apply bind
+//     //     console.log(this)
+//     // }.bind(this), 1000)
+//     setTimeout(() =&gt; {
+//         console.log(this)
+//     }, 1000)
+// })
+
+// 类
+// function People(name, age){
+//     console.log(this)
+//     this.name = name
+//     this.age = age
+// }
+// let People = (name, age) =&gt; {
+//     this.name = name
+//     this.age = age
+// }
+// let p1 = new People('xiecheng', 34)
+// console.log(p1)
+
+let foo = (...args) =&gt; {
+    // console.log(arguments)
+    console.log(args)
+}
+foo(1, 2, 3)
+</code></pre>
+<h6 id="_6">解构赋值</h6>
+<pre><code class="language-js">// let arr = [1, 2, 3]
+// let a = arr[0]
+// let b = arr[1]
+// let c = arr[2]
+// let [a, b, c] = [1, 2, 3]
+// console.log(a, b, c)
+
+// let [a, b, [c, d]] = [1, 2, [3, 4]]
+// console.log(a, b, c, d)
+
+// let [a, b, [c]] = [1, 2, [3, 4]]
+// console.log(a, b, c)
+
+// let [a, b, c] = [1, 2, [3, 4]]
+// console.log(a, b, c)
+
+// let [a, b, c, d = 5] = [1, 2, [3, 4], 6]
+// console.log(a, b, c, d)
+
+// let user = {
+//     name: 'xiecheng',
+//     age: 34
+// }
+// // let name = user.name
+// // let age = user.age
+// let {age: uage, name: uname} = user
+
+// console.log(uname, uage)
+
+// let str = 'imooc'
+// // for (let i = 0; i &lt; str.length; i++) {
+// //     console.log(str[i])
+// // }
+// let [a, b, c, d, e] = str
+// console.log(a, b, c, d, e)
+
+// let [a, b, c = 8] = [4, 5, 6]
+// console.log(a, b, c)
+
+// let {name, age = 18} = {
+//     name: 'xiecheng',
+//     // age: 34
+// }
+// console.log(name, age)
+
+// function foo(){
+//     console.log(123)
+// }
+// let [a = foo()] = []
+
+// function foo([a, b, c]) {
+//     console.log(a, b, c)
+// }
+// let arr = [1, 2, 3]
+// foo(arr)
+
+// function foo({name, age, school = 'imooc'}) {
+//     console.log(name, age, school)
+// }
+// let obj = {
+//     name: 'xiecheng',
+//     age: 34,
+//     school: 'xxx'
+// }
+// foo(obj)
+
+// function foo() {
+//     let obj = {
+//         name: 'xiecheng',
+//         age: 34,
+//         school: 'xxx'
+//     }
+//     return obj
+// }
+// let {name, age} = foo()
+// console.log(name, age)
+
+// json
+let json = '{&quot;a&quot;: &quot;hello&quot;, &quot;b&quot;: &quot;world&quot;}'
+let {a, b}= JSON.parse(json)
+console.log(a, b)
+
+</code></pre>
+<h6 id="_7">模版字符编码</h6>
+<pre><code class="language-js">// unicode
+// es6 \uxxxx 码点 0000~ffff
+// \u20BB7 -&gt; \u20BB+7
+// \u{20BB7}
+// \u{41} -&gt; A
+
+// z
+// console.log('\z' === 'z')
+//  \HHH
+// console.log('\172' === 'z')
+
+// \xHH \x7A
+
+// \u007A
+// \u{7A}
+
+// for(let item of 'imooc'){
+//     console.log(item)
+// }
+
+// 模板字符串
+// const str1 = '阿斯顿发斯\n'
+// + '蒂芬阿萨德法师法\n'
+// + '师按时发顺丰'
+// console.log(str1);
+
+// const str3 = `阿斯顿发斯
+// 蒂芬阿萨德法师法
+// 师按时发顺丰`
+// console.log(str3);
+
+// const str4 = `
+// &lt;ul&gt;
+//     &lt;li&gt;1&lt;/li&gt;
+//     &lt;li&gt;2&lt;/li&gt;
+//     &lt;li&gt;3&lt;/li&gt;
+// &lt;/ul&gt;
+// `
+// console.log(str4)
+
+// const a = 20
+// const b = 14
+// const c = 'ES'
+// const str2 = '我的年龄是:' + (a + b) + ',我在讲' + c
+// console.log(str2)
+// const str5 = `我的年龄是:${a+b},我在讲${c}`
+// console.log(str5)
+
+// 嵌套模板
+// const isLargeScreen = () =&gt; {
+//     return true
+// }
+// let class1 = 'icon'
+// class1 += isLargeScreen() ? ' icon-big':' icon-small'
+// console.log(class1)
+
+// const class2 = `icon icon-${isLargeScreen()?'big':'small'}`
+// console.log(class2)
+
+// 带标签的模板字符串
+// const foo = (a, b, c, d) =&gt; {
+//     console.log(a)
+//     console.log(b)
+//     console.log(c)
+//     console.log(d)
+// }
+// // foo(1, 2, 3, 4)
+// const name = 'xiecheng'
+// const age = 34
+// foo`这是${name},他的年龄是${age}岁`
+
+// console.log(String.fromCharCode(0x20BB7)) // ES5
+// console.log(String.fromCodePoint(0x20BB7)) // ES6
+
+// indexOf
+
+
+</code></pre>
+<h6 id="startswith">startsWith判断开头</h6>
+<pre><code>const str = 'imooc'
+// console.log(str.indexOf('mo1'))
+// console.log(str.includes('mo1'))
+// console.log(str.startsWith('im'))
+// console.log(str.endsWith('mooc'))
+const newStr = str.repeat(10)
+console.log(newStr)
+</code></pre>
+<h6 id="_8">深拷贝</h6>
+<pre><code class="language-js">// let target = {
+//     a: {
+//         b: {
+//             c: 1
+//         },
+//         e: 4,
+//         f: 5,
+//         g: 6
+//     }
+// }
+// let source = {
+//     a: {
+//         b: {
+//             c: 1
+//         },
+//         e: 2,
+//         f: 3
+//     }
+// }
+// Object.assign(target, source)
+// console.log(target)
+
+// let a = 5
+// let b = a
+// a = 6
+// console.log(a, b)
+// let obj1 = {
+//     name: 'xiecheng',
+//     age: 34
+// }
+// let obj2 = obj1
+// obj1.age = 18
+// console.log(obj1)
+// console.log(obj2)
+
+// let obj1 = {
+//     name: 'xiecheng',
+//     age: 34
+// }
+// '{&quot;a&quot;: &quot;hello&quot;, &quot;b&quot;: &quot;world&quot;}'
+// 
+// let obj = JSON.parse('{&quot;a&quot;: &quot;hello&quot;, &quot;b&quot;: &quot;world&quot;}')
+// console.log(obj)
+// let str = JSON.stringify(obj)
+// console.log(str)
+// let str = JSON.stringify(obj1)
+// let obj2 = JSON.parse(str)
+// obj1.age = 18
+// console.log(obj2)
+
+// 检查类型
+let checkType = data =&gt; {
+    return Object.prototype.toString.call(data).slice(8, -1)
+}
+checkType({})
+
+let deepClone = target =&gt; {
+    let targetType = checkType(target)
+    let result
+    if (targetType === 'Object') {
+        result = {}
+    } else if (targetType === 'Array') {
+        result = []
+    } else {
+        return target
+    }
+    for (let i in target) {
+        let value = target[i]
+        let valueType = checkType(value)
+        if (valueType === 'Object' || valueType === 'Array') {
+            result[i] = deepClone(value) // 递归
+        } else {
+            result[i] = value
+        }
+    }
+    return result
+}
+// let arr1 = [1, 2, {age: 18}]
+// let arr2 = deepClone(arr1)
+// arr2[2].age = 34
+// console.log(arr1)
+
+let obj1 = {
+    name: 'xiecheng',
+    hobby: ['coding', 'eating']
+}
+let obj2 = deepClone(obj1)
+obj2.hobby[0] = 'sleeping'
+console.log(obj1)
+console.log(obj2)
+</code></pre>
+<h6 id="_9">数组</h6>
+<pre><code class="language-js">// let s = new Set()
+// console.log(s)
+// 唯一的
+// let s = new Set([1, 2, 3, 2])
+// s.add('imooc').add('es')
+// s.delete(2)
+// s.clear()
+// console.log(s.has('imooc'))
+// console.log(s)
+// console.log(s.size)
+
+// 遍历
+// s.forEach(item =&gt; console.log(item))
+// for (let item of s) {
+//     console.log(item)
+// }
+// for (let item of s.keys()) {
+//     console.log(item)
+// }
+// for (let item of s.values()) {
+//     console.log(item)
+// }
+// for (let item of s.entries()) {
+//     console.log(item[0], item[1])
+// }
+
+// 数组去重
+// let arr = [1, 2, 3, 4, 2, 3]
+// let s = new Set(arr)
+// console.log(s)
+
+// 合并去重 set-&gt;array
+// let arr1 = [1, 2, 3, 4]
+// let arr2 = [2, 3, 4, 5, 6]
+// // let s = new Set([...arr1, ...arr2])
+// // console.log(s)
+// // console.log([...s])
+// // console.log(Array.from(s))
+
+// // 交集
+// let s1 = new Set(arr1)
+// let s2 = new Set(arr2)
+// // let result = new Set(arr1.filter(item =&gt; s2.has(item)))
+// // console.log(Array.from(result))
+
+// // 差集
+// let arr3 = new Set(arr1.filter(item =&gt; !s2.has(item)))
+// let arr4 = new Set(arr2.filter(item =&gt; !s1.has(item)))
+// // console.log(arr3)
+// // console.log(arr4)
+// console.log([...arr3, ...arr4])
+
+// WeakSet
+let ws = new WeakSet()
+const obj1 = {
+    name: 'imooc'
+}
+const obj2 = {
+    age: 5
+}
+ws.add(obj1)
+ws.add(obj2)
+// ws.delete(obj1)
+// console.log(ws)
+// console.log(ws.has(obj2))
+// ws.forEach(item =&gt; console.log(item))
+
+// 垃圾回收机制 GC +1 +1
+// weakset 弱引用
+</code></pre>
+<h6 id="_10">数组方法</h6>
+<pre><code class="language-js">let arr = [1, 2, 3, 2, 4]
+
+// for
+// for (let i = 0; i &lt; arr.length; i++) {
+//     if(arr[i] == 2){
+//         continue
+//     }
+//     console.log(arr[i])
+// }
+
+// // forEach
+// arr.forEach(function(elem, index, array){
+//     if(arr[i] == 2){
+//         continue
+//     }
+//     console.log(elem, index)
+// })
+
+// map
+// let result = arr.map(function(value){
+//     value += 1
+//     // console.log(value)
+//     return value
+// })
+// console.log(arr, result)
+
+// filter
+// let result = arr.filter(function (value) {
+//     // console.log(value)
+//     return value == 2
+// })
+// console.log(arr, result)
+
+// some
+// let result = arr.some(function (value) {
+//     // console.log(value)
+//     return value == 4
+// })
+// console.log(arr, result)
+
+// every
+// let result = arr.every(function (value) {
+//     // console.log(value)
+//     return value == 2
+// })
+// console.log(arr, result)
+
+// reduce
+// let sum = arr.reduce(function(prev, cur, index, array){
+//     return prev + cur
+// }, 0)
+// console.log(sum)
+// let max = arr.reduce(function(prev, cur){
+//     return Math.max(prev, cur)
+// })
+// console.log(max)
+
+// let res = arr.reduce(function(prev, cur){
+//     prev.indexOf(cur) == -1 &amp;&amp; prev.push(cur)
+//     return prev
+// }, [])
+// console.log(res)
+
+// Array.prototype.foo = function(){
+//     console.log('foo')
+// }
+// for(let index in arr){
+//     console.log(index, arr[index])
+// }
+
+// // find
+// let res = arr.find(function (value) {
+//     return value == 8
+// })
+// console.log(arr, res)
+
+// findIndex
+// let res = arr.findIndex(function (value) {
+//     return value == 2
+// })
+// console.log(arr, res)
+
+// for of
+// for(let item of arr){
+//     console.log(item)
+// }
+
+// for(let item of arr.values()){
+//     console.log(item)
+// }
+
+// for(let item of arr.keys()){
+//     console.log(item)
+// }
+
+for(let [index, item] of arr.entries()){
+    console.log(index, item)
+}
+
+</code></pre>
+<h6 id="_11">数组方法扩展</h6>
+<pre><code class="language-js">// // DOM
+// let divs = document.getElementsByTagName('div')
+// console.log(divs) // HTMLCollection
+
+// let divs2 = document.getElementsByClassName('xx')
+// console.log(divs2) // HTMLCollection
+
+// let divs3 = document.querySelectorAll('.xx')
+// console.log(divs3 instanceof Array) // NodeList
+// // divs3.push(123)
+
+// // slice
+// let arr = Array.prototype.slice.call(divs3)
+// console.log(arr)
+// arr.push(123)
+// console.log(arr)
+
+// function foo(){
+//     console.log(arguments instanceof Array)
+// }
+// foo(1, 'imooc', true)
+
+// let arrayLike = {
+//     0: 'es6',
+//     1: 'es7',
+//     2: 'es8',
+//     length: 3
+// }
+// let arr = Array.from(arrayLike)
+// arr.push('es9')
+// console.log(arr)
+
+// let arr = new Array(1, 2)
+// console.log(arr)
+
+// let arr = new Array(3)
+// console.log(arr)
+
+// let arr = Array.of(1, 2)
+// console.log(arr)
+
+// let arr = Array.of(3)
+// console.log(arr)
+
+// let arr = Array.of(1, true, 'imooc', [1, 2, 3], {
+//     name: 'xiecheng'
+// })
+// console.log(arr)
+
+// let arr = [1, 2, 3, 4, 5]
+// console.log(arr.copyWithin(1, 3))
+
+// let arr = new Array(3).fill(7)
+// console.log(arr)
+
+// let arr = [1, 2, 3, 4, 5]
+// // arr.fill('imooc', 1, 3)
+// arr.fill(0)
+// console.log(arr)
+
+let arr = [1, 2, 3, NaN]
+// console.log(arr.indexOf(NaN))
+// console.log(NaN == NaN)
+console.log(arr.includes(NaN))
+</code></pre>
+<h6 id="_12">异步</h6>
+<pre><code class="language-js">// const a = 2
+// const b = 3
+// console.log(a + b) // 同步任务
+// // 异步任务
+// setTimeout(() =&gt; {
+//     console.log(a + b)
+// }, 1000)
+
+// 前后端数据分离   前端 &lt;-&gt;  后端  ajax
+// console.log(1)
+// setTimeout(() =&gt; {
+//     console.log(2)
+// }, 1000)
+// console.log(3)
+
+// 1 3 2
+// console.log(1)
+// setTimeout(() =&gt; {
+//     console.log(2)
+// }, 0)
+// console.log(3)
+
+// 伪代码
+// setTimeout(()=&gt;{
+//     task() // 表示一个任务
+// }, 2000)
+// sleep(5000) // 表示一个很复杂的同步任务
+
+
+// Ajax的原理
+function ajax(url, callback) {
+    // 1、创建XMLHttpRequest对象
+    var xmlhttp
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest()
+    } else { // 兼容早期浏览器
+        xmlhttp = new ActiveXObject('Microsoft.XMLHTTP')
+    }
+    // 2、发送请求
+    xmlhttp.open('GET', url, true)
+    xmlhttp.send()
+    // 3、服务端响应
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState === 4 &amp;&amp; xmlhttp.status === 200) {
+            var obj = JSON.parse(xmlhttp.responseText)
+            // console.log(obj)
+            callback(obj)
+        }
+    }
+}
+
+// var url = 'http://musicapi.xiecheng.live/personalized'
+// ajax(url, res =&gt; {
+//     console.log(res)
+// })
+
+// 1 -&gt; 2 -&gt; 3
+// callback hell
+ajax('static/a.json', res =&gt; {
+    console.log(res)
+    ajax('static/b.json', res =&gt; {
+        console.log(res)
+        ajax('static/c.json', res =&gt; {
+            console.log(res)
+        })
+    })
+})
+</code></pre>
+<h6 id="_13">正则相关</h6>
+<pre><code class="language-js">// i(忽略大小写) m(多行匹配) g(全局匹配)
+// y修饰符 粘连(sticky)修饰符
+// const str = 'aaa_aa_a'
+// const reg1 = /a+/g // 每次匹配剩余的
+// const reg2 = /a+/y // 剩余的第一个开始匹配
+
+// console.log(reg1.exec(str))
+// console.log(reg2.exec(str))
+
+// console.log(reg1.exec(str)) // aa
+// console.log(reg2.exec(str)) // null
+
+// console.log(reg1.exec(str))
+// console.log(reg2.exec(str))
+
+// u修饰符 unicode
+// \u0000~\uffff
+const str = '\uD842\uDFB7' // 表示一个字符
+console.log(/^\uD842/.test(str)) // es5 true
+console.log(/^\uD842/u.test(str)) // es6 false
+
+// .除了换行符以外的任意单个字符
+console.log(/^.$/.test(str)) // false
+console.log(/^.$/u.test(str)) // true
+
+console.log(/\u{61}/.test('a')) // false
+console.log(/\u{61}/u.test('a')) // true
+
+console.log(/𠮷{2}/.test('𠮷𠮷')) // false
+console.log(/𠮷{2}/u.test('𠮷𠮷')) // true
+
+
+</code></pre>
+<h6 id="_14">字符串新增方法</h6>
+<pre><code class="language-js">// // 十进制 -&gt; 二进制
+// const a = 5 // 101
+// console.log(a.toString(2))
+
+// // 二进制 -&gt; 十进制
+// const b = 101
+// // console.log(parseInt(5.5))
+// console.log(parseInt(b, 2))
+
+// ES6 0B二进制  0O八进制
+// const a = 0B0101
+// console.log(a)
+
+// const b = 0O777
+// console.log(b)
+
+// console.log(Number.isFinite(5))
+// console.log(Number.isFinite(0.5))
+// console.log(Number.isFinite(Infinity)) // false
+// console.log(Number.isFinite('imooc')) // false
+// console.log(Number.isFinite(true)) // false
+
+// NaN:not a number
+// console.log(Number.isNaN(NaN)) // true
+// console.log(Number.isNaN(15)) // false
+
+
+// console.log(Number.parseInt(5.5))
+// console.log(Number.parseFloat(5.5))
+// console.log(window.parseInt(5.5))
+// console.log(window.parseFloat(5.5))
+
+// console.log(Number.isInteger(5))
+// console.log(Number.isInteger(5.5))
+
+// IEEE 754 双精度标准
+
+// 35 -&gt; 00100011
+// 0.375 -&gt; 0.011
+// 0.1 -&gt; 0.000110011....
+// console.log(0.1000000000000001)
+// console.log(0.10000000000000001 === 0.1) // true
+
+// const max = Math.pow(2, 53)
+// console.log(max)
+// // console.log(max + 1)
+// console.log(Number.MAX_SAFE_INTEGER === max - 1)
+// console.log(Number.MIN_SAFE_INTEGER)
+// console.log(Number.isSafeInteger(Number.MAX_SAFE_INTEGER))
+// console.log(Number.isSafeInteger(Number.MAX_SAFE_INTEGER + 1))
+
+// console.log(Math.trunc(5.5))
+// console.log(Math.trunc(-5.5))
+// console.log(Math.trunc(true)) // 1
+// console.log(Math.trunc(false)) // 0
+// console.log(Math.trunc(NaN)) // NaN
+// console.log(Math.trunc(undefined)) // NaN
+// console.log(Math.trunc()) // NaN
+
+// console.log(Number.parseInt(5.5))
+// console.log(Number.parseInt(-5.5))
+// console.log(Number.parseInt(true)) // NaN
+
+// console.log(Math.sign(5)) // 1
+// console.log(Math.sign(-5)) // -1
+// console.log(Math.sign(0)) // 0
+// console.log(Math.sign(NaN)) // NaN
+// console.log(Math.sign(true)) // 1
+// console.log(Math.sign(false)) // 0
+
+console.log(Math.cbrt(8))
+console.log(Math.cbrt('imooc')) // NaN
+
+
+// includes -&gt; boolean
+// const arr = ['es6', 'es7', 'es8']
+// console.log(arr.includes('es7'))
+// console.log(arr.includes('es9'))
+// console.log(arr.includes('es7', 1))
+// console.log(arr.includes('es7', 2))
+// console.log(arr.includes('es7', -1))
+// console.log(arr.includes('es7', -2))
+
+// console.log(arr.indexOf('es7'))
+// console.log(arr.indexOf('es7') &gt; -1)
+
+// const arr = ['es6', ['es7', 'es8'], 'es9']
+// console.log(arr.includes(['es7', 'es8'])) // false
+// console.log(arr.indexOf(['es7', 'es8'])) // -1
+
+const arr = ['es6', 'es7', NaN, 'es8', 2]
+// console.log(arr.includes(NaN)) // true
+// console.log(arr.indexOf(NaN)) // -1
+
+console.log(arr.includes('2')) // false
+console.log(arr.indexOf('2')) // -1
+
+// 2 10 -&gt; 1024
+// function pow(x, y) {
+//     let res = 1
+//     for (let i = 0; i &lt; y; i++) {
+//         res *= x
+//     }
+//     return res
+// }
+// console.log(pow(2, 10))
+
+// console.log(Math.pow(2, 10))
+
+console.log(2 ** 10)
+</code></pre>
+<h6 id="promise">Promise</h6>
+<pre><code class="language-js">// let p1 = Promise.resolve('success')
+// // console.log(p1)
+// p1.then(res =&gt; {
+//     console.log(res)
+// })
+
+// let p2 = Promise.reject('fail')
+// console.log(p2)
+// p2.catch(err =&gt; {
+//     console.log(err)
+// })
+
+// function foo(flag) {
+//     if (flag) {
+//         return new Promise(resolve =&gt; {
+//             // 异步操作
+//             resolve('success')
+//         })
+//     } else {
+//         // return 'fail'
+//         return Promise.reject('fail')
+//     }
+// }
+
+// foo(false).then(res =&gt; {
+//     console.log(res)
+// }, err =&gt; {
+//     console.log(err)
+// })
+
+// let p1 = new Promise((resolve, reject) =&gt; {
+//     setTimeout(() =&gt; {
+//         console.log(1)
+//         resolve('1成功')
+//     }, 2000)
+// })
+// let p2 = new Promise((resolve, reject) =&gt; {
+//     setTimeout(() =&gt; {
+//         console.log(2)
+//         // resolve('2成功')
+//         reject('2失败')
+//     }, 1000)
+// })
+// let p3 = new Promise((resolve, reject) =&gt; {
+//     setTimeout(() =&gt; {
+//         console.log(3)
+//         resolve('3成功')
+//     }, 3000)
+// })
+
+// Promise.all([p1, p2, p3]).then(res =&gt; {
+//     console.log(res)
+// }, err =&gt; {
+//     console.log(err)
+// })
+// Promise.race([p1, p2, p3]).then(res =&gt; {
+//     console.log(res)
+// }, err =&gt; {
+//     console.log(err)
+// })
+
+const imgArr = ['1.jpg', '2.jpg', '3.jpg']
+let promiseArr = []
+imgArr.forEach(item =&gt; {
+    promiseArr.push(new Promise((resolve, reject) =&gt; {
+        // 图片上传的操作
+        resolve()
+    }))
+})
+Promise.all(promiseArr).then(res =&gt; {
+    // 插入数据库的操作
+    console.log('图片全部上传完成')
+})
+
+function getImg() {
+    return new Promise((resolve, reject) =&gt; {
+        let img = new Image()
+        img.onload = function () {
+            resolve(img)
+        }
+        // img.src = 'http://www.xxx.com/xx.jpg'
+        img.src = 'https://www.imooc.com/static/img/index/logo.png'
+    })
+}
+
+function timeout() {
+    return new Promise((resolve, reject) =&gt; {
+        setTimeout(() =&gt; {
+            reject('图片请求超时')
+        }, 2000)
+    })
+}
+
+Promise.race([getImg(), timeout()]).then(res =&gt; {
+    console.log(res)
+}).catch(err =&gt; {
+    console.log(err)
+})
+
+// // 状态管理 
+// // resolve 成功
+// // reject 失败
+// let p = new Promise((resolve, reject) =&gt; {
+//     setTimeout(() =&gt; {
+//         console.log('imooc')
+//         // resolve()
+//         // reject()
+//         // if(){
+//         //     resolve()
+//         // }else{
+//         //     reject()
+//         // }
+//         // resolve('成功')
+//         reject('失败')
+//     }, 1000)
+// }).then(res =&gt; {
+//     console.log(res)
+// }, err =&gt; {
+//     console.log(err)
+// })
+
+// let p = new Promise((resolve, reject) =&gt; {
+//     console.log(1)
+//     resolve()
+// })
+// console.log(2)
+// p.then(res =&gt; {
+//     console.log(3)
+// })
+
+// let p1 = new Promise((resolve, reject) =&gt; {
+//     resolve(1)
+// })
+// let p2 = new Promise((resolve, reject) =&gt; {
+//     setTimeout(() =&gt; {
+//         resolve(2)
+//     }, 1000)
+// })
+// let p3 = new Promise((resolve, reject) =&gt; {
+//     setTimeout(() =&gt; {
+//         reject(3)
+//     }, 1000)
+// })
+// console.log(p1) // resolved
+// console.log(p2) // pending
+// console.log(p3) // pending
+// setTimeout(() =&gt; {
+//     console.log(p2)
+// }, 2000)
+// setTimeout(() =&gt; {
+//     console.log(p3)
+// }, 2000)
+
+// p1.then(res =&gt; {
+//     console.log(res)
+// })
+// p2.then(res =&gt; {
+//     console.log(res)
+// })
+// p3.catch(err =&gt; {
+//     console.log(err)
+// })
+
+// let p = new Promise((resolve, reject) =&gt; {
+//     reject(2)
+//     resolve(1)
+// })
+// p.then(res =&gt; {
+//     console.log(res)
+// }).catch(err =&gt; {
+//     console.log(err)
+// })
+
+function ajax(url, successCallback, failCallback) {
+    // 1、创建XMLHttpRequest对象
+    var xmlhttp
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest()
+    } else { // 兼容早期浏览器
+        xmlhttp = new ActiveXObject('Microsoft.XMLHTTP')
+    }
+    // 2、发送请求
+    xmlhttp.open('GET', url, true)
+    xmlhttp.send()
+    // 3、服务端响应
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState === 4 &amp;&amp; xmlhttp.status === 200) {
+            var obj = JSON.parse(xmlhttp.responseText)
+            // console.log(obj)
+            successCallback &amp;&amp; successCallback(obj)
+        } else if (xmlhttp.readyState === 4 &amp;&amp; xmlhttp.status === 404) {
+            failCallback &amp;&amp; failCallback(xmlhttp.statusText)
+        }
+    }
+}
+
+// new Promise((resolve, reject) =&gt; {
+//     ajax('static/a.json', res =&gt; {
+//         console.log(res)
+//         resolve()
+//     })
+// }).then(res =&gt; {
+//     console.log('a成功')
+//     return new Promise((resolve, reject) =&gt; {
+//         ajax('static/b.json', res =&gt; {
+//             console.log(res)
+//             resolve()
+//         })
+//     })
+// }).then(res =&gt; {
+//     console.log('b成功')
+//     return new Promise((resolve, reject) =&gt; {
+//         ajax('static/c.json', res =&gt; {
+//             console.log(res)
+//             resolve()
+//         })
+//     })
+// }).then(res =&gt; {
+//     console.log('c成功')
+// })
+
+function getPromise(url) {
+    return new Promise((resolve, reject) =&gt; {
+        ajax(url, res =&gt; {
+            resolve(res)
+        }, err =&gt; {
+            reject(err)
+        })
+    })
+}
+// getPromise('static/aa.json')
+//     .then(res =&gt; {
+//         console.log(res)
+//         return getPromise('static/b.json')
+//     }).then(res =&gt; {
+//         console.log(res)
+//         return getPromise('static/c.json')
+//     }).then(res =&gt; {
+//         console.log(res)
+//     })
+// getPromise('static/aa.json')
+//     .then(res =&gt; {
+//         console.log(res)
+//         return getPromise('static/b.json')
+//     }, err =&gt; {
+//         console.log(err)
+//         return getPromise('static/b.json')
+//     }).then(res =&gt; {
+//         console.log(res)
+//         return getPromise('static/c.json')
+//     }).then(res =&gt; {
+//         console.log(res)
+//     })
+
+getPromise('static/a.json')
+    .then(res =&gt; {
+        console.log(res)
+        return getPromise('static/b.json')
+    }).then(res =&gt; {
+        console.log(res)
+        return getPromise('static/c.json')
+    }).then(res =&gt; {
+        console.log(res)
+    }).catch(err =&gt; {
+        console.log(err)
+    })
+</code></pre>
+<h6 id="reflect">Reflect</h6>
+<pre><code class="language-js">// Object -&gt; Reflect
+// let obj = {}
+// let newVal = ''
+// Reflect.defineProperty(obj, 'name', {
+//     get() {
+//         return newVal
+//     },
+//     set(val) {
+//         console.log('set')
+//         // this.name = val
+//         newVal = val
+//     }
+// })
+// obj.name = 'es'
+// console.log(obj.name)
+
+// try {
+//     Object.defineProperty()
+// } catch (e) {}
+
+// if (Reflect.defineProperty()) { // boolean
+
+// } else {
+
+// }
+
+// console.log('assign' in Object) // true
+// console.log(Reflect.has(Object, 'assign'))// true
+
+// let user = {
+//     name: 'xiecheng',
+//     age: 34,
+//     _password: '***'
+// }
+// user = new Proxy(user, {
+//     get(target, prop) {
+//         if (prop.startsWith('_')) {
+//             throw new Error('不可访问')
+//         } else {
+//             // return target[prop]
+//             return Reflect.get(target, prop)
+//         }
+//     },
+//     set(target, prop, val) {
+//         if (prop.startsWith('_')) {
+//             throw new Error('不可访问')
+//         } else {
+//             // target[prop] = val
+//             Reflect.set(target, prop, val)
+//             return true
+//         }
+//     },
+//     deleteProperty(target, prop) { // 拦截删除
+//         if (prop.startsWith('_')) {
+//             throw new Error('不可删除')
+//         } else {
+//             // delete target[prop]
+//             Reflect.deleteProperty(target, prop)
+//             return true
+//         }
+//     },
+//     ownKeys(target) {
+//         // return Object.keys(target).filter(key =&gt; !key.startsWith('_'))
+//         return Reflect.ownKeys(target).filter(key =&gt; !key.startsWith('_'))
+//     }
+// })
+
+// console.log(user.age)
+// try {
+//     console.log(user._password)
+// } catch (e) {
+//     console.log(e.message)
+// }
+
+// user.age = 18
+// console.log(user.age)
+// try {
+//     user._password = 'xxx'
+// } catch (e) {
+//     console.log(e.message)
+// }
+
+// // delete user.age
+// // console.log(user.age)
+// for (let key in user) {
+//     console.log(key)
+// }
+
+// apply
+let sum = (...args) =&gt; {
+    let num = 0
+    args.forEach(item =&gt; {
+        num += item
+    })
+    return num
+}
+
+sum = new Proxy(sum, {
+    apply(target, ctx, args) {
+        // return target(...args) * 2
+        return Reflect.apply(target, target, [...args]) * 2
+    }
+})
+console.log(sum(1, 2))
+console.log(sum.call(null, 1, 2, 3))
+console.log(sum.apply(null, [1, 2, 3]))
+
+</code></pre>
+<h6 id="_15">模块化</h6>
+<pre><code class="language-js">// export const a = 5
+// export const b = 'imooc'
+// export const sum = (x, y) =&gt; x + y
+// const obj = {
+//     name: 'es'
+// }
+// export {obj}
+
+// const a = 5
+// const b = 'imooc'
+// const sum = (x, y) =&gt; x + y
+// const obj = {
+//     name: 'es'
+// }
+
+// class People {
+//     constructor(name) {
+//         this.name = name
+//     }
+//     showName() {
+//         console.log(this.name)
+//     }
+// }
+
+// export {
+//     a,
+//     b,
+//     sum,
+//     obj,
+//     People
+// }
+
+// const a = 5
+// export default a
+// const b = 'imooc'
+// export default b
+
+// export default const a = 5 // 错误
+// function sum(x, y) {
+//     return x + y
+// }
+// export default sum
+
+// export const str = 'imooc'
+
+const a = 5
+const b = 'imooc'
+const sum = (x, y) =&gt; x + y
+const obj = {
+    name: 'es'
+}
+class People {
+    constructor(name) {
+        this.name = name
+    }
+    showName() {
+        console.log(this.name)
+    }
+}
+export default {
+    a,
+    b,
+    sum,
+    obj,
+    People
+}
+
+
+// import {
+//     a as aa,
+//     b,
+//     sum,
+//     obj,
+//     People
+// } from './module'
+// console.log(aa, b)
+// console.log(sum(2, 5))
+// console.log(obj)
+// let p = new People('xiecheng')
+// p.showName()
+
+// import add, {str} from './module'
+// console.log(add(4, 5), str)
+
+
+// import mod from './module'
+// console.log(mod.a)
+// console.log(mod.b)
+// console.log(mod.obj)
+// console.log(mod.sum(7, 8))
+
+import * as mod from './module'
+console.log(mod)
+console.log(mod.default.a)
+console.log(mod.default.b)
+console.log(mod.default.sum(8, 9))
+</code></pre>
+<h6 id="rest">rest扩展运算符</h6>
+<pre><code class="language-js">// export const a = 5
+// export const b = 'imooc'
+// export const sum = (x, y) =&gt; x + y
+// const obj = {
+//     name: 'es'
+// }
+// export {obj}
+
+// const a = 5
+// const b = 'imooc'
+// const sum = (x, y) =&gt; x + y
+// const obj = {
+//     name: 'es'
+// }
+
+// class People {
+//     constructor(name) {
+//         this.name = name
+//     }
+//     showName() {
+//         console.log(this.name)
+//     }
+// }
+
+// export {
+//     a,
+//     b,
+//     sum,
+//     obj,
+//     People
+// }
+
+// const a = 5
+// export default a
+// const b = 'imooc'
+// export default b
+
+// export default const a = 5 // 错误
+// function sum(x, y) {
+//     return x + y
+// }
+// export default sum
+
+// export const str = 'imooc'
+
+const a = 5
+const b = 'imooc'
+const sum = (x, y) =&gt; x + y
+const obj = {
+    name: 'es'
+}
+class People {
+    constructor(name) {
+        this.name = name
+    }
+    showName() {
+        console.log(this.name)
+    }
+}
+export default {
+    a,
+    b,
+    sum,
+    obj,
+    People
+}
+</code></pre>
+<h6 id="setmap">Set.map</h6>
+<pre><code class="language-js">// let m = new Map()
+// let obj = {
+//     name: 'imooc'
+// }
+// m.set(obj, 'es')
+// console.log(m.get(obj))
+// m.delete(obj)
+// console.log(m)
+// console.log(m.has(obj))
+
+let map = new Map([
+    ['name', 'imooc'],
+    ['age', 5]
+])
+// console.log(map.size)
+// console.log(map.has('name'))
+// console.log(map.get('age'))
+// map.set('name', 'zhangsan')
+// map.delete('name')
+// console.log(map)
+
+// 遍历
+// map.forEach((value, key) =&gt; console.log(value, key))
+
+// for(let [key, value] of map){
+//     console.log(key, value)
+// }
+
+// for(let key of map.keys()){
+//     console.log(key)
+// }
+
+// for(let value of map.values()){
+//     console.log(value)
+// }
+
+// for(let [key, value] of map.entries()){
+//     console.log(key, value)
+// }
+
+// map  object
+
+// weakmap
+// let wm = new WeakMap()
+// wm.set([1], 2)
+// wm.set({
+//     name: 'imooc'
+// }, 'es')
+// // wm.clear()
+// console.log(wm.size)
+
+let wm = new WeakMap()
+let elem = document.getElementsByTagName('h1')
+wm.set(elem, 'info')
+console.log(wm.get(elem))
+</code></pre>
+<h6 id="symbol">Symbol</h6>
+<pre><code class="language-js">// let s1 = Symbol()
+// let s2 = Symbol()
+// console.log(s1)
+// console.log(s2)
+// console.log(s1 === s2) // false
+
+// let s1 = Symbol('foo')
+// let s2 = Symbol('bar')
+// console.log(s1)
+// console.log(s2)
+// console.log(s1 === s2)// false
+
+// const obj = {
+//     name: 'imooc',
+//     toString() {
+//         return this.name
+//     }
+// }
+// let s = Symbol(obj)
+// console.log(s)
+
+// let s = Symbol('foo')
+// // s.name = 'imooc'
+// // console.log(s)
+// console.log(s.description)
+
+// let s1 = Symbol.for('foo')
+// let s2 = Symbol.for('foo')
+// console.log(s1 === s2) // true
+
+// function foo() {
+//     return Symbol.for('foo')
+// }
+// const x = foo()
+// const y = Symbol.for('foo')
+// console.log(x === y) // true
+
+// const s1 = Symbol('foo')
+// console.log(Symbol.keyFor(s1)) // undefined
+
+// const s2 = Symbol.for('foo')
+// console.log(Symbol.keyFor(s2)) // foo
+
+// const grade = {
+//     张三: {address: 'xxx', tel: '111'},
+//     李四: {address: 'yyy', tel: '222'},
+//     李四: {address: 'zzz', tel: '333'},
+// }
+// console.log(grade)
+
+// const stu1 = '李四'
+// const stu2 = '李四'
+// const grade = {
+//     [stu1]: {address: 'yyy', tel: '222'},
+//     [stu2]: {address: 'zzz', tel: '333'},
+// }
+// console.log(grade)
+
+// const stu1 = Symbol('李四')
+// const stu2 = Symbol('李四')
+// const grade = {
+//     [stu1]: {address: 'yyy', tel: '222'},
+//     [stu2]: {address: 'zzz', tel: '333'},
+// }
+// console.log(grade)
+// console.log(grade[stu1])
+// console.log(grade[stu2])
+
+const sym = Symbol('imooc')
+class User {
+    constructor(name) {
+        this.name = name
+        this[sym] = 'imooc.com'
+    }
+    getName() {
+        return this.name + this[sym]
+    }
+}
+const user = new User('xiecheng')
+// console.log(user.getName())
+
+// for(let key in user){
+//     console.log(key)
+// }
+
+// for(let key of Object.keys(user)){
+//     console.log(key)
+// }
+
+// for(let key of Object.getOwnPropertySymbols(user)){
+//     console.log(key)
+// }
+
+// for(let key of Reflect.ownKeys(user)){
+//     console.log(key)
+// }
+
+// function getArea(shape) {
+//     let area = 0
+//     switch (shape) {
+//         case 'Triangle':
+//             area = 1
+//             break
+//         case 'Circle':
+//             area = 2
+//             break
+//     }
+//     return area
+// }
+// console.log(getArea('Triangle'))
+
+const shapeType = {
+    triangle: Symbol(),
+    circle: Symbol()
+}
+function getArea(shape) {
+    let area = 0
+    switch (shape) {
+        case shapeType.triangle:
+            area = 1
+            break
+        case shapeType.circle:
+            area = 2
+            break
+    }
+    return area
+}
+console.log(getArea(shapeType.triangle))
+</code></pre>
+<h6 id="ajax">Ajax</h6>
+<pre><code class="language-js">function ajax(url, callback) {
+    // 1、创建XMLHttpRequest对象
+    var xmlhttp
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest()
+    } else { // 兼容早期浏览器
+        xmlhttp = new ActiveXObject('Microsoft.XMLHTTP')
+    }
+    // 2、发送请求
+    xmlhttp.open('GET', url, true)
+    xmlhttp.send()
+    // 3、服务端响应
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState === 4 &amp;&amp; xmlhttp.status === 200) {
+            var obj = JSON.parse(xmlhttp.responseText)
+            // console.log(obj)
+            callback(obj)
+        }
+    }
+}
+export default ajax
+</code></pre>
+<h6 id="next-iterator">next()函数 <em>Iterator</em></h6>
+<pre><code class="language-js">// function foo() {
+//     for (let i = 0; i &lt; 3; i++) {
+//         console.log(i)
+//     }
+// }
+// foo()
+
+// function* foo() {
+//     for (let i = 0; i &lt; 3; i++) {
+//         yield i
+//     }
+// }
+// // console.log(foo())
+// let f = foo()
+// console.log(f.next())
+// console.log(f.next())
+// console.log(f.next())
+// console.log(f.next())
+
+// function* gen(args) {
+//     args.forEach(item =&gt; {
+//         yield item + 1
+//     })
+// }
+
+// function* gen(x) {
+//     let y = 2 * (yield(x + 1))
+//     let z = yield(y / 3)
+//     return x + y + z
+// }
+// let g = gen(5)
+// console.log(g.next()) // 6
+// console.log(g.next()) // NaN
+// console.log(g.next()) // NaN
+
+// let g = gen(5)
+// console.log(g.next()) // 6
+// console.log(g.next(12)) // y=24  8
+// console.log(g.next(13)) // z=13 x=5 42
+
+// function* count(x = 1) {
+//     while (true) {
+//         if (x % 7 === 0) {
+//             yield x
+//         }
+//         x++
+//     }
+// }
+// let n = count()
+// console.log(n.next().value)
+// console.log(n.next().value)
+// console.log(n.next().value)
+// console.log(n.next().value)
+// console.log(n.next().value)
+
+function ajax(url, callback) {
+    // 1、创建XMLHttpRequest对象
+    var xmlhttp
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest()
+    } else { // 兼容早期浏览器
+        xmlhttp = new ActiveXObject('Microsoft.XMLHTTP')
+    }
+    // 2、发送请求
+    xmlhttp.open('GET', url, true)
+    xmlhttp.send()
+    // 3、服务端响应
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState === 4 &amp;&amp; xmlhttp.status === 200) {
+            var obj = JSON.parse(xmlhttp.responseText)
+            // console.log(obj)
+            callback(obj)
+        }
+    }
+}
+
+function request(url) {
+    ajax(url, res =&gt; {
+        getData.next(res)
+    })
+}
+
+function* gen() {
+    let res1 = yield request('static/a.json')
+    console.log(res1)
+    let res2 = yield request('static/b.json')
+    console.log(res2)
+    let res3 = yield request('static/c.json')
+    console.log(res3)
+}
+let getData = gen()
+getData.next()
+
+
+function makeIterator(arr) {
+//     let nextIndex = 0
+//     return {
+//         next() {
+//             return nextIndex &lt; arr.length ? {
+//                 value: arr[nextIndex++],
+//                 done: false
+//             } : {
+//                 value: undefined,
+//                 done: true
+//             }
+//         }
+//     }
+// }
+// let it = makeIterator(['a', 'b', 'c'])
+// console.log(it.next())
+// console.log(it.next())
+// console.log(it.next())
+// console.log(it.next())
+
+// for(let c of courses){
+//     console.log(c)
+// }
+// let arr = ['a', 'b', 'c']
+// console.log(arr)
+// let it = arr[Symbol.iterator]()
+// console.log(it.next())
+// console.log(it.next())
+// console.log(it.next())
+// console.log(it.next())
+
+// let map = new Map()
+// map.set('name', 'es')
+// map.set('age', 5)
+// map.set('school', 'imooc')
+// // console.log(map)
+// let it = map[Symbol.iterator]()
+// console.log(it.next())
+// console.log(it.next())
+// console.log(it.next())
+// console.log(it.next())
+
+
+let courses = {
+    allCourse: {
+        frontend: ['ES', '小程序', 'Vue', 'React'],
+        backend: ['Java', 'Python', 'SpringBoot'],
+        webapp: ['Android', 'IOS']
+    }
+}
+
+// 可迭代协议：Symbol.iterator
+// 迭代器协议：return { next(){ return{value, done} }}
+// courses[Symbol.iterator] = function () {
+//     let allCourse = this.allCourse
+//     let keys = Reflect.ownKeys(allCourse)
+//     let values = []
+//     return {
+//         next() {
+//             if (!values.length) {
+//                 if (keys.length) {
+//                     values = allCourse[keys[0]]
+//                     keys.shift()
+//                 }
+//             }
+//             return {
+//                 done: !values.length,
+//                 value: values.shift()
+//             }
+//         }
+//     }
+// }
+
+// for (let c of courses) {
+//     console.log(c)
+// }
+
+// generator
+courses[Symbol.iterator] = function* () {
+    let allCourse = this.allCourse
+    let keys = Reflect.ownKeys(allCourse)
+    let values = []
+    while (1) {
+        if (!values.length) {
+            if (keys.length) {
+                values = allCourse[keys[0]]
+                keys.shift()
+                yield values.shift()
+            } else {
+                return false
+            }
+        }else{
+            yield values.shift()
+        }
+    }
+}
+for (let c of courses) {
+    console.log(c)
+}
+</code></pre>
+<h6 id="async-await">Async await</h6>
+<pre><code class="language-js">// function foo() {
+//     return 'imooc'
+// }
+// console.log(foo())
+
+// async function foo(){
+//     return 'imooc' // Promise.resolve('imooc')
+// }
+// console.log(foo())
+
+// async function foo() {
+//     let result = await 'imooc'
+//     console.log(result)
+// }
+// foo()
+
+// function timeout() {
+//     return new Promise(resolve =&gt; {
+//         setTimeout(()=&gt;{
+//             // console.log(1)
+//             resolve(1)
+//         }, 1000)
+//     })
+// }
+
+// async function foo(){
+//     const res = await timeout()
+//     console.log(res)
+//     console.log(2)
+// }
+// foo()
+
+// function timeout() {
+//     return new Promise((resolve, reject) =&gt; {
+//         setTimeout(() =&gt; {
+//             // resolve('success')
+//             reject('fail')
+//         }, 1000)
+//     })
+// }
+// async function foo() {
+//     return await timeout()
+// }
+// foo().then(res =&gt; {
+//     console.log(res);
+// }).catch(err =&gt; {
+//     console.log(err)
+// })
+
+// 伪代码
+// async function request(){
+//     const data = await axios.get('http://www.xx.com')
+//     console.log(data)
+// }
+
+import ajax from './ajax'
+
+function request(url) {
+    return new Promise(resolve =&gt; {
+        ajax(url, res =&gt; {
+            resolve(res)
+        })
+    })
+}
+async function getData(){
+    const res1 = await request('static/a.json')
+    console.log(res1)
+    const res2 = await request('static/b.json')
+    console.log(res2)
+    const res3 = await request('static/c.json')
+    console.log(res3)
+}
+getData()
+</code></pre>
+<pre><code>const obj = {
+    name: 'imooc',
+    web: 'www.imooc.com',
+    course: 'es'
+}
+// console.log(Object.keys(obj))
+// const res = Object.keys(obj).map(key =&gt; obj[key])
+// console.log(res)
+
+// console.log(Object.values(obj))
+// console.log(Object.entries(obj))
+// for(let [key, val] of Object.entries(obj)){
+//     console.log(`${key}: ${val}`)
+// }
+console.log(Object.entries(['a', 'b', 'c']))
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../TYPESCRIPT/TS/" class="md-footer__link md-footer__link--prev" aria-label="Previous: TS">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                TS
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../js%E9%AB%98%E7%BA%A7/js%E5%9F%BA%E7%A1%80/" class="md-footer__link md-footer__link--next" aria-label="Next: Js基础">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Js基础
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2023 Martin Donath
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+  
+      <script src="../../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  <script src="../../../assets/javascripts/custom.js"></script>
+
+  </body>
+</html>

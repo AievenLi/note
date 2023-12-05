@@ -1,0 +1,4106 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="一辈人一代神">
+      
+      
+        <meta name="author" content="haiwen">
+      
+      
+        <link rel="canonical" href="https://apple.hai.com/%E5%89%8D%E7%AB%AF/js/">
+      
+      
+        <link rel="prev" href="../html/">
+      
+      
+        <link rel="next" href="../json-server/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Js - 海文知识积累</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link rel="stylesheet" href="../../assets/stylesheets/custom.css">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#js" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="海文知识积累" class="md-header__button md-logo" aria-label="海文知识积累" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            海文知识积累
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Js
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换黑夜"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换黑夜" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换白日"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换白日" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mydocs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Material for MkDocs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../test/" class="md-tabs__link">
+        
+  
+    
+  
+  Test
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../test/test2/" class="md-tabs__link">
+          
+  
+    
+  
+  Test
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../bun/" class="md-tabs__link">
+          
+  
+    
+  
+  前端
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="海文知识积累" class="md-nav__button md-logo" aria-label="海文知识积累" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    海文知识积累
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mydocs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material for MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Test
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Test
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/test2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    前端
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            前端
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bun/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bun
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Css
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dom%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dom常用操作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../element-ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Element ui
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Es
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flex%E5%B8%83%E5%B1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flex 布局教程：实例篇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Html
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Js
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Js
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#js" class="md-nav__link">
+    <span class="md-ellipsis">
+      js常用操作符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-array-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Array 转Map
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Array 转Map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    <span class="md-ellipsis">
+      数组转array
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-es6-array-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ES6 Array average
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-array-reduce-sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Array reduce sum
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Array reduce sum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#js_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      js数组的方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="js数组的方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#n" class="md-nav__link">
+    <span class="md-ellipsis">
+      扁平化n维数组
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      去重
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      排序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      最大值
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      求和
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      合并
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      判断是否包含值
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      类数组转化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      每一项设置值
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      每一项是否满足
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      有一项满足
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      过滤数组
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      对象和数组转化
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    <span class="md-ellipsis">
+      string
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#math" class="md-nav__link">
+    <span class="md-ellipsis">
+      Math
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Object
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      判断
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="判断">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      是否为整数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promise" class="md-nav__link">
+    <span class="md-ellipsis">
+      promise
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="promise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#promise_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      谈谈promise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#es6-es6-es5" class="md-nav__link">
+    <span class="md-ellipsis">
+      所有的 ES6 特性你都知道吗？如果遇到一个东西不知道是 ES6 还是 ES5, 你该怎么区分它？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#es6es5" class="md-nav__link">
+    <span class="md-ellipsis">
+      es6的继承和es5的继承有什么区别
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promiseajax" class="md-nav__link">
+    <span class="md-ellipsis">
+      利用promise封装ajax
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promise_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promise
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Promise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-promise" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Promise特点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ajax" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 如何创建AJAX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-promisejsajax" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 利用Promise知识，用原生JS封装AJAX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-promise" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Promise 语法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Promise 语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-es5-callback" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 ES5 异步Callback实现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-promise" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Promise实现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 重要语法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promiseajax_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      promise封装ajax
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="promise封装ajax">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#let-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      let const 区别
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#es6-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      es6 generator
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="es6 generator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#js_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      异步加载js文件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      正则表达式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="正则表达式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      处理两个时间差
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      判断手机类型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../json-server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Json server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js%E5%8A%9F%E8%83%BD%E4%BB%A3%E7%A0%81%E5%9D%97/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Js功能代码块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../koa2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Koa2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mysqid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一：简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../node/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Node
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nvm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nvm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vue3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vue%E5%8A%9F%E8%83%BD%E7%BB%84%E4%BB%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue功能组件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wepy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wepy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一些问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%B8%80%E4%BB%BD%20ElementUI%20%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一份 ElementUI 问题清单
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%8F%90%E9%AB%98%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    提高开发效率
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%BA%90%E7%A0%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    源码
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    移动端适配
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_25" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_25" id="__nav_4_25_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    20220310
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_25_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_25">
+            <span class="md-nav__icon md-icon"></span>
+            20220310
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20220310/%E7%AC%AC%E4%B8%80%E8%8A%82/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_26" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_26" id="__nav_4_26_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    AngularJS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_26_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_26">
+            <span class="md-nav__icon md-icon"></span>
+            AngularJS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AngularJS/Angular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Angular
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_27" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_27" id="__nav_4_27_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    TYPESCRIPT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_27_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_27">
+            <span class="md-nav__icon md-icon"></span>
+            TYPESCRIPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TYPESCRIPT/TS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_28" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_28" id="__nav_4_28_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Es11
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_28_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_28">
+            <span class="md-nav__icon md-icon"></span>
+            Es11
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../es11/js11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Js11
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_29" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_29" id="__nav_4_29_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Js高级
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_29_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_29">
+            <span class="md-nav__icon md-icon"></span>
+            Js高级
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js%E9%AB%98%E7%BA%A7/js%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Js基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js%E9%AB%98%E7%BA%A7/js%E9%AB%98%E7%BA%A7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js%E9%AB%98%E7%BA%A7/%E5%89%8D%E7%AB%AF%E8%BF%9B%E9%98%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    前端进阶
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_30" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_30" id="__nav_4_30_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    学习线路
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_30_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_30">
+            <span class="md-nav__icon md-icon"></span>
+            学习线路
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AD%A6%E4%B9%A0%E7%BA%BF%E8%B7%AF/%E5%AD%A6%E4%B9%A0%E7%BA%BF%E8%B7%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    学习线路
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_31" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_31" id="__nav_4_31_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    框架
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_31_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_31">
+            <span class="md-nav__icon md-icon"></span>
+            框架
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%A1%86%E6%9E%B6/vite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_32" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_32" id="__nav_4_32_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    源码
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_32_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_32">
+            <span class="md-nav__icon md-icon"></span>
+            源码
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%BA%90%E7%A0%81/element%E6%BA%90%E7%A0%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Element UI 源码中学到的技巧
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%BA%90%E7%A0%81/%E4%B8%80%E6%A0%8Fexcel%E5%92%8Cword/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一栏excel和word
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_33" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_33" id="__nav_4_33_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    移动端
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_33_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_33">
+            <span class="md-nav__icon md-icon"></span>
+            移动端
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E9%97%AE%E9%A2%98%E6%94%B6%E9%9B%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    问题收集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_34" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_34" id="__nav_4_34_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    脚手架
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_34_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_34">
+            <span class="md-nav__icon md-icon"></span>
+            脚手架
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%84%9A%E6%89%8B%E6%9E%B6/lerna/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lerna
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%84%9A%E6%89%8B%E6%9E%B6/%E8%84%9A%E6%89%8B%E6%9E%B6%E6%9C%AC%E5%9C%B0link%E6%A0%87%E5%87%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    脚手架本地link标准
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#js" class="md-nav__link">
+    <span class="md-ellipsis">
+      js常用操作符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-array-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Array 转Map
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Array 转Map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    <span class="md-ellipsis">
+      数组转array
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-es6-array-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ES6 Array average
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-array-reduce-sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Array reduce sum
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Array reduce sum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#js_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      js数组的方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="js数组的方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#n" class="md-nav__link">
+    <span class="md-ellipsis">
+      扁平化n维数组
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      去重
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      排序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      最大值
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      求和
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      合并
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      判断是否包含值
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      类数组转化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      每一项设置值
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      每一项是否满足
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      有一项满足
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      过滤数组
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      对象和数组转化
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    <span class="md-ellipsis">
+      string
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#math" class="md-nav__link">
+    <span class="md-ellipsis">
+      Math
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Object
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      判断
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="判断">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      是否为整数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promise" class="md-nav__link">
+    <span class="md-ellipsis">
+      promise
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="promise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#promise_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      谈谈promise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#es6-es6-es5" class="md-nav__link">
+    <span class="md-ellipsis">
+      所有的 ES6 特性你都知道吗？如果遇到一个东西不知道是 ES6 还是 ES5, 你该怎么区分它？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#es6es5" class="md-nav__link">
+    <span class="md-ellipsis">
+      es6的继承和es5的继承有什么区别
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promiseajax" class="md-nav__link">
+    <span class="md-ellipsis">
+      利用promise封装ajax
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promise_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promise
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Promise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-promise" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Promise特点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ajax" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 如何创建AJAX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-promisejsajax" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 利用Promise知识，用原生JS封装AJAX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-promise" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Promise 语法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Promise 语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-es5-callback" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 ES5 异步Callback实现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-promise" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Promise实现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 重要语法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promiseajax_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      promise封装ajax
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="promise封装ajax">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#let-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      let const 区别
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#es6-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      es6 generator
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="es6 generator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#js_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      异步加载js文件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      正则表达式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="正则表达式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      处理两个时间差
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      判断手机类型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<pre><code>
+</code></pre>
+<h6 id="js">js常用操作符</h6>
+<pre><code class="language-js">一、一元加减操作符
+        1、数字加减
+
+         一元加操作符：
+         相当于使用Number()函数对变量进行转换。
+
+         一元减操作符：与加类似，只是会在结果前面多一个负号
+
+         2、字符串和数字
+
+         字符串和数字：加则拼接，减则转数字相减。
+
+         字符串和字符串：加则拼接，减则转数字相减。
+
+         无法转成数字时则为NaN
+
+ 二、相等操作符
+
+         1、先进行类型转换再比较
+
+         2、NaN != NaN
+
+         3、null == undefined
+
+         4、[ ] == false ? true : false;
+
+         结果为true!
+
+         1）空数组转换为数字0
+
+         数组继承了默认的valueOf()方法，这个方法返回一个对象而不是一个原始值，因此，数组到数字的转换则调用toString()方法。空数组转换为空字符串，空字符串转换为数字0。
+
+         2）布尔值转换为0、1
+
+ 三、void操作符
+
+         1、void是JavaScript里面的一元操作符
+
+         2、作用
+
+         1）void(0) === undefined 为真，undefined不是保留字，用void0可以替代。
+
+         2）href=”javascript:void(0)”，阻止a标签点击跳转。
+  四、typeof操作符
+
+         1、基本值
+
+         6种：string,number,boolean,undefined,object,
+         function
+            2、易出错的数据类型
+            typeof undefined //undefined
+            typeof null // object 没有null类型
+            typeof function //function 函数不是object类型
+
+ 五、instanceof操作符
+
+ instanceof操作符：当a的原型为b，b原型为c时，a既是b的instance也是c的
+
+六、in操作符
+
+         用来检测数组索引或者对象属性。
+
+         var trees = new Array(&quot;redwood&quot;, &quot;bay&quot;, &quot;cedar&quot;, &quot;oak&quot;, &quot;maple&quot;);
+
+         0 in trees        // 返回true
+
+         3 in trees        // 返回true
+
+         6 in trees        // 返回false
+
+         &quot;bay&quot; in trees    // 返回false (
+         必须使用索引号,而不是数组元素的值)
+
+         &quot;length&quot; in trees // 返回true (length是一个数组属性)
+
+         Symbol.iterator in trees // 返回true (数组可迭代，只在ES2015+上有效)// 内置对象
+
+         &quot;PI&quot; in Math          // 返回true
+
+         // 自定义对象
+
+         var mycar = {make: &quot;Honda&quot;, model: &quot;Accord&quot;, year: 1998};
+
+         &quot;make&quot; in mycar  // 返回true
+          →属性必须用双引号！
+
+         &quot;model&quot; in mycar // 返回true
+
+
+
+
+</code></pre>
+<h3 id="1-array-map">1. Array 转Map</h3>
+<h6 id="array">数组转array</h6>
+<pre><code class="language-js">    let arr = [
+
+  {type:'1',name:'name1'},
+
+  {type:'2',name:'name2'}
+
+];
+
+// convert array data to map
+
+let newmap=arr.map(i =&gt;
+
+  [i]
+
+);
+
+//[[{&quot;type&quot;:&quot;1&quot;,&quot;name&quot;:&quot;name1&quot;}],[{&quot;type&quot;:&quot;2&quot;,&quot;name&quot;:&quot;name2&quot;}]]
+
+</code></pre>
+<pre><code class="language-js">let arr = [{count:1,name:'test1'},{count:2,name:'test2'}];
+let average = arr.reduce((sum,value)=&gt;sum+value.count,0)/arr.length;
+console.log(average)
+
+</code></pre>
+<h3 id="2-es6-array-average">2. ES6 Array average</h3>
+<pre><code class="language-js">let average = array.reduce((sum,value)=&gt;sum+value,initValue)/array.length
+</code></pre>
+<h3 id="2-array-reduce-sum">2. Array reduce sum</h3>
+<pre><code class="language-js">// create array data
+let arr = [
+                {type:'1',count:1},
+                {type:'2',count:2}
+           ];
+// sum count value
+let sum  = reduce((accumulator, currentValue)=&gt;accumulator+currentValue.count,0);
+</code></pre>
+<pre><code class="language-js">slice(start，end)
+
+从start开始截取到end但是不包括end
+返回值为截取出来的元素的集合
+原始的数组不会发生变化
+//例子
+        var arr1 = [1,23,44,55,66,77,888,&quot;fff&quot;];
+        var arr2 = arr1.slice(2,4) //从index为2截取到index为4之前不包括4
+        console.log(arr2); //[44,55]
+        console.log(arr1); // [1,23,44,55,66,77,888,&quot;fff&quot;]原始数组没有被改变
+1
+2
+3
+4
+5
+二、 splice(start,deleteCount,item1,item2…..);
+
+start参数 开始的位置
+deleteCount 要截取的个数
+后面的items为要添加的元素
+如果deleteCount为0，则表示不删除元素，从start位置开始添加后面的几个元素到原始的数组里面
+返回值为由被删除的元素组成的一个数组。如果只删除了一个元素，则返回只包含一个元素的数组。如果没有删除元素，则返回空数组
+这个方法会改变原始数组，数组的长度会发生变化
+//例子
+        var arr3 = [1,2,3,4,5,6,7,&quot;f1&quot;,&quot;f2&quot;];
+        var arr4 = arr3.splice(2,3) //删除第三个元素以后的三个数组元素(包含第三个元素)
+        console.log(arr4); //[3,4,5];
+        console.log(arr3); //[1,2,6,7,&quot;f1&quot;,&quot;f2&quot;]; 原始数组被改变
+
+        var arr5 = arr3.splice(2,0,&quot;wu&quot;,&quot;leon&quot;); 
+        //从第2位开始删除0个元素，插入&quot;wu&quot;,&quot;leon&quot;
+        console.log(arr5); //[] 返回空数组
+        console.log(arr3); // [1, 2, &quot;wu&quot;, &quot;leon&quot;, 6, 7, &quot;f1&quot;, &quot;f2&quot;]; 原始数组被改变
+
+        var arr6 = arr3.splice(2,3,&quot;xiao&quot;,&quot;long&quot;);
+        //从第2位开始删除3个元素，插入&quot;xiao&quot;,&quot;long&quot;
+        console.log(arr6); //[&quot;wu&quot;, &quot;leon&quot;, 6]
+        console.log(arr3); //[1, 2, &quot;xiao&quot;, &quot;long&quot;, 7, &quot;f1&quot;, &quot;f2&quot;]
+
+        var arr7 = arr3.splice(2);//从第三个元素开始删除所有的元素
+        console.log(arr7);//[&quot;xiao&quot;, &quot;long&quot;, 7, &quot;f1&quot;, &quot;f2&quot;]
+        console.log(arr3); //[1, 2]
+
+</code></pre>
+<h4 id="js_1">js数组的方法</h4>
+<p>concat() 合并数组，并返回合并之后的数据</p>
+<p>join()使用分隔符，将数组转为字符串并返回</p>
+<p>pop()删除最后一位，并返回删除的数据</p>
+<p>shift()删除第一位，并返回删除的数据</p>
+<p>unshift()在第一位新增一或多个数据，返回长度</p>
+<p>push()在最后一位新增一或多个数据，返回长度</p>
+<p>reverse()反转数组，返回结果</p>
+<p>slice()截取指定位置的数组，并返回</p>
+<p>sort()排序（字符规则），返回结果</p>
+<p>splice()删除指定位置，并替换，返回删除的数据</p>
+<p>toString()直接转为字符串，并返回</p>
+<p>valueOf()返回数组对象的原始值</p>
+<p>indexOf()查询并返回数据的索引</p>
+<p>lastIndexOf()反向查询并返回数据的索引</p>
+<p>forEach()参数为回调函数，会遍历数组所有的项，回调函数接受三个参数，反别为value，index，self；forEach没有返回值</p>
+<p>map()同forEach同时回调函数返回数据，组成新数组由map返回</p>
+<p>filter()同forEach,同时回调函数返回布尔值，为true的数据组成新数组由filter返回</p>
+<p>every()同forEach,同时回调函数返回布尔值，全部为true，由every返回true</p>
+<p>some()同forEach,同时回调函数返回布尔值，只要由一个为true，由some返回true</p>
+<p>reduce()归并，同forEach,迭代数组的所有项，并构建一个最终值，由reduce返回</p>
+<pre><code class="language-js"> list_pay.reduce((a, b) =&gt; (a = a + Number(b.amt_pay)), 0)
+</code></pre>
+<p>reduceRight()反向归并，同forEach,迭代数组所有项，并构建一个最终值，由reduceRight返回</p>
+<p>原数组会发生改变</p>
+<p>unshift()</p>
+<p>push()</p>
+<p>shift()</p>
+<p>pop()</p>
+<p>sort()</p>
+<p>reverse()</p>
+<p>splice()</p>
+<h6 id="n"><strong>扁平化n维数组</strong></h6>
+<p><strong>1.终极篇</strong></p>
+<pre><code>[1,[2,3]].flat(1) //[1,2,3][1,[2,3,[4,5]].flat(1) //[1,2,3,4,5][1,[2,3,[4,5]]].toString()  //'1,2,3,4,5'[1[2,3,[4,5[...]].flat(Infinity) //[1,2,3,4...n]
+</code></pre>
+<p>Array.flat(n)是ES10扁平数组的api,
+n表示数组嵌套的深度,如果数组嵌套两层,n取值大于或等于1都可以,n值为Infinity时维度为无限大。</p>
+<p><strong>2.开始篇</strong></p>
+<pre><code>function flatten(arr) {    while(arr.some(item=&gt;Array.isArray(item))) {        arr = [].concat(...arr);    }    return arr;}flatten([1,[2,3]]) //[1,2,3]flatten([1,[2,3,[4,5]]) //[1,2,3,4,5]
+</code></pre>
+<p>实质是利用递归和数组合并方法concat实现扁平。</p>
+<h6 id="_1"><strong>去重</strong></h6>
+<p><strong>1.终极篇</strong></p>
+<pre><code>Array.from(new Set([1,2,3,3,4,4])) //[1,2,3,4][...new Set([1,2,3,3,4,4])] //[1,2,3,4]
+</code></pre>
+<p>set是ES6新出来的一种一种定义不重复数组的数据类型。
+Array.from是将类数组转化为数组。
+...是扩展运算符,将set里面的值转化为字符串。
+<strong>2.开始篇</strong></p>
+<pre><code>Array.prototype.distinct = function(){ var arr = this,  result = [],  i,  j,  len = arr.length; for(i = 0; i &lt; len; i++){  for(j = i + 1; j &lt; len; j++){   if(arr[i] === arr[j]){    j = ++i;   }  }  result.push(arr[i]); } return result;}[1,2,3,3,4,4].distinct(); //[1,2,3,4]
+</code></pre>
+<p>取新数组存值,循环两个数组值相比较。</p>
+<h6 id="_2">排序</h6>
+<p><strong>1.终极篇</strong></p>
+<pre><code>[1,2,3,4].sort((a, b) =&gt; a - b); // [1, 2,3,4],默认是升序[1,2,3,4].sort((a, b) =&gt; b - a); // [4,3,2,1] 降序
+</code></pre>
+<p>sort是js内置的排序方法,参数为一个函数 2.开始篇 冒泡排序:</p>
+<pre><code>Array.prototype.bubleSort=function () {    let arr=this,        len = arr.length;    for (let outer = len; outer &gt;= 2; outer--) {      for (let inner = 0; inner &lt;= outer - 1; inner++) {        if (arr[inner] &gt; arr[inner + 1]) {          //升序          [arr[inner], arr[inner + 1]] = [arr[inner + 1], arr[inner]];          console.log([arr[inner], arr[inner + 1]]);        }      }    }    return arr;  }[1,2,3,4].bubleSort() //[1,2,3,4]
+</code></pre>
+<p>选择排序</p>
+<pre><code>  Array.prototype.selectSort=function () {        let arr=this,            len = arr.length;        for (let i = 0, len = arr.length; i &lt; len; i++) {    for (let j = i, len = arr.length; j &lt; len; j++) {      if (arr[i] &gt; arr[j]) {        [arr[i], arr[j]] = [arr[j], arr[i]];      }    }  }    return arr;  }  [1,2,3,4].selectSort() //[1,2,3,4]
+</code></pre>
+<h6 id="_3"><strong>最大值</strong></h6>
+<p><strong>1.终极篇</strong></p>
+<pre><code>Math.max(...[1,2,3,4]) //4Math.max.apply(this,[1,2,3,4]) //4[1,2,3,4].reduce( (prev, cur,curIndex,arr)=&gt; { return Math.max(prev,cur);},0) //4
+</code></pre>
+<p>Math.max()是Math对象内置的方法,参数是字符串;
+reduce是ES5的数组api,参数有函数和默认初始值;
+函数有四个参数,pre(上一次的返回值),cur(当前值),curIndex(当前值索引),arr(当前数组)</p>
+<p>2.开始篇 先排序再取值</p>
+<h6 id="_4"><strong>求和</strong></h6>
+<p><strong>1.终极篇</strong></p>
+<pre><code>eval([1,2,3,4].join('+')] //10[1,2,3,4].arr.reduce((prev, cur) =&gt;prev + cur) //10
+</code></pre>
+<p><strong>2.开始篇</strong></p>
+<pre><code>function sum(arr) {  var len = arr.length;  if(len == 0){    return 0;  } else if (len == 1){    return arr[0];  } else {    return arr[0] + sum(arr.slice(1));  }}sum([1,2,3,4]) //10
+</code></pre>
+<p>利用slice截取改变数组,再利用递归求和。</p>
+<h6 id="_5"><strong>合并</strong></h6>
+<p><strong>1.终极篇</strong></p>
+<pre><code>[1,2,3,4].concat([5,6]) //[1,2,3,4,5,6][...[1,2,3,4],...[4,5]] //[1,2,3,4,5,6][1,2,3,4].push.apply([1,2,3,4],[5,6]) //[1,2,3,4,5,6]
+</code></pre>
+<p><strong>2.开始篇</strong></p>
+<pre><code>let arr=[1,2,3,4];[5,6].map(item=&gt;{   arr.push(item)}) //arr值为[1,2,3,4,5,6],注意不能直接return出来,return后只会返回[5,6]
+</code></pre>
+<h6 id="_6"><strong>判断是否包含值</strong></h6>
+<p><strong>1.终极篇</strong></p>
+<pre><code>[1,2,3].includes(4) //false[1,2,3].indexOf(4) //-1 如果存在换回索引[1, 2, 3].find((item)=&gt;item===3)) //3 如果数组中无值返回undefined[1, 2, 3].findIndex((item)=&gt;item===3)) //2 如果数组中无值返回-1
+</code></pre>
+<p>includes(),find(),findIndex()是ES6的api</p>
+<p><strong>2.开始篇</strong></p>
+<pre><code>[1,2,3].some(item=&gt;{  return item===3}) //true 如果不包含返回false
+</code></pre>
+<h6 id="_7"><strong>类数组转化</strong></h6>
+<p><strong>1.终极篇</strong></p>
+<pre><code>Array.prototype.slice.call(arguments) //arguments是类数组(伪数组)Array.prototype.slice.apply(arguments)Array.from(arguments)[...arguments]
+</code></pre>
+<p>类数组:表示有length属性,但是不具备数组的方法
+call,apply:是改变slice里面的this指向arguments,所以arguments也可调用数组的方法
+Array.from是将类似数组或可迭代对象创建为数组
+...是将类数组扩展为字符串,再定义为数组</p>
+<p><strong>2.开始篇</strong></p>
+<pre><code>Array.prototype.slice = function(start,end){      var result = new Array();      start = start || 0;      end = end || this.length; //this指向调用的对象，当用了call后，能够改变this的指向，也就是指向传进来的对象，这是关键      for(var i = start; i &lt; end; i++){           result.push(this[i]);      }      return result; } 
+</code></pre>
+<h6 id="_8"><strong>每一项设置值</strong></h6>
+<p><strong>1.终极篇</strong></p>
+<pre><code>[1,2,3].fill(false) //[false,false,false]注:fill填充对象会报错
+</code></pre>
+<p>fill是ES6的方法 2.开始篇</p>
+<pre><code>[1,2,3].map(() =&gt; 0)
+</code></pre>
+<h6 id="_9"><strong>每一项是否满足</strong></h6>
+<pre><code>[1,2,3].every(item=&gt;{return item&gt;2}) //false
+</code></pre>
+<p>every是ES5的api,每一项满足返回 true</p>
+<h6 id="_10"><strong>有一项满足</strong></h6>
+<pre><code>[1,2,3].some(item=&gt;{return item&gt;2}) //true
+</code></pre>
+<p>some是ES5的api,有一项满足返回 true</p>
+<h6 id="_11"><strong>过滤数组</strong></h6>
+<pre><code>[1,2,3].filter(item=&gt;{return item&gt;2}) //[3]
+</code></pre>
+<p>filter是ES5的api,返回满足添加的项的数组</p>
+<h6 id="_12"><strong>对象和数组转化</strong></h6>
+<pre><code>Object.keys({name:'张三',age:14}) //['name','age']Object.values({name:'张三',age:14}) //['张三',14]Object.entries({name:'张三',age:14}) //[[name,'张三'],[age,14]]Object.fromEntries([name,'张三'],[age,14]) //ES10的api,Chrome不支持 , firebox输出{name:'张三',age:14}
+</code></pre>
+<h3 id="string">string</h3>
+<p>charAt()返回指定位置的字符串</p>
+<p>charCodeAt()返回在指定的位置的字符的Unicode编码。</p>
+<p>concat()连接字符串</p>
+<p>indexOf()检索字符串</p>
+<p>match()找到一个或多个正则表达式的匹配</p>
+<p>replace()替换与正则表达式匹配的子串</p>
+<p>search()检索与正则表达式相匹配的值</p>
+<p>slice()提取字符串的片段，并在新的字符串中返回被提取的部分</p>
+<p>split()把字符串分割为字串数组。</p>
+<p>toLocaleLowerCase()把字符串转换为小写</p>
+<p>toLocaleUpperCase()把字符串转换为大写</p>
+<p>toLowerCase()把字符串转换为小写</p>
+<p>toUpperCase()把字符串转换为大写</p>
+<p>substr()从起始索引号提取字符串中指定数目的字符</p>
+<p>substring提取字符串中两个指定的索引号之间的字符</p>
+<h3 id="math">Math</h3>
+<p>ceil(x)尽可能取最大</p>
+<p>floor(x)尽可能取最小</p>
+<p>round(x)把数四舍五入为最接近的整数</p>
+<p>max(x,y)返回x和y中的最高值</p>
+<p>min(x,y)返回x，y中的最低值</p>
+<p>pow(x,y)返回x，y次幂</p>
+<p>random()返回0~1之间的随机数</p>
+<p>sqrt(x)返回数的平方根</p>
+<p>‘parseInt()取整</p>
+<p>toFixed() 取两位小数</p>
+<h3 id="object">Object</h3>
+<pre><code class="language-js">class Person{
+    constructor(name){
+        this.name = name;
+    }
+    showName(){
+        return this.name;
+    }
+}
+class SubPerson extends Person{
+    constructor(name,job){
+        super(name);
+        this.job = job;
+    }
+    showJob(){
+        return this.job;
+    }
+}
+
+let p1 = new SubPerson('千点张三','前端开发');
+console.log(p1.name);//千点张三
+//console.log(p1.showName()) 千点张三
+//console.log(p1.job) //前端开发
+</code></pre>
+<h3 id="_13">判断</h3>
+<h6 id="_14">是否为整数</h6>
+<pre><code class="language-js">Number.isInteger(25) // true
+Number.isInteger(25.0) // true
+Number.isInteger(25.1) // false
+Number.isInteger(&quot;15&quot;) // false
+Number.isInteger(true) // false
+</code></pre>
+<h3 id="promise">promise</h3>
+<h4 id="promise_1">谈谈promise</h4>
+<pre><code class="language-js">const promise = new Promise((resolve, reject) =&gt; {
+  console.log(1)
+  resolve()
+  console.log(2)
+})
+promise.then(() =&gt; {
+  console.log(3)
+})
+console.log(4)
+
+//运行结果：1 2 4 3 
+//解释：Promise 构造函数是同步执行的，promise.then 中的函数是异步执行的。
+
+</code></pre>
+<h4 id="es6-es6-es5">所有的 ES6 特性你都知道吗？如果遇到一个东西不知道是 ES6 还是 ES5, 你该怎么区分它？</h4>
+<pre><code class="language-js">
+
+const promise1 = new Promise((resolve, reject) =&gt; {
+  setTimeout(() =&gt; {
+    resolve('success')
+  }, 1000)
+})
+const promise2 = promise1.then(() =&gt; {
+  throw new Error('error!!!')
+})
+
+console.log('promise1', promise1)
+console.log('promise2', promise2)
+
+setTimeout(() =&gt; {
+  console.log('promise1', promise1)
+  console.log('promise2', promise2)
+}, 2000)
+//运行结果
+promise2 Promise { &lt;pending&gt; }
+(node:50928) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: error!!!
+(node:50928) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+promise1 Promise { 'success' }
+promise2 Promise {
+  &lt;rejected&gt; Error: error!!!
+    at promise.then (...)
+    at &lt;anonymous&gt; }
+//解释
+ promise 有 3 种状态：pending、fulfilled 或 rejected。状态改变只能是 pending-&gt;fulfilled 或者 pending-&gt;rejected，状态一旦改变则不能再变。上面 promise2 并不是 promise1，而是返回的一个新的 Promise 实例。
+</code></pre>
+<h4 id="es6es5">es6的继承和es5的继承有什么区别</h4>
+<pre><code>ES5的继承是通过prototype或构造函数机制来实现。
+
+ES5的继承实质上是先创建子类的实例对象，然后再将父类的方法添加到this上(Parent.apply(this))。
+
+ES6的继承机制实质上是先创建父类的实例对象this(所以必须先调用父类的super()方法)，然后再用子类的构造函数修改this。具体为ES6通过class关键字定义类，里面有构造方法，类之间通过extends关键字实现继承。子类必须在constructor方法中调用super方法，否则新建实例报错。因为子类没有自己的this对象，而是继承了父类的this对象，然后对其调用。如果不调用super方法，子类得不到this对象。
+
+注意：super关键字指代父类的实例，即父类的this对象。在子类构造函数中，调用super后，才可使用this关键字，否则报错
+
+</code></pre>
+<h4 id="promiseajax">利用promise封装ajax</h4>
+<pre><code>function xxx(){
+    return new Promise((f1, f2) =&gt; {
+        doSomething()
+        setTimeout(()=&gt;{
+            // 成功就调用 f1，失败就调用 f2
+        },3000)
+    })
+}
+
+xxx().then(success, fail)
+
+// 链式操作
+xxx().then(success, fail).then(success, fail)
+</code></pre>
+<h2 id="promise_2">Promise</h2>
+<blockquote>
+<p>Promise 就是一个对象，用来传递异步操作的消息。有了 Promise 对象，就可以将异步操作以同步操作的流程表达出来。</p>
+</blockquote>
+<h3 id="1-promise">1. Promise特点</h3>
+<ul>
+<li>
+<p>承诺将来会执行</p>
+</li>
+<li>
+<p>防止回调地狱 - Callback Hell</p>
+</li>
+<li>
+<p>可以进行then的链式执行</p>
+</li>
+<li>
+<p>区分数据请求和数据处理</p>
+</li>
+<li>
+<p>三种状态</p>
+</li>
+<li>
+<p>pending：等待中，或者进行中，表示还没有得到结果</p>
+</li>
+<li>resolved（fullfilled）：已经完成，表示得到了我们想要的结果，可以继续往下执行</li>
+<li>
+<p>rejected：也表示得到结果，但是由于结果并非我们所愿，因此拒绝执行</p>
+</li>
+<li>
+<p>调用时会被传递两个参数：<code>resolve</code>和<code>reject</code>函数</p>
+</li>
+<li>
+<p>具备</p>
+</li>
+</ul>
+<p><code>then()</code></p>
+<p>方法，对于</p>
+<p><code>then()</code></p>
+<p>方法有以下简单的要求：</p>
+<ol>
+<li>接收完成态、错误态的回调方法</li>
+<li>可选地支持progress事件回调作为第三个方法</li>
+<li>只接受function对象</li>
+<li>返回Promise对象，以实现链式调用</li>
+</ol>
+<h3 id="2-ajax">2. 如何创建AJAX</h3>
+<p>一个Ajax建立要了解以下几点：</p>
+<ul>
+<li>XMLHttpRequest对象的工作流程</li>
+<li>兼容性处理</li>
+<li>事件的触发条件</li>
+<li>事件的触发顺序</li>
+</ul>
+<p>步骤：</p>
+<ol>
+<li>创建<code>XMLHttpRequest</code>对象，也就是创建一个<strong>异步调用对象</strong>。</li>
+<li>创建一个新的HTTP请求，并指定该HTTP请求的方法、URL及验证信息。</li>
+<li>设置响应HTTP请求状态变化的函数。</li>
+<li>发送HTTP请求。</li>
+<li>获取异步调用返回的数据。</li>
+<li>使用JavaScript和DOM实现局部刷新。</li>
+</ol>
+<h3 id="3-promisejsajax">3. 利用Promise知识，用原生JS封装AJAX</h3>
+<pre><code class="language-javascript">var url = '/请求的路径';
+var params = {
+    id: 'id=123',
+    limit: 'limit=10'
+};
+
+// 封装一个get请求的方法
+function getJSON(url) {
+    return new Promise(function (resolve, reject) {
+        var XHR = XMLHttpRequest ? new XMLHttpRequest() : new window.ActiveXObject('Microsoft.XMLHTTP');
+
+        XHR.onreadystatechange = function () {
+            //readyState属性表示请求/响应过程的当前活动阶段。
+            if (XHR.readyState == 4) {
+                if ((XHR.status &gt;= 200 &amp;&amp; XHR.status &lt; 300) || XHR.status == 304) {
+                    try {
+                        //获取数据
+                        var response = JSON.parse(XHR.responseText);
+                        resolve(response);
+                    } catch (e) {
+                        reject(e);
+                    }
+                } else {
+                    reject(new Error(&quot;Request was unsuccessful: &quot; + XHR.statusText));
+                }
+            }
+        }
+        XHR.open('GET', url + '?' + params.join('&amp;'), true);
+        XHR.send(null);
+    })
+}
+
+getJSON(url).then(resp =&gt; console.log(resp));
+</code></pre>
+<p><strong>readyState</strong>
+ 0 - 代表未初始化。 还没有调用 open 方法
+ 1 - 代表正在加载。 open 方法已被调用，但 send 方法还没有被调用
+ 2 - 代表已加载完毕。send 已被调用。请求已经开始
+ 3 - 代表正在与服务器交互中。服务器正在解析响应内容
+ 4 - 代表完成。响应发送完毕</p>
+<blockquote>
+<p>readyState的值等于3，就是“流”(streaming)，它是提升数据性能的强大工具。</p>
+</blockquote>
+<h3 id="4-promise">4. Promise 语法</h3>
+<p>代码以实现异步操作img为例</p>
+<h4 id="41-es5-callback">4.1 ES5 异步Callback实现</h4>
+<pre><code class="language-javascript">function loadImg(src, callback, fail) {
+    var img = document.createElement('img')
+    img.onload = function () {
+        callback(img)
+    }
+    img.onerror = function () {
+        fail()
+    }
+    img.src = src
+}
+var src = 'https://img.mukewang.com/5be2bcb30001a46709360316.jpg'
+loadImg(src, function (img) {
+    console.log(img.width)
+}, function () {
+    console.log('failed')
+})
+</code></pre>
+<h4 id="42-promise">4.2 Promise实现</h4>
+<pre><code class="language-javascript">function loadImg(src) {
+    const promise = new Promise(function (resolve, resolve) {
+        var img = document.createElement('img')
+        img.onload = function () {
+            resolve(img)
+        }
+        img.onerror = function () {
+            reject()
+        }
+        img.src = src
+    })
+    return promise
+}
+
+
+var src = 'https://img.mukewang.com/5be2bcb30001a46709360316.jpg'
+var result = loadImg(src)
+
+result.then(function (img) {
+    console.log(img.width)
+}, function () {
+    console.log('failed')
+})
+result.then(function (img) {
+    console.log(img.height)
+})
+</code></pre>
+<p>优点：便于集成、扩展
+ 注意：</p>
+<ul>
+<li>new Promise 实例，必须要 return</li>
+<li>new Promise 时要传入函数，函数有 resolve reject 两个参数</li>
+<li>成功时执行 resolve() 失败时执行 reject()</li>
+</ul>
+<h4 id="43">4.3 重要语法</h4>
+<ul>
+<li>
+<p>Promise.all接收一个Promise对象组成的数组作为参数，当这个数组所有的Promise对象状态都变成resolved或者rejected的时候，它才会去调用then方法。</p>
+</li>
+<li>
+<p>Promise.race与Promise.all相似的是，Promise.race都是以一个Promise对象组成的数组作为参数，不同的是，只要当数组中的其中一个Promsie状态变成resolved或者rejected时，就可以调用.then方法了。</p>
+</li>
+<li>
+<p>如何有效的将ajax的数据请求和数据处理分别放在不同的模块中进行管理</p>
+</li>
+<li>
+<p>将所有的数据请求这个动作放在同一个模块中统一管理</p>
+</li>
+</ul>
+<p>```javascript
+  define(function(require) {
+      var API = require('API');</p>
+<pre><code>  // 因为jQuery中的get方法也是通过Promise进行了封装，最终返回的是一个Promise对象，因此这样我们就可以将数据请求与数据处理放在不同的模块，即使用一个统一的模块来管理所有的数据请求
+
+  // 获取当天的信息
+  getDayInfo = function() {
+      return $.get(API.dayInfo);
+  }
+
+  // 获取type信息
+  getTypeInfo = function() {
+      return $.get(API.typeInfo);
+  };
+
+  return {
+      getDayInfo: getDayInfo,
+      getTypeInfo: getTypeInfo
+  }
+</code></pre>
+<p>});
+  ```</p>
+<p>可以增加过滤处理</p>
+<ul>
+<li>拿到数据并处理数据</li>
+</ul>
+<p>```javascript
+  // components/calendar.js
+  define(function(require) {
+      var request = require('request');</p>
+<pre><code>  // 拿到数据之后，需要处理的组件，可以根据数据渲染出需求想要的样式
+
+  request.getTypeInfo()
+      .then(function(resp) {
+
+          // 拿到数据，并执行处理操作
+          console.log(resp);
+      })
+
+  // 这样，我们就把请求数据，与处理数据分离开来，维护起来就更加方便了，代码结构也足够清晰
+</code></pre>
+<p>})
+  ```</p>
+<h1 id="promiseajax_1">promise封装ajax</h1>
+<pre><code>const axios = function(options){
+    let promise = new promise(( resolve , reject )=&gt;{
+        var xhr = null;
+        if(window.XMLHttpRequest){//兼容处理
+           xhr = new XMLHttpRequest();
+       }else{
+           xhr = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);   
+       }
+         var data = &quot;&quot;;
+        for (var key in options.data) {//数据处理
+            data += &quot;&amp;&quot; + key + &quot;=&quot; + options.data[key]
+        }
+       if (options.method == &quot;get&quot;) {
+
+            let url = options.url + &quot;?&quot; + data.slice(1);
+            xhr.open(options.method, url);
+            xhr.send();
+        } else if (options.method == &quot;post&quot;) {
+
+            xhr.open(options.method, options.url);
+            xhr.setRequestHeader(&quot;content-type&quot;, &quot;application/x-www-form-urlencoded&quot;);
+            xhr.send(data);
+        }
+
+
+        xhr.onreadystatechange = function () {
+            let timer = null;
+            let timeout = options.timeout?options.timeout:5000  //等待响应的时间 
+            if(xhr.readyState == 4 &amp;&amp; xhr.status == 200){
+                let res = JSON.parse(xhr.responseText);
+                clearTimeout(timer);
+                resolve(res);
+            }
+
+
+            timer = setTimeout(()=&gt;{
+                clearTimeout(timer);
+                reject(xhr.status);
+            },timeout) 
+
+        }
+    })
+    return promise;
+}    
+</code></pre>
+<p>栗子：</p>
+<pre><code> axios({
+        method:&quot;get&quot;,
+        url:&quot;./data.json&quot;,
+        data:{
+            id:10
+        }
+    }).then((res)=&gt;{
+        console.log(res)
+    },(e)=&gt;{
+        console.log(e);
+    })
+</code></pre>
+<h4 id="let-const">let const 区别</h4>
+<pre><code>const的特点：
+
+不能变量提升（必须先声明后使用）
+不能跨区域
+不能重复声明和赋值，否则会报错
+声名的变量不挂载到window对象上
+let的特点：
+
+不能变量提升（必须先声明后使用）
+不能跨区域
+不能重复声明
+声名的变量不挂载到window对象上
+</code></pre>
+<h4 id="es6-generator">es6 generator</h4>
+<pre><code class="language-js">学习 Generator 语法，你需要了解function* 、yield、next三个基本概念。
+
+· function* 用来声明一个函数是生成器函数，它比普通的函数声明多了一个*,*的位置比较随意可以挨着 function 关键字，也可以挨着函数名
+
+· yield 产出的意思，这个关键字只能出现在生成器函数体内，但是生成器中也可以没有yield 关键字，函数遇到 yield 的时候会暂停，并把 yield 后面的表达式结果抛出去
+
+· next作用是将代码的控制权交还给生成器函数
+
+// 声明生成器函数
+function* generator() {
+   // A
+   yield 'foo'
+    // B
+}
+// 获取生成器对象
+let g = generator();
+// 第一个 next()，首次启动生成器
+g.next(); // {value: &quot;foo&quot;, done: false}
+// 唤醒被 yield 暂停的状态
+g.next();
+// {value: undefined, done: true}
+
+</code></pre>
+<h6 id="js_2">异步加载js文件</h6>
+<pre><code class="language-js">  function loadScript(url, callback) {
+            let script = document.createElement('script');
+            script.type = &quot;text/javascript&quot;;
+            if (script.readyState) {
+                script.onreadystatechange = function () {
+                    //ie
+                    if (script.readyState == &quot;complete&quot; || script.resadState == &quot;loaded&quot;) {
+                        callback();
+                    }
+                }
+            } else {
+                script.onload = function () {
+                    // safari chrome forefox opera
+                    callback();
+                }
+            }
+            script.src = url;
+            document.head.appendChild(script);
+        }
+        loadScript('./index.js');
+</code></pre>
+<h4 id="_15">正则表达式</h4>
+<pre><code class="language-js">//身份证号：/^[1-9]\d{5}(18|19|20|(3\d))\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/
+正则在写代码过程中是必不可少的一环，这里汇总一下，便于后期开发使用。
+
+1、手机号校验
+
+复制代码
+var phoneReg = /^1[3456789]\d{9}$/; // 通用校验规则
+console.log(reg.test(13679563335))
+
+var phoneReg1 = /^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/; // 详细手机号校验规则
+console.log(reg.test(13679563335))
+
+var reg = /^((0\d{2,3}-\d{7,8})|(1[34578]\d{9}))$/;;  //验证手机号和固定电话
+复制代码
+2、邮箱格式校验
+
+var emailReg = /[\w!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[\w!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/;
+console.log(1017737292@qq.com)
+3、用户名校验
+
+var userNameReg = /^[a-zA-Z0-9_-]{6,16}$/;  //6-16位的包含大小写字母、数字、特殊符号- _ 的用户名
+var userNameReg1 = /^(?![0-9]*$)(?![a-zA-Z]*$)[a-zA-Z0-9]{6,20}$/; //6-20位字母和数字组合
+4、密码强度校验
+
+var reg = /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&amp;*? ]).*$/; //密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符
+var passwordReg = /^(?![\d]+$)(?![a-zA-Z]+$)(?![^\da-zA-Z]+$)([^\u4e00-\u9fa5\s]){6,20}$/; // 请输入6-20位英文字母、数字或者符号（除空格），且字母、数字和标点符号至少包含两种
+//输出 true
+console.log(reg.test(&quot;123qweA#&quot;));
+5、整数校验
+
+复制代码
+//正整数正则
+const posReg = /^\d+$/;
+//负整数正则
+const negReg = /^-\d+$/;
+//整数正则
+const numReg = /^-?\d+$/;
+const re = /^[0-9]*[1-9][0-9]*$/; // 正整数正则
+console.log(posReg.test(&quot;15&quot;));  //输出 true
+
+console.log(negReg.test(&quot;-15&quot;));  //输出 true
+
+console.log(numReg.test(&quot;-25&quot;)); //输出 true
+复制代码
+6、身份证验证
+
+ var idcardReg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+
+console.log(37281019653429120)
+7、合法url校验
+
+const urlReg = /^(https?|ftp):\/\/([a-zA-Z0-9.-]+(:[a-zA-Z0-9.&amp;%$-]+)*@)*((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])){3}|([a-zA-Z0-9-]+\.)*[a-zA-Z0-9-]+\.(com|edu|gov|int|mil|net|org|biz|arpa|info|name|pro|aero|coop|museum|[a-zA-Z]{2}))(:[0-9]+)*(\/($|[a-zA-Z0-9.,?'\\+&amp;%$#=~_-]+))*$/;
+8、验证输入内容是否包含英文数字及下划线
+
+var reg = /^[_a-zA-Z0-9]+$/;
+console.log(reg.test('2334sdfsfk3'));
+9、验证1-99之间的数字
+
+ var reg = /^[1-9][0-9]{0,1}$/;
+console.log(33);
+10、验证是否两位小数
+
+var twoDigReg = /(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/;
+console.log(twoDigReg.test(123.24));
+11、中文校验
+
+var chineseReg = /^[\u0391-\uFFE5A-Za-z]+$/;
+console.log(chineseReg.test('中国2'))；
+12、纯数字校验
+
+var numberReg = /^\d+$|^\d+[.]?\d+$/;
+console.log(numberReg.test(2344.2))
+13、最多一位小数
+
+var reg = /^[0-9]+([.]{1}[0-9]{1})?$/;
+console.log(reg.test(23.23));
+14、ip地址校验
+
+//ipv4地址正则
+var reg = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+console.log(reg.test(&quot;115.28.47.26&quot;)); //输出 true
+15、包含中文的校验
+
+var reg = /[\u4e00-\u9fa5]/gm
+console.log(reg.test('小夭同学')
+16、只能输入n个字符
+
+var reg = /^\d{n}$/
+console.log(reg.test(434))
+17、至少输入n个字符
+
+var reg = /^\d{n,}$/;
+console.log(reg.test(11212));
+18、输入m-n个字符
+
+var reg = /^\d{m,n}$/
+console.log(reg.test(1212))
+19、内容只能由英文、数字、下划线组成
+
+var reg = /^\w+$/;
+console.log(reg.test(drt23_));
+20、内容只能包含英文字母和数字
+
+var reg = /^[a-z0-9]+$/i；
+console.log(reg.test(455fdg))；
+</code></pre>
+<p>原生js验证</p>
+<pre><code>var foo = 'bar';
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+    form{
+        width: 600px;
+        margin: 100px auto;
+        border:1px solid black;
+        height: 600px;
+        text-align:left;
+        padding-top: 50px;
+        position: relative;
+        background: #88bbff;
+    }
+        b{
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+            margin-right: 20px;
+        }
+        input{
+            width: 300px;
+            height: 30px;
+        }
+
+        p{
+            margin-bottom: 20px;
+            font-size: 10px;
+            color: #ccc;
+            height: 10px;
+            margin-left: 170px;
+        }
+        input:nth-of-type(5){
+            width: 70px;
+            height: 30px;
+            margin-left: 170px;
+        }
+        span{
+            color: red;
+            font-size: 12px;
+        }
+        h1{
+            width: 100%;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form action=&quot;#&quot;&gt;
+    &lt;h1&gt;注册&lt;/h1&gt;
+        &lt;b&gt;邮箱地址&lt;/b&gt;&lt;input type=&quot;text&quot; id=&quot;email&quot;&gt;&lt;span id=&quot;tip1&quot;&gt;&lt;/span&gt;&lt;br&gt;
+        &lt;p&gt;6~18个字符，可使用字母、数字、下划线，需以字母开头&lt;/p&gt;
+         &lt;b&gt;密码&lt;/b&gt;&lt;input type=&quot;password&quot; id=&quot;pwd&quot;&gt;&lt;span id=&quot;tip2&quot;&gt;&lt;/span&gt;&lt;br&gt;
+         &lt;p&gt;6~16个字符，区分大小写&lt;/p&gt;
+        &lt;b&gt;确认密码&lt;/b&gt;&lt;input type=&quot;password&quot; id=&quot;repwd&quot;&gt;&lt;span id=&quot;tip3&quot;&gt;&lt;/span&gt;&lt;br&gt;
+        &lt;p&gt;请再次填写密码&lt;/p&gt;
+        &lt;b&gt;手机号码&lt;/b&gt;&lt;input type=&quot;tel&quot; id=&quot;phone&quot;&gt;&lt;span id=&quot;tip4&quot;&gt;&lt;/span&gt;&lt;br&gt;
+        &lt;p&gt; &lt;/p&gt;
+        &lt;input type=&quot;submit&quot; id=&quot;sub&quot; value=&quot;注册&quot;&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;script&gt;
+var email = document.querySelector('#email');
+var pwd = document.querySelector(&quot;#pwd&quot;);
+var repwd = document.querySelector(&quot;#repwd&quot;);
+var phone = document.querySelector(&quot;#phone&quot;);
+var oBtn = document.querySelector(&quot;#sub&quot;);
+    //验证邮箱
+    email.onblur = function(){
+    if(email.value ==&quot;&quot;){
+        document.querySelector(&quot;#tip1&quot;).innerText = &quot;邮箱不能为空！&quot;;
+        return false;
+    }else if(!/^[a-z]/i.test(email.value)){
+        document.querySelector(&quot;#tip1&quot;).innerText = &quot;请以字母开头！&quot;;
+        return false;
+    }else if(!/^[a-z]\w{5,17}@(163|qq)\.com$/i.test(email.value)){
+        document.querySelector(&quot;#tip1&quot;).innerText = &quot;请输入6~18个字符！&quot;;
+        return false;
+    }else {
+        document.querySelector(&quot;#tip1&quot;).innerText = &quot;&quot;;
+        return true;
+        }
+    }
+    //验证密码
+    pwd.onblur = function(){
+        if(pwd.value ==&quot;&quot;){
+            document.querySelector(&quot;#tip2&quot;).innerText = &quot;密码不能为空！&quot;;
+            return false;
+        }else if(!/\w{6,16}/.test(pwd.value)){
+        document.querySelector(&quot;#tip2&quot;).innerText = &quot;请输入6~16个字符！&quot;;
+            return false;
+        }else{
+            document.querySelector(&quot;#tip2&quot;).innerText = &quot;&quot;;
+            return true;
+        }
+    }
+    //再次输入密码
+    repwd.onblur = function(){
+    if(pwd.value != repwd.value){
+            document.querySelector(&quot;#tip3&quot;).innerText = &quot;两次输入密码不一致！&quot;;
+            return false;
+    }else{
+        document.querySelector(&quot;#tip3&quot;).innerText = &quot;&quot;;
+        return true;
+        }
+    }
+    //验证手机号码
+    phone.onblur = function(){
+        if(phone.value==&quot;&quot;){
+            document.querySelector(&quot;#tip4&quot;).innerText = &quot;手机号不能为空！&quot;;
+            return false;
+        }else if(!/^1[35789]\d{9}$/.test(phone.value)){
+            document.querySelector(&quot;#tip4&quot;).innerText = &quot;手机号输入有误！&quot;;
+            return false;
+        }else{
+            document.querySelector(&quot;#tip4&quot;).innerText = &quot;&quot;;
+            return true;
+        }
+    }
+    oBtn.onclick = function(){
+        if(email.value ==&quot;&quot;){
+        document.querySelector(&quot;#tip1&quot;).innerText = &quot;邮箱不能为空！&quot;;
+            return false;
+        }else if(pwd.value ==&quot;&quot;){
+            document.querySelector(&quot;#tip2&quot;).innerText = &quot;密码不能为空！&quot;;
+            return false;
+        }else if(repwd.value ==&quot;&quot;){
+            document.querySelector(&quot;#tip3&quot;).innerText = &quot;密码不能为空！&quot;;
+            return false;
+        }else if(phone.value ==&quot;&quot;){
+            document.querySelector(&quot;#tip4&quot;).innerText = &quot;手机号不能为空！&quot;;
+            return false;
+        }else{
+        document.querySelector(&quot;#tip1&quot;).innerText = &quot;&quot;;
+        document.querySelector(&quot;#tip2&quot;).innerText = &quot;&quot;;
+        document.querySelector(&quot;#tip3&quot;).innerText = &quot;&quot;;
+        document.querySelector(&quot;#tip4&quot;).innerText = &quot;&quot;;
+        return true;
+        }
+    }
+&lt;/script&gt;
+&lt;/html&gt;
+
+</code></pre>
+<pre><code class="language-js">//随机获取布尔值：
+const randomBoolean = () =&gt;Math.random()&lt;=0.5
+//判断给的日期是否为工作日
+const isWeekday = (date) =&gt; date.getDay()%6 !==0;
+console.log(isWeekday(2021,0,10))
+//反转字符串
+const reverse = str =&gt;str.split('').reverse().join('');
+//判断当前选项卡是否在焦点中
+const isBrowserTabView = () =&gt; document.hidden;
+isBrowserTabView()
+//判断是基数还是偶数
+const isEven = num =&gt; num%2 ===0;
+//从日期获取时间
+const timeFromDate = date.toTimeString().slice(0,8)
+console.log(timeFromDate(new Date(2021,0,10,17,30,0)))
+//将数字四舍五入到固定的小数点
+const toFixed = (n,fixed) =&gt; ~~ (Math.pow(10,,fixed) * n) / Math.pow(10,fixed);
+toFixed(25.3333333,1)
+
+//检查元素当前是否处于焦点
+const elementInfocus = (el) =&gt; (el === document.activeElement);
+elementIsInFocus(anyElement)
+//检测当前用户是否支持触摸事件
+const touchSupported =() =&gt;{
+    ('ontouchstart' in window || window.DocumentTouch &amp;&amp; documnet instanceof window.DocumentTouch)
+}
+touchSupported()
+
+//检测当前用户是否在Apple 设备上
+const isAppleDevice = /mac|iPod|iPhone|ipad/.test(navigator.platform);
+//滚动到页面顶部
+const goToTop = () =&gt; window.scrollTo(0,0);
+goToTop();
+
+//获取参数的平均值
+const average = (...args) =&gt; args.reduce((a,b)=&gt;a+b)/args.length
+average(1,2,3,4)
+//转化华氏/摄氏
+
+</code></pre>
+<pre><code>
+
+</code></pre>
+<h6 id="_16">处理两个时间差</h6>
+<pre><code class="language-js">&lt;wxs module=&quot;m&quot;&gt;
+var my_filter = function(startTime,endTime) {
+     startTime = startTime.split(' ')[1] 
+      endTime = endTime.split(' ')[1]
+     console.log(countDown(startTime),countDown(endTime));
+    return countDown(endTime) - countDown(startTime)
+}
+
+function countDown(time){
+var s = 0;
+var hour = time.split(':')[0];
+var min = time.split(':')[1];
+var sec = time.split(':')[2];
+s = Number(hour * 3600) + Number(min * 60) + Number(sec);
+console.log(s);
+return s;
+}
+function formatDuring(mss){
+var hours = parseInt((mss % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = parseInt((mss % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = (mss % (1000 * 60)) / 1000;
+hours = hours &lt; 10 ? ('0' + hours) : hours;
+minutes = minutes &lt; 10 ? ('0' + minutes) : minutes;
+seconds = seconds &lt; 10 ? ('0' + seconds) : seconds;
+return hours + &quot;:&quot; + minutes + &quot;:&quot; + seconds;
+}
+  module.exports.my_filter = my_filter
+</code></pre>
+<h6 id="_17">判断手机类型</h6>
+<pre><code class="language-js">//判断是否为手机游览器
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Opera Mobi|Windows CE|Symbian|Windows Phone|POLARIS|lgtelecom|nokia|SonyEricsson|LG|SAMSUNG|Samsung/i
+    .test(navigator.userAgent)) {
+    //移动端浏览器  
+    AndroidIp('http://58.87.108.109:8084')
+} else {
+    //PC浏览器  
+    let bb = &quot;2222&quot;
+    alert(bb)
+    console.log(22222)
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../html/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Html">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Html
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../json-server/" class="md-footer__link md-footer__link--next" aria-label="Next: Json server">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Json server
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2023 Martin Donath
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+  
+      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  <script src="../../assets/javascripts/custom.js"></script>
+
+  </body>
+</html>

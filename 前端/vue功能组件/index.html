@@ -1,0 +1,3000 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="一辈人一代神">
+      
+      
+        <meta name="author" content="haiwen">
+      
+      
+        <link rel="canonical" href="https://apple.hai.com/%E5%89%8D%E7%AB%AF/vue%E5%8A%9F%E8%83%BD%E7%BB%84%E4%BB%B6/">
+      
+      
+        <link rel="prev" href="../vue3/">
+      
+      
+        <link rel="next" href="../wepy/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Vue功能组件 - 海文知识积累</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link rel="stylesheet" href="../../assets/stylesheets/custom.css">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="海文知识积累" class="md-header__button md-logo" aria-label="海文知识积累" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            海文知识积累
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Vue功能组件
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换黑夜"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换黑夜" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换白日"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换白日" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mydocs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Material for MkDocs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../test/" class="md-tabs__link">
+        
+  
+    
+  
+  Test
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../test/test2/" class="md-tabs__link">
+          
+  
+    
+  
+  Test
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../bun/" class="md-tabs__link">
+          
+  
+    
+  
+  前端
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="海文知识积累" class="md-nav__button md-logo" aria-label="海文知识积累" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    海文知识积累
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mydocs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material for MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Test
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Test
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/test2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    前端
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            前端
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bun/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bun
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Css
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dom%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dom常用操作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../element-ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Element ui
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Es
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flex%E5%B8%83%E5%B1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flex 布局教程：实例篇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Html
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Js
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../json-server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Json server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js%E5%8A%9F%E8%83%BD%E4%BB%A3%E7%A0%81%E5%9D%97/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Js功能代码块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../koa2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Koa2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mysqid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一：简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../node/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Node
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nvm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nvm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vue3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Vue功能组件
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Vue功能组件
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      秒杀组件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      轮播图组件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toolbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      toolbar组件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      表单组件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      附件上传
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wepy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wepy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一些问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%B8%80%E4%BB%BD%20ElementUI%20%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一份 ElementUI 问题清单
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%8F%90%E9%AB%98%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    提高开发效率
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%BA%90%E7%A0%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    源码
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    移动端适配
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_25" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_25" id="__nav_4_25_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    20220310
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_25_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_25">
+            <span class="md-nav__icon md-icon"></span>
+            20220310
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20220310/%E7%AC%AC%E4%B8%80%E8%8A%82/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_26" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_26" id="__nav_4_26_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    AngularJS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_26_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_26">
+            <span class="md-nav__icon md-icon"></span>
+            AngularJS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AngularJS/Angular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Angular
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_27" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_27" id="__nav_4_27_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    TYPESCRIPT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_27_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_27">
+            <span class="md-nav__icon md-icon"></span>
+            TYPESCRIPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TYPESCRIPT/TS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_28" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_28" id="__nav_4_28_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Es11
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_28_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_28">
+            <span class="md-nav__icon md-icon"></span>
+            Es11
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../es11/js11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Js11
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_29" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_29" id="__nav_4_29_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Js高级
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_29_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_29">
+            <span class="md-nav__icon md-icon"></span>
+            Js高级
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js%E9%AB%98%E7%BA%A7/js%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Js基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js%E9%AB%98%E7%BA%A7/js%E9%AB%98%E7%BA%A7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js%E9%AB%98%E7%BA%A7/%E5%89%8D%E7%AB%AF%E8%BF%9B%E9%98%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    前端进阶
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_30" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_30" id="__nav_4_30_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    学习线路
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_30_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_30">
+            <span class="md-nav__icon md-icon"></span>
+            学习线路
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AD%A6%E4%B9%A0%E7%BA%BF%E8%B7%AF/%E5%AD%A6%E4%B9%A0%E7%BA%BF%E8%B7%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    学习线路
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_31" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_31" id="__nav_4_31_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    框架
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_31_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_31">
+            <span class="md-nav__icon md-icon"></span>
+            框架
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%A1%86%E6%9E%B6/vite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_32" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_32" id="__nav_4_32_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    源码
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_32_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_32">
+            <span class="md-nav__icon md-icon"></span>
+            源码
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%BA%90%E7%A0%81/element%E6%BA%90%E7%A0%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Element UI 源码中学到的技巧
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%BA%90%E7%A0%81/%E4%B8%80%E6%A0%8Fexcel%E5%92%8Cword/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一栏excel和word
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_33" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_33" id="__nav_4_33_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    移动端
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_33_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_33">
+            <span class="md-nav__icon md-icon"></span>
+            移动端
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E9%97%AE%E9%A2%98%E6%94%B6%E9%9B%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    问题收集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_34" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_34" id="__nav_4_34_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    脚手架
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_34_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_34">
+            <span class="md-nav__icon md-icon"></span>
+            脚手架
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%84%9A%E6%89%8B%E6%9E%B6/lerna/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lerna
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%84%9A%E6%89%8B%E6%9E%B6/%E8%84%9A%E6%89%8B%E6%9E%B6%E6%9C%AC%E5%9C%B0link%E6%A0%87%E5%87%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    脚手架本地link标准
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      秒杀组件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      轮播图组件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toolbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      toolbar组件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      表单组件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      附件上传
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Vue功能组件</h1>
+
+<h6 id="_1">秒杀组件</h6>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;div class=&quot;count-down&quot;&gt;
+    &lt;!-- 12点场 00:32:18 --&gt;
+    &lt;span class=&quot;count-down-end-time&quot;&gt;{{ endHours }}点场&lt;/span&gt;
+    &lt;span class=&quot;count-down-surplus&quot;&gt;{{ surplus | filterTime }}&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+// import { setInterval, clearInterval } from 'timers'
+/**
+ * 接收一个时间(时间场)，自动计算时间并且倒计时
+ */
+export default {
+  props: {
+    endHours: {
+      type: Number,
+      required: true,
+      default: 0
+    }
+  },
+  data () {
+    return {
+      // 展示活动状态
+      surplus: '',
+      // 活动开始差距秒数
+      diffSeconds: 0,
+      interval: undefined
+    }
+  },
+  created: function () {
+    this.computedSurplusTime()
+  },
+  methods: {
+    /**
+     * 计算时间
+     */
+    computedSurplusTime: function () {
+      if (this.interval) clearInterval(this.interval)
+      const date = new Date()
+      /**
+       * 当前时间大于活动时间，活动已结束
+       */
+      if (date.getHours() &gt; this.endHours) {
+        this.surplus = '活动已结束'
+        return
+      }
+
+      /**
+       * 当前时间等于活动时间，活动进行中
+       */
+      if (date.getHours() === this.endHours) {
+        this.surplus = '活动进行中'
+        return
+      }
+
+      /**
+       * 当前时间小于活动时间，活动未开始，进行倒计时,
+       * -1 表示 预计时间为 16点 ， 当前为 12点00分，
+       * 那么差距应该是 3个小时 59分 59秒，而不是4个小时
+       */
+      const diffHours = this.endHours - date.getHours() - 1
+      const diffMinutes = 60 - date.getMinutes() - 1
+      const diffSeconds = 60 - date.getSeconds()
+      /**
+       * 获取差距秒数
+       */
+      this.diffSeconds = diffHours * 3600 + diffMinutes * 60 + diffSeconds
+      this.interval = setInterval(() =&gt; {
+        this.diffSeconds -= 1
+      }, 1000)
+    }
+  },
+  watch: {
+    /**
+     * 监听秒数变化，转化为对应的时间，
+     * 时间补0，可以直接在这里补0，也可以使用 filters 去补0，
+     * 课程中为了介绍filters的概念，将使用 filters 补0
+     */
+    diffSeconds: function (newV, oldV) {
+      // math.floor  向下取整
+      /**
+       * 当前的秒数 / 3600 向下取整 获取所有的小时数
+       * 当前的秒数 / 60 向下取整 获取所有的分钟数，对 60 进行取模，获取到超过小时的分钟数
+       * 当前秒数直接对 60 取模 ， 获取单独的描述
+       */
+      const hours = Math.floor(newV / 3600)
+      const minutes = Math.floor(newV / 60) % 60
+      const seconds = newV % 60
+      this.surplus = hours + ':' + minutes + ':' + seconds
+
+      // 如果当前倒计时秒数已经为 0 的情况下，重新去计算时间
+      if (newV === 0) {
+        this.computedSurplusTime()
+      }
+    },
+    /**
+     * 父组件主动修改了时间的话，
+     * 那么重新计算时间
+     */
+    endHours: function () {
+      this.computedSurplusTime()
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style lang=&quot;scss&quot; scoped&gt;
+@import &quot;@css/style.scss&quot;;
+
+.count-down {
+  display: flex;
+  font-size: px2rem(14);
+  margin-left: $marginSize;
+
+  span {
+    display: inline-block;
+    padding: px2rem(2) px2rem(4) px2rem(2) px2rem(4);
+  }
+
+  &amp;-end-time {
+    background-color: $mainColor;
+    border-top-left-radius: px2rem(4);
+    border-bottom-left-radius: px2rem(4);
+    border: px2rem(1) solid $mainColor;
+    color: white;
+  }
+
+  &amp;-surplus {
+    background-color: white;
+    border-top-right-radius: px2rem(4);
+    border-bottom-right-radius: px2rem(4);
+    color: $mainColor;
+    border: px2rem(1) solid $mainColor;
+  }
+}
+&lt;/style&gt;
+
+</code></pre>
+<h6 id="_2">轮播图组件</h6>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;swiper :options=&quot;swiperOption&quot; ref=&quot;mySwiper&quot;&gt;
+    &lt;!-- slides --&gt;
+    &lt;swiper-slide v-for=&quot;(item, index) in swiperImgs&quot; :key=&quot;index&quot;&gt;
+      &lt;img
+        class=&quot;swiper-slide-img&quot;
+        :src=&quot;item&quot;
+        alt=&quot;&quot;
+        srcset=&quot;&quot;
+        :style=&quot;{ height: height }&quot;
+      /&gt;
+    &lt;/swiper-slide&gt;
+    &lt;!-- Optional controls --&gt;
+    &lt;template v-slot:pagination&gt;
+      &lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;
+    &lt;/template&gt;
+  &lt;/swiper&gt;
+&lt;/template&gt;
+&lt;script&gt;
+import 'swiper/dist/css/swiper.css'
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
+export default {
+  props: {
+    height: {
+      type: String,
+      default: 'auto'
+    },
+    swiperImgs: {
+      type: Array,
+      required: true,
+      default: function () {
+        return []
+      },
+      /**
+       * 1、圆点切换
+       * 2、数字
+       */
+      paginationType: {
+        type: String,
+        default: '1'
+      }
+    }
+  },
+  components: {
+    swiper,
+    swiperSlide
+  },
+
+  data () {
+    return {
+      // swiper 配置
+      swiperOption: {
+        // 自动切换
+        autoplay: true,
+        // 自动高度，让 siwper 的高度跟随 slide 的高度变化
+        autoHeight: true,
+        // 设置分页器效果
+        pagination: {
+          // 分页器对应的 html 元素
+          el: '.swiper-pagination',
+          // 分页器的样式
+          type: 'bullets',
+          // 分页器内元素的类名
+          bulletClass: 'custom-bullet-class'
+        }
+      }
+    }
+  },
+  methods: {
+    // 根据分页器类型配置对应的分页器
+    initPaginationLayout () {
+      switch (this.paginationType) {
+        case '1':
+          this.swiperOption.pagination = {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            bulletClass: 'custom-bullet-class'
+          }
+          break
+        case '2':
+          this.swiperOption.pagination = {
+            el: '.swiper-pagination',
+            type: 'fraction'
+          }
+          break
+      }
+    }
+  }
+}
+&lt;/script&gt;
+&lt;style lang=&quot;scss&quot;&gt;
+@import &quot;@css/style.scss&quot;;
+.swiper-container {
+  .swiper-wrapper {
+    .swiper-slide {
+      background-color: white;
+      .swiper-slide-img {
+        width: 100%;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    bottom: px2rem(12);
+    .custom-bullet-class {
+      box-sizing: border-box;
+      border-radius: 100%;
+      height: px2rem(6);
+      width: px2rem(6);
+      border: px2rem(1) solid #fff;
+      margin: 0 px2rem(4);
+      display: inline-block;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: white;
+    }
+  }
+
+  .swiper-pagination-fraction {
+    left: auto;
+    right: 0;
+    width: auto;
+    font-size: $minInfoSize;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: px2rem(6) px2rem(18);
+    border-top-left-radius: px2rem(16);
+    border-bottom-left-radius: px2rem(16);
+    bottom: px2rem(32);
+    color: white;
+
+    .swiper-pagination-current {
+      font-size: $titleSize;
+      font-weight: bold;
+    }
+  }
+}
+&lt;/style&gt;
+
+</code></pre>
+<h6 id="toolbar">toolbar组件</h6>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;div class=&quot;tool-bar&quot; :class=&quot;[{'iphonex-bottom':$store.state.isIphoneX}]&quot;&gt;
+    &lt;div
+      class=&quot;tool-bar-item&quot;
+      :class=&quot;{ 'tool-bar-item-class': index === selectItemIndex }&quot;
+      @touchstart=&quot;onChangeFragment(item,index)&quot;
+      v-for=&quot;(item, index) in toolBarData&quot;
+      :key=&quot;index&quot;
+    &gt;
+      &lt;img :src=&quot;[index === selectItemIndex? item.hIcon:item.nIcon]&quot; alt class=&quot;tool-bar-item-img&quot; /&gt;
+      &lt;p
+        class=&quot;tool-bar-item-name&quot;
+        :class=&quot;{ 'tool-bar-item-name-h': index === selectItemIndex }&quot;
+      &gt;{{ item.name }}&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+  data () {
+    return {
+      toolBarData: [
+        {
+          nIcon: require('@img/home-n.svg'),
+          hIcon: require('@img/home-h.svg'),
+          name: '首页',
+          componentName: 'home'
+        },
+        {
+          nIcon: require('@img/shopping-n.svg'),
+          hIcon: require('@img/shopping-h.svg'),
+          name: '购物车',
+          componentName: 'shopping'
+        },
+        {
+          nIcon: require('@img/my-n.svg'),
+          hIcon: require('@img/my-h.svg'),
+          name: '我的',
+          componentName: 'my'
+        }
+      ],
+      selectItemIndex: 0
+    }
+  },
+  methods: {
+    onChangeFragment (item, index) {
+      this.selectItemIndex = index
+      this.$emit('onChangeFragment', item.componentName)
+    }
+  }
+}
+&lt;/script&gt;
+&lt;style lang=&quot;scss&quot; scoped&gt;
+@import &quot;@css/style.scss&quot;;
+.tool-bar {
+  width: 100%;
+  height: px2rem(46);
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #e5e5e5;
+  &amp;-item {
+    text-align: center;
+    padding: px2rem(4) px2rem(12);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &amp;-img {
+      width: px2rem(22);
+      height: px2rem(22);
+    }
+    &amp;-name {
+      font-size: $minInfoSize;
+      margin-top: px2rem(6);
+      &amp;-h {
+        color: $mainColor;
+      }
+    }
+  }
+}
+&lt;/style&gt;
+
+</code></pre>
+<pre><code>.icon{
+    width:1em;
+    height:1em;
+}
+&lt;g-button&gt;&lt;svg&gt;&lt;use xlink:href=&quot;#i-settings&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/g-button&gt;
+
+
+</code></pre>
+<h6 id="_3">表单组件</h6>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;p&gt;{{ title }}&lt;/p&gt;
+    &lt;el-divider&gt;&lt;/el-divider&gt;
+    &lt;el-form ref=&quot;form&quot; :model=&quot;form&quot; label-width=&quot;120px&quot; inline&gt;
+      &lt;el-form-item v-for=&quot;(item,index) in props&quot; :key=&quot;index+'props'&quot; :label=&quot;item.label&quot; &gt;
+        &lt;el-date-picker  v-if=&quot;item.name === 'el-date-picker'&quot; v-model=&quot;form[item.id]&quot; 
+        type=&quot;month&quot; style=&quot;width: 180px&quot; 
+        :placeholder=&quot;item.placeholder&quot; format=&quot;yyyy-MM&quot; value-format=&quot;yyyy-MM&quot;&gt;
+        &lt;/el-date-picker&gt;
+          &lt;el-select v-if=&quot;item.name === 'el-select'&quot; v-model=&quot;form[item.id]&quot; :placeholder=&quot;item.placeholder&quot;&gt;
+           &lt;el-option v-for=&quot;(ite) in item.options&quot; :key=&quot;ite.label&quot; :label='ite.label' :value=&quot;ite.label&quot;&gt;
+           &lt;/el-option&gt;
+          &lt;/el-select&gt;
+      &lt;/el-form-item&gt;
+      &lt;el-form-item&gt;
+        &lt;el-button type=&quot;primary&quot; style=&quot;margin-left: 20px&quot; @click=&quot;getData()&quot;&gt;查询&lt;/el-button&gt;
+        &lt;el-button type=&quot;primary&quot; style=&quot;margin-left: 20px&quot; @click=&quot;$emit('reset')&quot;&gt;重置&lt;/el-button&gt;
+      &lt;/el-form-item&gt;
+    &lt;/el-form&gt;
+    &lt;el-divider v-if=&quot;!utils&quot;&gt;&lt;/el-divider&gt;
+    &lt;ul class=&quot;nav&quot; v-if=&quot;!utils&quot;&gt;
+      &lt;li v-if=&quot;save&quot; @click=&quot;clickSave()&quot;&gt;&lt;i class=&quot;el-icon-folder&quot;&gt;&lt;/i&gt;&amp;nbsp;保存&lt;/li&gt;
+      &lt;li v-if=&quot;save&quot;&gt;|&lt;/li&gt;
+      &lt;li @click=&quot;printyl()&quot;&gt;&lt;i class=&quot;el-icon-mobile&quot;&gt;&lt;/i&gt;&amp;nbsp;打印预览&lt;/li&gt;
+      &lt;li&gt;|&lt;/li&gt;
+      &lt;li @click=&quot;print()&quot;&gt;&lt;i class=&quot;el-icon-printer&quot;&gt;&lt;/i&gt;&amp;nbsp;打印&lt;/li&gt;
+      &lt;li&gt;|&lt;/li&gt;
+      &lt;li&gt;&lt;i class=&quot;el-icon-download&quot;&gt;&lt;/i&gt;&amp;nbsp;导出&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;el-card class=&quot;print-v&quot; v-show=&quot;printV&quot;&gt;
+      &lt;div class=&quot;title&quot;&gt;
+        &lt;p&gt;打印预览&lt;/p&gt;
+        &lt;el-tooltip class=&quot;item&quot; effect=&quot;dark&quot; content=&quot;关闭&quot; placement=&quot;left-end&quot;&gt;
+          &lt;i @click=&quot;printV = false&quot; class=&quot;el-icon-circle-close&quot;&gt;&lt;/i&gt;
+        &lt;/el-tooltip&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;print-v-main&quot;&gt;
+        &lt;img :src=&quot;printImg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
+        &lt;el-button style=&quot;text-align: center&quot; type=&quot;primary&quot; @click=&quot;print()&quot;&gt;打印&lt;/el-button&gt;
+      &lt;/div&gt;
+    &lt;/el-card&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import html2canvas from 'html2canvas'
+import { getDate } from '@/utils/form.js'
+export default {
+  props: {
+    value:{
+      type:Object,
+      default:()=&gt;{}
+    },
+    props: {
+      type: Array,
+      default: () =&gt; []
+
+    },
+    title: {
+      type: String,
+      default: '统计管理',
+    },
+    utils: {
+      type: Boolean,
+    },
+    success: {
+      type: Function,
+      default: () =&gt; {},
+    },
+    save: {
+      type: Boolean,
+      default: false,
+    },
+    reset:{
+      type:Function,
+      default:()=&gt;{}
+    }
+  },
+  data() {
+    return {
+      form:{
+        time:Object.values(getDate()).join('-')
+      },
+      timeValue: getDate(1),
+      printV: false,
+      printImg: null,
+    }
+  },
+  methods: {
+    print() {
+      let newhtml = document.getElementById('printmain').innerHTML
+      let oldhtml = document.body.innerHTML
+      document.body.innerHTML = newhtml
+
+      window.print()
+      document.body.innerHTML = oldhtml
+      window.location.reload()
+      return true
+    },
+    printyl() {
+      let newhtml = document.getElementById('printmain')
+      html2canvas(newhtml).then(canvas =&gt; {
+        this.printImg = canvas.toDataURL()
+        console.log(canvas.toDataURL())
+        this.printV = true
+      })
+    },
+    resetHand(){
+      console.log(this.form);
+      for(const i in this.form){
+       this.form[i]=null
+      }
+      this.$emit('input',this.form)
+      this.reset(this.form)
+    },
+
+    getData() {
+      this.success(this.form)
+    },
+    clickSave() {
+      this.save(this.form)
+    },
+  },
+  created() {
+    this.getData()
+    this.form = this.value
+  },
+}
+&lt;/script&gt;
+
+&lt;style lang=&quot;scss&quot; scoped&gt;
+$height: 40px;
+.nav {
+  display: flex;
+  height: $height;
+  cursor: pointer;
+  &gt; li {
+    margin-left: 20px;
+  }
+}
+.el-icon-mobile {
+  color: rgb(76, 76, 76);
+}
+
+/* 打印 */
+.printmain {
+  text-align: center;
+  vertical-align: middle;
+  &gt; div {
+    display: inline-block;
+  }
+}
+.print-v {
+  width: 1000px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -400px;
+}
+.print-v .title {
+  display: flex;
+  justify-content: space-between;
+  p {
+    font-size: 16px;
+  }
+}
+#print-v-main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+&lt;/style&gt;
+
+</code></pre>
+<p>表单组件</p>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;p&gt;{{ title }}&lt;/p&gt;
+    &lt;el-divider v-if=&quot;props.length&gt; 0&quot;&gt;&lt;/el-divider&gt;
+    &lt;el-form v-if=&quot;props.length&gt; 0&quot; ref=&quot;form&quot; :model=&quot;form&quot; label-width=&quot;120px&quot; inline&gt;
+      &lt;el-form-item v-for=&quot;(item,index) in props&quot; :key=&quot;index+'props'&quot; :label=&quot;item.label&quot; &gt;
+        &lt;el-date-picker  v-if=&quot;item.name === 'el-date-picker'&quot; v-model=&quot;form[item.id]&quot; 
+        type=&quot;month&quot; style=&quot;width: 180px&quot; 
+        :placeholder=&quot;item.placeholder&quot; format=&quot;yyyy-MM&quot; value-format=&quot;yyyy-MM&quot;&gt;
+        &lt;/el-date-picker&gt;
+        &lt;el-select v-if=&quot;item.name === 'el-select'&quot; v-model=&quot;form[item.id]&quot; :placeholder=&quot;item.placeholder&quot;&gt;
+           &lt;el-option v-for=&quot;(ite) in item.options&quot; :key=&quot;ite.label&quot; :label='ite.label' :value=&quot;ite.label&quot;&gt;
+           &lt;/el-option&gt;
+        &lt;/el-select&gt;
+        &lt;el-input v-if=&quot;item.name === 'el-input'&quot; v-model=&quot;form[item.id]&quot;&gt;&lt;/el-input&gt;
+        &lt;el-date-picker  v-if=&quot;item.name === 'el-date-picker-date'&quot; v-model=&quot;form[item.id]&quot; 
+          type=&quot;date&quot; style=&quot;width: 180px&quot; 
+          :placeholder=&quot;item.placeholder&quot; format=&quot;yyyy-MM-dd&quot; value-format=&quot;yyyy-MM-dd&quot;&gt;
+        &lt;/el-date-picker&gt;
+      &lt;/el-form-item&gt;
+      &lt;el-form-item&gt;
+        &lt;el-button type=&quot;primary&quot; style=&quot;margin-left: 20px&quot; @click=&quot;getData(0)&quot;&gt;查询&lt;/el-button&gt;
+         &lt;!-- &lt;el-button type=&quot;primary&quot; style=&quot;margin-left: 20px&quot; @click=&quot;getData(1)&quot;&gt;客户查询&lt;/el-button&gt; --&gt;
+        &lt;el-button type=&quot;primary&quot; style=&quot;margin-left: 20px&quot; @click=&quot;resetHand()&quot;&gt;重置&lt;/el-button&gt;
+      &lt;/el-form-item&gt;
+    &lt;/el-form&gt;
+    &lt;slot&gt;&lt;/slot&gt;
+    &lt;el-divider v-if=&quot;!utils&quot;&gt;&lt;/el-divider&gt;
+    &lt;ul class=&quot;nav&quot; v-if=&quot;!utils&quot;&gt;
+      &lt;li v-if=&quot;save&quot; @click=&quot;clickSave()&quot;&gt;&lt;i class=&quot;el-icon-folder&quot;&gt;&lt;/i&gt;&amp;nbsp;保存&lt;/li&gt;
+      &lt;li v-if=&quot;save&quot;&gt;|&lt;/li&gt;
+      &lt;li @click=&quot;printyl()&quot;&gt;&lt;i class=&quot;el-icon-mobile&quot;&gt;&lt;/i&gt;&amp;nbsp;打印预览&lt;/li&gt;
+      &lt;li&gt;|&lt;/li&gt;
+      &lt;li @click=&quot;print()&quot;&gt;&lt;i class=&quot;el-icon-printer&quot;&gt;&lt;/i&gt;&amp;nbsp;打印&lt;/li&gt;
+      &lt;li&gt;|&lt;/li&gt;
+      &lt;li @click=&quot;exExcel()&quot;&gt;&lt;i  class=&quot;el-icon-download&quot;&gt;&lt;/i&gt;&amp;nbsp;导出&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;el-card class=&quot;print-v&quot; v-show=&quot;printV&quot;&gt;
+      &lt;div class=&quot;title&quot;&gt;
+        &lt;p&gt;打印预览&lt;/p&gt;
+        &lt;el-tooltip class=&quot;item&quot; effect=&quot;dark&quot; content=&quot;关闭&quot; placement=&quot;left-end&quot;&gt;
+          &lt;i @click=&quot;printV = false&quot; class=&quot;el-icon-circle-close&quot;&gt;&lt;/i&gt;
+        &lt;/el-tooltip&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;print-v-main&quot;&gt;
+        &lt;img :src=&quot;printImg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
+        &lt;el-button style=&quot;text-align: center&quot; type=&quot;primary&quot; @click=&quot;print()&quot;&gt;打印&lt;/el-button&gt;
+      &lt;/div&gt;
+    &lt;/el-card&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import html2canvas from 'html2canvas'
+import { getDate } from '@/utils/form.js'
+export default {
+  props: {
+    value:{
+      type:Object,
+      default:()=&gt;{}
+    },
+    props: {
+      type: Array,
+      default: () =&gt; []
+
+    },
+    // props: [
+    //     {
+    //       name: 'el-date-picker',
+    //       id: 'time',
+    //       label: '请选择时间:',
+    //       type: 'reportYear',
+    //       placeholder: '请选择',
+    //     },
+    //     {
+    //       name: 'el-select',
+    //       id: 'supplierId',
+    //       label: '请选择供应商:',
+    //       placeholder: '请选择',
+    //       options: [],
+    //     },
+    //     {
+    //       name: 'el-select',
+    //       label: '请选择客户:',
+    //       id: 'customerId',
+    //       placeholder: '请选择',
+    //       options: [],
+    //     },
+    //   ],
+    title: {
+      type: String,
+      default: '统计管理',
+    },
+    utils: {
+      type: Boolean,
+    },
+    success: {
+      type: Function,
+      default: () =&gt; {},
+    },
+    save: {
+      type: Function,
+      default: false,
+    },
+    exExcel:{
+      type:Function,
+      default:()=&gt;{ }
+    },
+    reset:{
+      type:Function,
+      default:()=&gt;{}
+    }
+  },
+  data() {
+    return {
+      form:{
+        time:Object.values(getDate()).join('-')
+      },
+      timeValue: getDate(1),
+      printV: false,
+      printImg: null,
+    }
+  },
+  methods: {
+    print() {
+      let newhtml = document.getElementById('printmain').innerHTML
+      let oldhtml = document.body.innerHTML
+      document.body.innerHTML = newhtml
+
+      window.print()
+      document.body.innerHTML = oldhtml
+      window.location.reload()
+      return true
+    },
+    printyl() {
+      let newhtml = document.getElementById('printmain')
+      html2canvas(newhtml).then(canvas =&gt; {
+        this.printImg = canvas.toDataURL()
+        console.log(canvas.toDataURL())
+        this.printV = true
+      })
+    },
+    resetHand(){
+      console.log(this.form);
+      for(const i in this.form){
+       this.form[i]=null
+      }
+      this.$emit('input',this.form)
+      this.reset(this.form)
+    },
+
+    getData(x) {
+      // 0 供应商 1 客户
+      const obj = Object.assign({},this.form)
+    // if(x) {delete obj.supplierId}
+    // else delete obj.customerId
+
+
+      this.success(obj)
+    },
+    clickSave() {
+      this.save(this.form)
+    },
+  },
+  created() {
+    this.getData()
+    this.form = this.value
+  },
+}
+&lt;/script&gt;
+
+&lt;style lang=&quot;scss&quot; scoped&gt;
+$height: 40px;
+.nav {
+  display: flex;
+  height: $height;
+  cursor: pointer;
+  &gt; li {
+    margin-left: 20px;
+  }
+}
+.el-icon-mobile {
+  color: rgb(76, 76, 76);
+}
+
+/* 打印 */
+.printmain {
+  text-align: center;
+  vertical-align: middle;
+  &gt; div {
+    display: inline-block;
+  }
+}
+.print-v {
+  width: 1000px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -400px;
+}
+.print-v .title {
+  display: flex;
+  justify-content: space-between;
+  p {
+    font-size: 16px;
+  }
+}
+#print-v-main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+&lt;/style&gt;
+
+</code></pre>
+<h6 id="_4">附件上传</h6>
+<pre><code>&lt;el-form-item label=&quot;上传证书图片(jpg,png)&quot;&gt;
+        &lt;el-upload ref=&quot;upload&quot; :action=&quot;Action&quot; list-type=&quot;picture-card&quot; :before-upload=&quot;beforeAvatarUpload&quot;
+          :file-list=&quot;queryParams.files&quot; :on-preview=&quot;handlePictureCardPreview&quot; :headers=&quot;Headers&quot; :data=&quot;{
+              parentId: 'manageship',
+            }&quot; :on-success=&quot;onSuccess&quot; :on-remove=&quot;handleRemove&quot; :limit=&quot;10&quot;&gt;
+          &lt;i class=&quot;el-icon-plus&quot;&gt;&lt;/i&gt;
+        &lt;/el-upload&gt;
+        &lt;el-dialog :visible.sync=&quot;picVisible&quot; :modal=&quot;false&quot;&gt;
+          &lt;img width=&quot;100%&quot; :src=&quot;dialogImageUrl&quot; alt=&quot;&quot; /&gt;
+        &lt;/el-dialog&gt;
+&lt;/el-form-item&gt;
+  /* 查看大图*/
+    handlePictureCardPreview(file) {
+      this.dialogImageUrl = file.url;
+      this.picVisible = true;
+    },
+     /* 限制文件类型*/
+    beforeAvatarUpload(file) {
+      const isPNG = file.type === &quot;image/png&quot; || file.type === &quot;image/jpeg&quot;;
+      const isLt10M = file.size / 1024 / 1024 &lt; 10;
+      if (!isPNG) {
+        this.$message.error(&quot;图片只能是 JPG、png 格式!&quot;);
+      }
+      if (!isLt10M) {
+        this.$message.error(&quot;图片不能大于10MB!&quot;);
+      }
+      return isPNG &amp;&amp; isLt10M;
+    },
+      /* 上传成功 */
+    onSuccess(response, file, fileList) {
+      this.queryParams.files = this.queryParams.files || [];
+      console.log(this.queryParams.files);
+      this.queryParams.files.push({
+        url: `${BaseUrl}${response.data.id}`,
+        attachId: response.data.id,
+        attachType: response.data.type,
+        attachName: response.data.name,
+        attachSize: response.data.size,
+        attachPath: response.data.path,
+        attachStuff: response.data.suffix,
+      });
+    },
+
+    /* 删除文档 */
+    handleRemove({ attachId }) {
+      archiveDocDel(attachId).finally(() =&gt; {
+        this.queryParams.files = this.queryParams.files.filter((item) =&gt; {
+          return item.attachId !== attachId;
+        });
+        console.log(this.queryParams.files);
+      });
+    },
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../vue3/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Vue3">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Vue3
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../wepy/" class="md-footer__link md-footer__link--next" aria-label="Next: Wepy">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Wepy
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2023 Martin Donath
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+  
+      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  <script src="../../assets/javascripts/custom.js"></script>
+
+  </body>
+</html>
