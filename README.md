@@ -6,4 +6,5 @@
 ## 启动 
 `mkdocs serve`
 
-推送
+主动推送
+` mkdocs gh-deploy --force`
