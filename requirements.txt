@@ -1,1 +1,0 @@
-mkdocs-material==<YOUR_MATERIAL_VERSION>
